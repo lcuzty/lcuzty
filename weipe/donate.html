@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微pe工具箱-捐赠</title>
+    <link rel="stylesheet" href="./CSS/style1.css">
+    <script>
+        function auto_change_size(){
+            if(window.innerWidth<=990){
+                document.getElementById("content").style.marginLeft="0px";
+            }else{
+                document.getElementById("content").style.marginLeft=(window.innerWidth-990)/2 + "px";
+            }
+        }
+        function change_big(bigid){
+            document.getElementById("jex").style.backgroundImage="url(./RE/je" + bigid + ".jpg)";
+            if(bigid==1){
+                document.getElementById("jex").style.backgroundImage="url(./RE/je" + bigid + ".png)";
+            }
+        }
+        function change_big_2(bigid){
+            document.getElementById("jex_2").style.backgroundImage="url(./RE/je2" + bigid + ".png)";
+        }
+        function open_link_1(){
+            window.open("https://item.taobao.com/item.htm?id=592831650924");
+        }
+    </script>
+</head>
+<body onresize="auto_change_size()" onmouseover="auto_change_size()" onload="auto_change_size()">
+    <div class="title" id="title" style="height: 70px;position:fixed;width: 100%;box-shadow: 0 3px 4px 0 rgba(0,0,0,0.1);text-align: center;padding-top: 0px;background-color: white;">
+        <div class="main_title" id="main_title" style="height: 70px;width: 1040px;display: inline-block;background-image: url(./RE/title3.png);background-size: cover">
+            <img src="./RE/logo.png" alt="logo" style="height: 45px;display: inline-block;float: left;margin-top: 13px;margin-left: 19px">
+            <a href="./learnmore.html" class="title_link" target="_self">技术规格</a>
+            <a href="./download.html" class="title_link" target="_self">下载</a>
+            <a href="./fixtools.html" class="title_link" target="_self">维修工具包</a>
+            <a href="./donate.html" class="title_link" target="_self">捐赠</a>
+            <a href="./about.html" class="title_link" target="_self">情怀</a>
+            <a href="./index.html" class="title_link" target="_self">首页</a>
+        </div>
+    </div>
+    <div id="main" style="background-color: #f7f7f7;width: 100%;margin: 0 auto;">
+        <div id="gap" style="height: 130px"></div>
+        <div id="content" style="width: 990px;background-color: white;border: 1px gray;padding-top: 37px;padding-bottom: 37px;padding-left: 55px;padding-right: 55px;font-size: 15px;color: #6b6b6b">
+            <p style="font-size: 20px"><strong>捐赠微PE团队</strong></p>
+            <br>
+            <p>如果您认为微PE工具箱非常好用，使用后确实解决了电脑问题，不妨小额捐赠一下我们，让我们更有动力去制作更好的版本。</p>
+            <p>毕竟，找人修个电脑怎滴都得百十来块钱呢。我们由衷地向您表示感谢。</p>
+            <hr>
+            <p><strong>捐赠方式一共有三种：</strong>   微信支付 、支付宝支付 、购买WEPE数码维修工具包</p>
+            <hr>
+            <br>
+            <p><strong>方式一 微信捐赠</strong></p>
+            <br>
+            <p>绝对赤裸裸的金钱赞助：如果你有微信，请打开微信App，使用“扫一扫”付款。</p>
+            <br>
+            <p>目前一共有：自定义金额、19元、29元、39元、59元和“我是土豪”共6档。</p>
+            <br>
+            <span>现在，请闭上眼睛随意选择：</span>&nbsp;&nbsp;<input class="je_change_inputs" type="button" value="自定义金额" style="background-color: rgb(255,102,102);height: 36px;width: 90px;margin-right: 10px;cursor: pointer" onclick="change_big(1)"><input class="je_change_inputs" type="button" value="¥19" style="background-color: rgb(41,173,55);height: 36px;width: 60px;margin-right: 10px;cursor: pointer" onclick="change_big(2)"><input class="je_change_inputs" type="button" value="¥29" style="background-color: rgb(41,173,55);height: 36px;width: 60px;margin-right: 10px;cursor: pointer" onclick="change_big(3)"><input class="je_change_inputs" type="button" value="¥39" style="background-color: rgb(41,173,55);height: 36px;width: 60px;margin-right: 10px;cursor: pointer" onclick="change_big(4)"><input class="je_change_inputs" type="button" value="¥59" style="background-color: rgb(41,173,55);height: 36px;width: 60px;margin-right: 10px;cursor: pointer" onclick="change_big(5)"><input class="je_change_inputs" type="button" value="我是土豪" style="background-color: rgb(41,173,55);height: 36px;width: 90px;margin-right: 10px;cursor: pointer" onclick="change_big(6)">
+            <br>
+            <br>
+            <div style="width: 470px;background-image: url(./RE/jeborder.png);height:450px;margin: 0 auto;background-size: contain;background-repeat: no-repeat">
+                <div id="jex" style="background-image: url(./RE/je1.png);background-size: contain;background-repeat: no-repeat;background-position-x: center;background-position-y: center;width: 450px;height: 430px;margin-top: 10px;margin-left: 10px;float: none;display: inline-block"></div>
+            </div>
+            <br>
+            <br>
+            <p><strong>方式一 支付宝捐赠</strong></p>
+            <br>
+            <p>也是赤果果的金钱赞助：如果你有手机支付宝，请打开支付宝，使用“扫一扫”付款。</p>
+            <br>
+            <p>目前一共有：自定义金额、19元、29元、39元、59元和“我是土豪”共6档。</p>
+            <br>
+            <span>现在，请闭上眼睛随意选择：</span>&nbsp;&nbsp;<input class="je_change_inputs_2" type="button" value="自定义金额" style="background-color: rgb(255,102,102);height: 36px;width: 90px;margin-right: 10px;cursor: pointer" onclick="change_big_2(1)"><input class="je_change_inputs_2" type="button" value="¥19" style="background-color: rgb(0,170,238);height: 36px;width: 60px;margin-right: 10px;cursor: pointer" onclick="change_big_2(2)"><input class="je_change_inputs_2" type="button" value="¥29" style="background-color: rgb(0,170,238);height: 36px;width: 60px;margin-right: 10px;cursor: pointer" onclick="change_big_2(3)"><input class="je_change_inputs_2" type="button" value="¥39" style="background-color: rgb(0,170,238);height: 36px;width: 60px;margin-right: 10px;cursor: pointer" onclick="change_big_2(4)"><input class="je_change_inputs_2" type="button" value="¥59" style="background-color: rgb(0,170,238);height: 36px;width: 60px;margin-right: 10px;cursor: pointer" onclick="change_big_2(5)"><input class="je_change_inputs_2" type="button" value="我是土豪" style="background-color: rgb(0,170,238);height: 36px;width: 90px;margin-right: 10px;cursor: pointer" onclick="change_big_2(6)">
+            <br>
+            <br>
+            <div style="width: 470px;background-image: url(./RE/jeborder.png);height:450px;margin: 0 auto;background-size: contain;background-repeat: no-repeat">
+                <div id="jex_2" style="background-image: url(./RE/je21.png);background-size: contain;background-repeat: no-repeat;background-position-x: center;background-position-y: center;width: 450px;height: 430px;margin-top: 10px;margin-left: 10px;float: none;display: inline-block"></div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <p><strong>方式三 购买微PE优盘或维修工具包</strong></p>
+            <br>
+            <p>如果觉着现金捐赠太赤裸裸，您也可以选择购买我们的WEPE维修工具包来支持我们。感恩。</p>
+            <br>
+            <br>
+            <br>
+            <div style="height: 100px;">
+                <div style="float: left;width: 150px;height: 100px;background-image: url(./RE/adpic1.png);background-repeat: no-repeat;background-position-x: center;background-position-y: center"></div>
+                <div style="float: left;width: 425px;height: 100px;padding-top: 15px">
+                    <h1>WEPE数码维修工具包</h1>
+                    <p style="font-size: 14px;line-height: 30px">多合一工具包，适用于电脑手机等数码产品的拆装、维护等。</p>
+                </div>
+                <div style="width: 230px;height: 100px;padding-top: 20px;float: left;">
+                    <input type="button" style="width: 230px;height: 60px;background-color: #ff6767;border-radius: 5px;font-weight: bold" value="点击购买" id="dianjigoumai" onclick="open_link_1()">
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div id="gap2" style="height: 60px">
+
+        </div>
+        <div id="gap3" style="height: 60px;text-align: center">
+            <p style="display: inline-block;line-height: 60px">© 2021 Wepe.com.cn  |  皖ICP备19015054号</p>
+        </div>
+    </div>
+</body>
+</html>

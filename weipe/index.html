@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微pe工具箱-超好用的装机维护工具</title>
+    <link rel="stylesheet" href="./CSS/style1.css">
+    <script>
+        function auto_change_size(){
+            document.getElementById("pic_1").style.height=window.innerHeight + "px";
+            document.getElementById("pic_2").style.height=window.innerHeight + "px";
+            document.getElementById("pic_3").style.height=window.innerHeight + "px";
+            document.getElementById("pic_4").style.height=window.innerHeight + "px";
+            document.getElementById("pic_5").style.height=window.innerHeight + "px";
+            document.getElementById("pic_6").style.height=window.innerHeight + "px";
+            document.getElementById("pic_7").style.height=window.innerHeight + "px";
+
+            document.getElementById("pic_1").style.paddingLeft=(window.innerWidth-600)/2 + "px";
+            document.getElementById("pic_2").style.paddingLeft=(window.innerWidth-600)/2 + "px";
+            document.getElementById("pic_3").style.paddingLeft=(window.innerWidth-600)/2 + "px";
+            document.getElementById("pic_4").style.paddingLeft=(window.innerWidth-600)/2 + "px";
+            document.getElementById("pic_5").style.paddingLeft=(window.innerWidth-600)/2 + "px";
+            document.getElementById("pic_6").style.paddingLeft=(window.innerWidth-600)/2 + "px";
+            document.getElementById("pic_7").style.paddingLeft=(window.innerWidth-600)/2 + "px";
+
+            document.getElementById("pic_1").style.paddingTop=(window.innerHeight-600)/2 + "px";
+            document.getElementById("pic_2").style.paddingTop=(window.innerHeight-600)/2 + "px";
+            document.getElementById("pic_3").style.paddingTop=(window.innerHeight-600)/2 + "px";
+            document.getElementById("pic_4").style.paddingTop=(window.innerHeight-600)/2 + "px";
+            document.getElementById("pic_5").style.paddingTop=(window.innerHeight-600)/2 + "px";
+            document.getElementById("pic_6").style.paddingTop=(window.innerHeight-600)/2 + "px";
+            document.getElementById("pic_7").style.paddingTop=(window.innerHeight-600)/2 + "px";
+
+            if (window.innerWidth<=600){
+                document.getElementById("pic_inside_1").style.width=window.innerWidth + "px";
+                document.getElementById("pic_inside_2").style.width=window.innerWidth + "px";
+                document.getElementById("pic_inside_3").style.width=window.innerWidth + "px";
+                document.getElementById("pic_inside_4").style.width=window.innerWidth + "px";
+                document.getElementById("pic_inside_5").style.width=window.innerWidth + "px";
+                document.getElementById("pic_inside_6").style.width=window.innerWidth + "px";
+                document.getElementById("pic_inside_7").style.width=window.innerWidth + "px";
+            }else{
+                document.getElementById("pic_inside_1").style.width="600px";
+                document.getElementById("pic_inside_2").style.width="600px";
+                document.getElementById("pic_inside_3").style.width="600px";
+                document.getElementById("pic_inside_4").style.width="600px";
+                document.getElementById("pic_inside_5").style.width="600px";
+                document.getElementById("pic_inside_6").style.width="600px";
+                document.getElementById("pic_inside_7").style.width="600px";
+            }
+        }
+        function open_link_1(){
+            window.open("https://weibo.com/wepe");
+        }
+        function open_link_2(){
+            window.open("https://beian.miit.gov.cn/");
+        }
+        function open_link_3(){
+            window.open("./download.html");
+        }
+    </script>
+</head>
+<body onresize="auto_change_size()" onmouseover="auto_change_size()" onload="auto_change_size()">
+    <div class="title" id="title" style="height: 70px;position:fixed;width: 100%;box-shadow: 0 3px 4px 0 rgba(0,0,0,0.1);text-align: center;padding-top: 0px;background-color: white;">
+        <div class="main_title" id="main_title" style="height: 70px;width: 1040px;display: inline-block;background-image: url(./RE/title1.png);background-size: cover">
+            <img src="./RE/logo.png" alt="logo" style="height: 45px;display: inline-block;float: left;margin-top: 13px;margin-left: 19px">
+            <a href="./learnmore.html" class="title_link" target="_self">技术规格</a>
+            <a href="./download.html" class="title_link" target="_self">下载</a>
+            <a href="./fixtools.html" class="title_link" target="_self">维修工具包</a>
+            <a href="./donate.html" class="title_link" target="_self">捐赠</a>
+            <a href="./about.html" class="title_link" target="_self">情怀</a>
+            <a href="./index.html" class="title_link" target="_self">首页</a>
+        </div>
+    </div>
+    <div id="main" style="background-color: #f7f7f7;width: 100%;">
+        <div id="gap" style="height: 70px"></div>
+        <div class="pics" id="pic_1">
+            <img src="./RE/1.png" alt="1" id="pic_inside_1" style="cursor: pointer;" onclick="open_link_3()">
+
+        </div>
+        <div class="pics" id="pic_2">
+            <img src="./RE/2.png" alt="2" id="pic_inside_2">
+
+        </div>
+        <div class="pics" id="pic_3">
+            <img src="./RE/3.png" alt="3" id="pic_inside_3">
+
+        </div>
+        <div class="pics" id="pic_4">
+            <img src="./RE/4.png" alt="4" id="pic_inside_4">
+
+        </div>
+        <div class="pics" id="pic_5">
+            <img src="./RE/5.png" alt="5" id="pic_inside_5">
+
+        </div>
+        <div class="pics" id="pic_6">
+            <img src="./RE/6.png" alt="6" id="pic_inside_6" onclick="open_link_1()" style="cursor: pointer;">
+
+        </div>
+        <div class="pics" id="pic_7">
+            <img src="./RE/7.png" alt="7" id="pic_inside_7" onclick="open_link_2()" style="cursor: pointer;">
+
+        </div>
+    </div>
+</body>
+</html>
