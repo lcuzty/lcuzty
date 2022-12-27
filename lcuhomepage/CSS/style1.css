@@ -1,0 +1,335 @@
+/* 清除默认样式的代码 */
+/* 去除常见标签默认的 margin 和 padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+/* 內减模式 */
+* {
+    box-sizing: border-box;
+}
+
+/* 设置网页统一的字体大小、行高、字体系列相关属性 */
+body {
+    font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei",
+    "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    color: #333;
+}
+
+/* 去除列表默认样式 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 去除默认的倾斜效果 */
+em,
+i {
+    font-style: normal;
+}
+
+/* 去除a标签默认下划线，并设置默认文字颜色 */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
+img {
+    vertical-align: middle;
+}
+
+/* 去除input默认样式 */
+input {
+    border: none;
+    outline: none;
+    color: #333;
+}
+
+/* 左浮动 */
+.fl {
+    float: left;
+}
+
+/* 右浮动 */
+.fr {
+    float: right;
+}
+
+/* 双伪元素清除法 */
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+
+
+
+
+*{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+    font-family: 微软雅黑,sans-serif;
+}
+.title_and_nav{
+    height: 150px;
+    background-color: #155167;
+    background-image: url(../资源/标题栏背景图.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.search{
+    display: inline-block;
+    background-color: #0d495f;
+    height: 150px;
+    width: 80px;
+    float: right;
+    background-image: url(../资源/搜索图标.png);
+    background-size: cover;
+    border-left: 1px white;
+}
+.links{
+    padding-top: 30px;
+    padding-right: 170px;
+    text-align: right;
+    color: white;
+    font-size: 12px;
+}
+.links_a{
+    text-decoration: none;
+    color: rgb(196, 209, 217);
+    font-size: 12px;
+}
+.links_a:hover{
+    color: red;
+}
+.navs{
+    padding-right: 15px;
+    height: 104px;
+    text-align: right;
+}
+.nav{
+    display: inline-block;
+    height: 46px;
+    width: 100px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    line-height: 46px;
+}
+.gap{
+    height: 58px;
+}
+.nav:hover{
+    background-color: white;
+    color:#34667b;
+}
+.banner{
+    height: 500px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-image: url(../资源/横幅2.jpg);
+    background-color:aqua;
+    vertical-align: center;
+}
+.menu_item{
+    text-decoration: none;
+    color: #346e85;
+    font-size: 14px;
+}
+.menu_item_box{
+    height: 26px;
+    padding-left: 22px;
+    padding-right: 22px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: max-content;
+}
+.menu_item_box:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+    font-weight: bold;
+}
+#menu1{
+    margin-right: 787px;
+    float: right;
+    opacity: 0;
+}
+#menu2{
+    margin-right: 645px;
+    float: right;
+    opacity: 0;
+}
+#menu3{
+    margin-right: 587px;
+    float: right;
+    opacity: 0;
+}
+#menu4{
+    margin-right: 487px;
+    float: right;
+    opacity: 0;
+}
+#menu5{
+    margin-right: 359px;
+    float: right;
+    opacity: 0;
+}
+#menu7{
+    margin-right: 187px;
+    float: right;
+    opacity: 0;
+}
+#menu8{
+    margin-right: 87px;
+    float: right;
+    opacity: 0;
+}
+.menus>div{
+    float: right;
+}
+#visitor_type{
+    height: 65px;
+}
+.vt_inside_a{
+    display: inline-block;
+    line-height: 44px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.vts{
+    padding-top: 21px;
+    float: left;
+    margin-left: 1px;
+}
+#vt_inside_a_1{
+    background-color: #259293;
+    border-top: 3px rgba(37, 146, 147, 0.5);
+    background-image: url("../资源/校友图标.png");
+    background-repeat: no-repeat;
+    background-position-x: 14px;
+    background-position-y: center;
+}
+#vt_inside_a_3{
+    background-color: #259293;
+    border-top: 3px rgba(37, 146, 147, 0.5);
+    background-image: url("../资源/教职工图标.png");
+    background-repeat: no-repeat;
+    background-position-x: 14px;
+    background-position-y: center;
+}
+#vt_inside_a_2{
+    background-color: #f6ac18;
+    border-top: 3px rgba(246, 172, 24, 0.5);
+    background-image: url("../资源/访客及考生图标.png");
+    background-repeat: no-repeat;
+    background-position-x: 14px;
+    background-position-y: center;
+}
+#vt_inside_a_4{
+    background-color: #f6ac18;
+    border-top: 3px rgba(246, 172, 24, 0.5);
+    background-image: url("../资源/学生图标.png");
+    background-repeat: no-repeat;
+    background-position-x: 14px;
+    background-position-y: center;
+}
+.ldyw_pic{
+    display: inline-block;
+    float: left;
+    margin-left: 25px;
+}
+.ldyw_text{
+    height: 70px;
+    display: inline-block;
+    float: left;
+    margin-left: 25px;
+}
+.ldyw_list{
+    display: inline-block;
+    float: left;
+    height: 270px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.ldyw_lists{
+
+}
+.ldyw_lists_top_gray_lines{
+    background-color: #eceadb;
+    height: 5px;
+}
+.ldyw_list_single_li{
+    display: block;
+    height: 74px;
+    padding-left: 20px;
+    padding-top: 28px;
+    padding-right: 60px;
+}
+.ldyw_list_single_li_date{
+    float: left;
+    width: 53px;
+    height: 43px;
+    text-align: center;
+    margin-right: 17px;
+    color: #165068;
+}
+.gap2{
+    height: 80px;
+    text-align: center;
+    font-size: 13px;
+    color: #165068;
+    padding-top: 15px;
+}
+#no_area{
+    background-image: url(../资源/插图1.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+#no_area2{
+    background-image: url(../资源/插图1.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.whxs.tzgg{
+    float: left;
+}
+.gengduoneirong:hover{
+    font-weight: bold;
+}
+.no_area_inside_ol>li{
+    height: 70px;
+}
+#mtld{
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.mtld_news{
+    height: 200px;
+    margin-left: 15px;
+    width: auto;
+    background-color: greenyellow;
+    display: inline-block;
+}
+.mtld_news_title{
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
