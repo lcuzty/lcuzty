@@ -1,0 +1,63 @@
+#title{
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(40px);
+}
+#maintitle{
+    height: 75px;
+    margin: 0 auto;
+    background-color: rgba(222, 184, 135, 0);
+}
+#maintitlelogo{
+    height: 30px;
+    float: left;
+    margin-left: 8px;
+    margin-top: 10px;
+}
+.main{
+    margin: 0 auto;
+    background-size: contain;
+    box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+    border-radius: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.banner{
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    background-image: url(../RE/ct3.jpeg);
+}
+.title_navs>a{
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+    line-height: 55px;
+    color: white;
+    font-size: 19px;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.main *{
+    margin-bottom: 30px;
+}
+.h1{
+    font-size: 30px;
+}
+.h2{
+    font-size: 20px;
+}
+.p{
+    text-indent: 2em;
+}
+.img{
+    width: 100%;
+}
