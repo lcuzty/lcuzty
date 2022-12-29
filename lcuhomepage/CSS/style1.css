@@ -333,3 +333,6 @@ input {
     padding-left: 10px;
     padding-right: 10px;
 }
+.sms{
+    overflow: hidden;
+}
