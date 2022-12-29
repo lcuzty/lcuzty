@@ -467,7 +467,12 @@
 
             if(540+gap*2>=width_website){
                 document.getElementById("hdhb").style.width=width_website-gap*2 + "px";
+                document.getElementById("hdhbpicdiv").style.width=width_website-gap*2-60 + "px";
+                document.getElementById("hdhbpicwithcontrolbuttondiv").style.width=width_website-gap*2 + "px";
+            }else{
 
+                document.getElementById("hdhbpicdiv").style.width="470px";
+                document.getElementById("hdhbpicwithcontrolbuttondiv").style.width="540px";
             }
 
 
@@ -481,8 +486,8 @@
                     document.getElementById("foot2").style.visibility="visible";
                     document.getElementById("foot2_r").style.width=width_website/2+"px";
                     document.getElementById("foot3_r").style.width=width_website/3+"px";
-                    document.getElementById("foot3_l").style.width=width_website/3*2+"px";
-                    document.getElementById("foot2_l").style.width=width_website/2+"px";
+                    document.getElementById("foot3_l").style.width=width_website/3*2-5+"px";
+                    document.getElementById("foot2_l").style.width=width_website/2-5+"px";
                     if(width_website<=670){
                         document.getElementById("foott").style.height="80px";
                         document.getElementById("foot2").style.visibility="hidden";
@@ -1164,10 +1169,10 @@
                     <img src="./资源/活动海报.png" alt="" style="height: 35px;margin-top: 3px;display: inline-block;float: left">
                     <a href="#" style="display: inline-block;float: right;font-size: 14px">更多 >></a>
                 </div>
-                <div style="height: 560px;background-color: #b4b4b4;width: 540px;margin: 0 auto">
+                <div id="hdhbpicwithcontrolbuttondiv" style="height: 560px;background-color: #b4b4b4;width: 540px;margin: 0 auto">
                     <div style="width: 30px;height: 560px;background-image: url(./资源/向左的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer">
                     </div>
-                    <div style="width: 470px;background-color: white;height: 560px;display: inline-block;cursor: pointer">
+                    <div id="hdhbpicdiv" style="width: 470px;background-color: white;height: 560px;display: inline-block;cursor: pointer">
                         <img id="hdhbct" src="./资源/活动海报插图1.png" alt="" style="width: 100%;height: 560px;float: left">
                     </div>
                     <div style="width: 30px;height: 560px;background-image: url(./资源/向右的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer">
