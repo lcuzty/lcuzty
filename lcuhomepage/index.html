@@ -446,9 +446,11 @@
 
             document.getElementById("foota1").style.visibility="visible";
             document.getElementById("foota2").style.visibility="hidden";
+            document.getElementById("footas2").style.visibility="hidden";
             if(width_website<=780){
                 document.getElementById("foota2").style.visibility="visible";
                 document.getElementById("foota1").style.visibility="hidden";
+                document.getElementById("footas2").style.visibility="visible";
             }
 
             if(document.body.clientWidth<=885){
@@ -462,6 +464,32 @@
             document.getElementById("foota_2_3").style.width=(width_website-60*2-33)/5 + "px";
             document.getElementById("foota_2_4").style.width=(width_website-60*2-33)/5 + "px";
             document.getElementById("foota_2_5").style.width=(width_website-60*2-33)/5 + "px";
+
+            if(540+gap*2>=width_website){
+                document.getElementById("hdhb").style.width=width_website-gap*2 + "px";
+
+            }
+
+
+            document.getElementById("ftpg1").style.width="100px";
+            document.getElementById("foot2").style.visibility="hidden";
+            document.getElementById("foot3").style.visibility="hidden";
+            document.getElementById("foott").style.height="40px";
+            if(width_website<=1470){
+                document.getElementById("ftpg1").style.width="40px";
+                if(width_website<=1155){
+                    document.getElementById("foot2").style.visibility="visible";
+                    document.getElementById("foot2_r").style.width=width_website/2+"px";
+                    document.getElementById("foot3_r").style.width=width_website/3+"px";
+                    document.getElementById("foot3_l").style.width=width_website/3*2+"px";
+                    if(width_website<=670){
+                        document.getElementById("foott").style.height="80px";
+                        document.getElementById("foot2").style.visibility="hidden";
+                        document.getElementById("foot3").style.visibility="visible";
+
+                    }
+                }
+            }
 
         }
         function vt1_change_style_1(){
@@ -969,7 +997,7 @@
                 <div class="mtld_news" id="mtld_news_1" style="margin-left: 0px">
                     <img id="mtld_news_1_pic" src="./资源/媒体聊大插图1.png" alt="" style="height: 200px;float: left;display: inline-block">
                     <div class="mtld_news_title" id="mtld_news_1_title" style="height: 200px;display: inline-block;float: right;background-color: rgb(22,80,104);">
-                        <div style="width: 100%;height: 80px">
+                        <div style="width: 100%;height: 100px">
                             <a href="#" style="color: white">【海报新闻】聊城大学...</a>
 
                         </div>
@@ -979,7 +1007,7 @@
                 <div class="mtld_news" id="mtld_news_2">
                     <img id="mtld_news_2_pic" src="./资源/媒体聊大插图2.png" alt="" style="height: 200px;float: left;display: inline-block">
                     <div class="mtld_news_title" id="mtld_news_2_title" style="height: 200px;display: inline-block;float: right;background-color: rgb(37,146,147);">
-                        <div style="width: 100%;height: 80px">
+                        <div style="width: 100%;height: 100px">
                             <a href="#" style="color: white">【中国教育报】“学、...</a>
 
                         </div>
@@ -990,7 +1018,7 @@
                 <div class="mtld_news" id="mtld_news_3">
                     <img id="mtld_news_3_pic" src="./资源/媒体聊大插图3.jpg" alt="" style="height: 200px;float: left;display: inline-block">
                     <div class="mtld_news_title" id="mtld_news_3_title" style="height: 200px;display: inline-block;float: right;background-color: rgb(22,80,104);">
-                        <div style="width: 100%;height: 80px">
+                        <div style="width: 100%;height: 100px">
                             <a href="#" style="color: white">《中国青年报》报道聊...</a>
 
                         </div>
@@ -1002,7 +1030,7 @@
                 <div class="mtld_news" id="mtld_news_4">
                     <img id="mtld_news_4_pic" src="./资源/媒体聊大插图4.jpg" alt="" style="height: 200px;float: left;display: inline-block">
                     <div class="mtld_news_title" id="mtld_news_4_title" style="height: 200px;display: inline-block;float: right;background-color: rgb(37,146,147);">
-                        <div style="width: 100%;height: 80px">
+                        <div style="width: 100%;height: 100px">
                             <a href="#" style="color: white">《光明日报》报道我校...</a>
 
                         </div>
@@ -1139,7 +1167,7 @@
                     <div style="width: 30px;height: 560px;background-image: url(./资源/向左的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer">
                     </div>
                     <div style="width: 470px;background-color: white;height: 560px;display: inline-block;cursor: pointer">
-                        <img src="./资源/活动海报插图1.png" alt="" style="width: 470px;height: 560px;float: left">
+                        <img id="hdhbct" src="./资源/活动海报插图1.png" alt="" style="width: 100%;height: 560px;float: left">
                     </div>
                     <div style="width: 30px;height: 560px;background-image: url(./资源/向右的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer">
                     </div>
@@ -1147,10 +1175,7 @@
                 </div>
             </div>
         </div>
-        <div id="footas" style="height: 280px;background-color: rgba(173,255,47,0);padding-top: 40px;padding-left: 60px;padding-right: 60px">
-            <div id="foota1" style="height: 110px;background-color: rgba(255,255,0,0);overflow: hidden;float: left">
-                <img src="./资源/链接1.png" alt="" style="display: inline-block"><img src="./资源/链接2.png" alt="" style="display: inline-block"><img src="./资源/链接3.jpg" alt="" style="display: inline-block"><img src="./资源/链接4.png" alt="" style="display: inline-block"><img src="./资源/链接5.jpg" alt="" style="display: inline-block"><img src="./资源/链接6.png" alt="" style="display: inline-block"><img src="./资源/链接7.png" alt="" style="display: inline-block"><img src="./资源/链接8.png" alt="" style="display: inline-block"><img src="./资源/链接9.jpg" alt="" style="display: inline-block">
-            </div>
+        <div id="footas2" style="height: 170px;background-color: rgba(173,255,47,0);padding-top: 40px;padding-left: 60px;padding-right: 60px;position: absolute;width: 100%;background-color: #ffffff;">
             <div id="foota2" style="height: 110px;background-color: rgba(255,255,0,0);overflow: hidden;float: left">
                 <div id="foota_2_1" style="height: 110px;display: inline-block;float: left;margin-right: 8px">
                     <div style="height: 55px">
@@ -1200,6 +1225,11 @@
                 </div>
             </div>
         </div>
+        <div id="footas" style="height: 170px;background-color: rgba(173,255,47,0);padding-top: 40px;padding-left: 60px;padding-right: 60px">
+            <div id="foota1" style="height: 110px;background-color: rgba(255,255,0,0);overflow: hidden;float: left">
+                <img src="./资源/链接1.png" alt="" style="display: inline-block"><img src="./资源/链接2.png" alt="" style="display: inline-block"><img src="./资源/链接3.jpg" alt="" style="display: inline-block"><img src="./资源/链接4.png" alt="" style="display: inline-block"><img src="./资源/链接5.jpg" alt="" style="display: inline-block"><img src="./资源/链接6.png" alt="" style="display: inline-block"><img src="./资源/链接7.png" alt="" style="display: inline-block"><img src="./资源/链接8.png" alt="" style="display: inline-block"><img src="./资源/链接9.jpg" alt="" style="display: inline-block">
+            </div>
+        </div>
         <div style="height: 90px;background-color: #f0f5f7;padding-left: 15px;font-size: 14px">
             <div style="height: 90px;width: 90px;background-color: #279394;display: inline-block;float: left;font-size: 16px">
                 <p style="line-height: 1.1em;color: white;padding-top: 27px;padding-left: 29px">常用</p>
@@ -1221,6 +1251,39 @@
                 <a href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">聊大新闻网</a>
             </div>
         </div>
+        <div id="foot2" style="height: 255px;background-image: url(./资源/页脚背景.png);overflow: hidden;position: absolute;width: 100%;visibility: hidden">
+            <div style="height: 3px;background-color: rgb(161,150,74);"></div>
+            <div id="foot2_r" style="height: 255px;width: 550px;float: right;display: inline-block;background-color: rgba(245,222,179,0);">
+                <div style="display: inline-block;float: left;width: 3px;background-image: url(./资源/页脚分割线.png);background-size: contain;background-position: center;height: 255px;background-repeat: no-repeat"></div>
+                <img src="./资源/聊城大学.png" alt="" style="height: 70px;margin-left: 55px;margin-top: 50px">
+                <div style="width:500px;height: 2px "></div>
+                <p style="font-size: 20px;color: white;margin-left: 55px;margin-top: 40px;display: inline-block">关注：</p>
+                <img src="./资源/微信.png" alt="" style="height: 35px;display: inline-block">
+                <img src="./资源/微博.png" alt="" style="height: 35px;display: inline-block">
+                <img src="./资源/事业单位.png" alt="" style="height: 35px;display: inline-block">
+            </div>
+        </div>
+        <div id="foot3" style="height: 255px;background-image: url(./资源/页脚背景.png);overflow: hidden;position: absolute;width: 100%;visibility: hidden">
+            <div style="height: 3px;background-color: rgb(161,150,74);"></div>
+            <div id="foot3_l" style="height: 255px;float: left;padding-left: 20px;padding-top: 60px">
+                <p style="color: white;font-size: 14px;margin-bottom: 15px">招生热线: (0635) 8239405（本科）&#12288;&#12288;&#12288;&#12288;(0635) 8239267（研究生）</p>
+                <p style="color: white;font-size: 14px;margin-bottom: 15px">电话: (0635) 8239115 8239155校长信箱：xzxx@lcu.edu.cn</p>
+                <p style="color: white;font-size: 14px;margin-bottom: 15px">网站信箱：webmaster@lcu.edu.cn</p>
+                <p style="color: white;font-size: 14px;margin-bottom: 15px">地址：中国山东聊城市湖南路1号邮编：252000</p>
+
+            </div>
+            <div id="foot3_r" style="height: 255px;width: 550px;float: right;display: inline-block;background-color: rgba(245,222,179,0);">
+                <div style="display: inline-block;float: left;width: 3px;background-image: url(./资源/页脚分割线.png);background-size: contain;background-position: center;height: 255px;background-repeat: no-repeat"></div>
+                <div style="padding-top: 50px;padding-left: 20px">
+                    <div style="height: 50px;width: 50px;"><img src="./资源/微信.png" alt="" style="height: 35px;display: block;margin: 0 auto"></div>
+                    <div style="height: 50px;width: 50px;"><img src="./资源/微博.png" alt="" style="height: 35px;display: block;margin: 0 auto"></div>
+                    <div style="height: 50px;width: 50px;"><img src="./资源/事业单位.png" alt="" style="height: 35px;display: block;margin: 0 auto"></div>
+                </div>
+
+
+
+            </div>
+        </div>
         <div style="height: 255px;background-image: url(./资源/页脚背景.png);overflow: hidden">
             <div style="height: 3px;background-color: rgb(161,150,74);"></div>
             <div style="height: 252px">
@@ -1239,7 +1302,7 @@
                     <a href="#" style="line-height: 40px;color: white;margin-top: 0px;width: 160px;display: block">校园服务</a>
                 </div>
                 <div style="width: 3px;height: 252px;background-image: url(./资源/页脚分割线.png);background-size: contain;background-repeat: no-repeat;background-position: center;float: left;display: inline-block"></div>
-                <div style="width: 100px;height: 252px;float: left;display: inline-block"></div>
+                <div id="ftpg1" style="width: 100px;height: 252px;float: left;display: inline-block"></div>
                 <div style="width: 260px;height: 252px;float: left;display: inline-block;background-color: rgba(245,222,179,0);">
                     <p href="#" style="line-height: 40px;color: white;margin-top: 50px;width: 300px;display: block">招生热线：(0635) 8239405（本科）</p>
                     <p href="#" style="line-height: 40px;color: white;margin-top: 0px;width: 300px;display: block">&#12288;&#12288;&#12288;&#12288;&#12288;(0635) 8239267（研究生）</p>
@@ -1255,7 +1318,7 @@
 
             </div>
         </div>
-        <div style="height: 40px;background-color: #0e4e6a;text-align: center ">
+        <div id="foott" style="height: 40px;background-color: #0e4e6a;text-align: center ">
             <p style="display: inline;line-height: 40px;color: #d5dbe0;font-size: 14px">版权所有©聊城大学 鲁ICP备05001955号 鲁公网安备 37150202000174号 建设管理：党委宣传部</p>
         </div>
     </div>
