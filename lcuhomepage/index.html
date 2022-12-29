@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>22级9班张天予</title>
-    <link rel="stylesheet" href="./CSS/style1.css">
+    <title>聊城大学官网首页（22级9班张天予）</title>
+    <link rel="stylesheet" href="./CSS/style1.css">s
     <script>
         var is_first=1;
         function hide_all_menu_at_start(){
@@ -130,26 +130,58 @@
             document.getElementById("ldyw_text_3").style.marginLeft=gap + "px";
             document.getElementById("ldyw_text_4").style.marginLeft=gap + "px";
 
+            document.getElementById("ldyw_pic_1").style.visibility="visible";
+            document.getElementById("ldyw_pic_2").style.visibility="visible";
+            document.getElementById("ldyw_pic_3").style.visibility="visible";
+            document.getElementById("ldyw_pic_4").style.visibility="visible";
+            document.getElementById("ldyw_text_1").style.visibility="visible";
+            document.getElementById("ldyw_text_2").style.visibility="visible";
+            document.getElementById("ldyw_text_3").style.visibility="visible";
+            document.getElementById("ldyw_text_4").style.visibility="visible";
+
             if(width_website<=885){
                 if(width_website<=485){
                     document.getElementById("ldyw_pic_1").style.width=(width_website-3*gap)/2 + "px";
                     document.getElementById("ldyw_pic_2").style.width=(width_website-3*gap)/2 + "px";
-                    document.getElementById("ldyw_pic_3").style.width=0;
-                    document.getElementById("ldyw_pic_4").style.width=0;
+                    document.getElementById("ldyw_pic_3").style.visibility="hidden";
+                    document.getElementById("ldyw_pic_4").style.visibility="hidden";
+                    document.getElementById("ldyw_pic_3").style.width="0px";
+                    document.getElementById("ldyw_pic_4").style.width="0px";
                     document.getElementById("ldyw_text_1").style.width=(width_website-3*gap)/2 + "px";
                     document.getElementById("ldyw_text_2").style.width=(width_website-3*gap)/2 + "px";
-                    document.getElementById("ldyw_text_3").style.width=0;
-                    document.getElementById("ldyw_text_4").style.width=0;
+                    document.getElementById("ldyw_text_3").style.visibility="hidden";
+                    document.getElementById("ldyw_text_4").style.visibility="hidden";
+                    document.getElementById("ldyw_text_3").style.width="0px";
+                    document.getElementById("ldyw_text_4").style.width="0px";
                     gap2_top=(width_website-3*gap)/2/1.78+70;
+                    if(width_website<=375){
+                        document.getElementById("ldyw_pic_2").style.visibility="hidden";
+                        document.getElementById("ldyw_pic_3").style.visibility="hidden";
+                        document.getElementById("ldyw_pic_4").style.visibility="hidden";
+                        document.getElementById("ldyw_text_2").style.visibility="hidden";
+                        document.getElementById("ldyw_text_3").style.visibility="hidden";
+                        document.getElementById("ldyw_text_4").style.visibility="hidden";
+                        document.getElementById("ldyw_pic_2").style.width="0px";
+                        document.getElementById("ldyw_pic_3").style.width="0px";
+                        document.getElementById("ldyw_pic_4").style.width="0px";
+                        document.getElementById("ldyw_text_2").style.width="0px";
+                        document.getElementById("ldyw_text_3").style.width="0px";
+                        document.getElementById("ldyw_text_4").style.width="0px";
+
+                        document.getElementById("ldyw_pic_1").style.width=(width_website-2*gap) + "px";
+                        document.getElementById("ldyw_text_1").style.width=(width_website-2*gap) + "px";
+                    }
                 }else{
                     document.getElementById("ldyw_pic_1").style.width=(width_website-4*gap)/3 + "px";
                     document.getElementById("ldyw_pic_2").style.width=(width_website-4*gap)/3 + "px";
                     document.getElementById("ldyw_pic_3").style.width=(width_website-4*gap)/3 + "px";
-                    document.getElementById("ldyw_pic_4").style.width=0;
+                    document.getElementById("ldyw_pic_4").style.visibility="hidden";
+                    document.getElementById("ldyw_pic_4").style.width="0px";
                     document.getElementById("ldyw_text_1").style.width=(width_website-4*gap)/3 + "px";
                     document.getElementById("ldyw_text_2").style.width=(width_website-4*gap)/3 + "px";
                     document.getElementById("ldyw_text_3").style.width=(width_website-4*gap)/3 + "px";
-                    document.getElementById("ldyw_text_4").style.width=0;
+                    document.getElementById("ldyw_text_4").style.visibility="hidden";
+                    document.getElementById("ldyw_text_4").style.width="0px";
                     gap2_top=(width_website-3*gap)/3/1.78+70;
                 }
             }else{
@@ -162,6 +194,28 @@
                 document.getElementById("ldyw_text_3").style.width=(width_website-5*gap)/4 + "px";
                 document.getElementById("ldyw_text_4").style.width=(width_website-5*gap)/4 + "px";
                 gap2_top=(width_website-3*gap)/4/1.78+70;
+            }
+
+            document.getElementById("title_and_nav").style.visibility="visible";
+            document.getElementById("title_and_nav_2").style.visibility="hidden";
+            document.getElementById("title_and_nav_2").style.height="150px";
+            document.getElementById("lculogo2").style.height="65px";
+            if(width_website<=455){
+                document.getElementById("title_and_nav_2").style.height="135px";
+            }
+            if(width_website<=1175){
+                document.getElementById("title_and_nav").style.visibility="hidden";
+                document.getElementById("title_and_nav_2").style.visibility="visible";
+                if(width_website<=580){
+                    document.getElementById("lculogo2").style.height="50px";
+                    if(width_website<=335){
+                        document.getElementById("lculogo2").style.height="40px";
+                    }
+                }
+            }else{
+                if(is_sm_p_open){
+                    document.getElementById("super_menu").style.visibility="hidden";
+                }
             }
 
             if(width_website<=1005){
@@ -445,11 +499,153 @@
             document.getElementById("vt4").style.paddingTop="21px";
             document.getElementById("vt_inside_a_4").style.lineHeight="44px";
         }
+        let is_sm_p_open=0;
+        function open_or_close_menu(){
+            if(document.getElementById("super_menu").style.visibility=="visible"){
+                document.getElementById("super_menu").style.visibility="hidden";
+                is_sm_p_open=0;
+            }else{
+                document.getElementById("super_menu").style.visibility="visible";
+                is_sm_p_open=1;
+            }
+        }
+        let is_sm_open=0;
+        function hide_all_sm(){
+            is_sm_open=0;
+            document.getElementById("sm1").style.height="0px";
+            document.getElementById("sm2").style.height="0px";
+            document.getElementById("sm3").style.height="0px";
+            document.getElementById("sm4").style.height="0px";
+            document.getElementById("sm5").style.height="0px";
+            document.getElementById("sm7").style.height="0px";
+            document.getElementById("sm8").style.height="0px";
+        }
+        function open_super_menu(menu_id){
+            if(is_sm_open==0){
+                hide_all_sm();
+                document.getElementById("sm" + menu_id).style.height="auto";
+                is_sm_open=1;
+            }else{
+                hide_all_sm();
+            }
+        }
     </script>
+    <link rel="shortcut icon" href="/资源/favicon.ico" type="image/x-icon">
 </head>
 <body onresize="auto_adapt_banner_size()" onload="auto_adapt_banner_size()">
     <div class="main" id="main" style="margin: 0 auto">
-        <div class="title_and_nav">
+        <div id="title_and_nav_2" style="height: 150px;width: 100%;background-color: #185169;position: absolute;top: 0px;left: 0px">
+            <div style="width: 100%;height: 36px;background-color: #1d6483;padding-left: 12px">
+                <div style="margin-top: 4px;margin-left: 5px;float: left;display: inline-block;color: white">
+                    <a href="#" class="links_a">联系我们</a>
+                    &ThinSpace;|&ThinSpace;
+                    <a href="#" class="links_a">网站地图</a>
+                </div>
+                <div style="margin-top: 2px;margin-right: 9px;float: right;width: 31px;height: 31px;background-color: #d6d6d6;background-image: url(./资源/菜单图标.jpg);background-size: contain;cursor: pointer" onclick="open_or_close_menu()"></div>
+            </div>
+            <div style="width: 100%;height: 114px;text-align: center;line-height: 114px">
+                <img id="lculogo2" src="./资源/聊城大学.png" alt="" style="height:65px;margin: 0 auto">
+            </div>
+            <div id="super_menu" style="width: 100%;background-color: #185169;position: absolute;top: 36px;padding-bottom: 5px;visibility: hidden;color: white">
+                <p style="display: block;line-height: 36px;text-indent: 1em" onclick="open_super_menu(1)">学校概况</p>
+                <div style="height: 1px;background-color: #0e455b;"></div>
+                <div class="sms" id="sm1" style="background-color: white;color: black;font-size: 14px;height: 0px">
+                    <p style="display: block;line-height: 36px;text-indent: 2em">聊大简介</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">现任领导</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">影像聊大</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">校园地图</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">聊大标识</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">历史沿革</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                </div>
+                <p style="display: block;line-height: 36px;text-indent: 1em" onclick="open_super_menu(2)">组织机构</p>
+                <div style="height: 1px;background-color: #0e455b;"></div>
+                <div class="sms" id="sm2" style="background-color: white;color: black;font-size: 14px;height: 0px">
+                    <p style="display: block;line-height: 36px;text-indent: 2em">党政机关</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">教学单位</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">科研院（所）</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">基层党群团组织</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">直附属单位</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                </div>
+                <p style="display: block;line-height: 36px;text-indent: 1em" onclick="open_super_menu(3)">师资队伍</p>
+                <div style="height: 1px;background-color: #0e455b;"></div>
+                <div class="sms" id="sm3" style="background-color: white;color: black;font-size: 14px;height: 0px">
+                    <p style="display: block;line-height: 36px;text-indent: 2em">两院院士</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">聊大名师</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">人才招聘</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                </div>
+                <p style="display: block;line-height: 36px;text-indent: 1em" onclick="open_super_menu(4)">教学科研</p>
+                <div style="height: 1px;background-color: #0e455b;"></div>
+                <div class="sms" id="sm4" style="background-color: white;color: black;font-size: 14px;height: 0px">
+                    <p style="display: block;line-height: 36px;text-indent: 2em">教学工作</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">科学研究</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">人才培养</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">学术期刊</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">学科建设</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                </div>
+                <p style="display: block;line-height: 36px;text-indent: 1em" onclick="open_super_menu(5)">招生就业</p>
+                <div style="height: 1px;background-color: #0e455b;"></div>
+                <div class="sms" id="sm5" style="background-color: white;color: black;font-size: 14px;height: 0px">
+                    <p style="display: block;line-height: 36px;text-indent: 2em">本科招生</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">研究生招生</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">国际学生招生</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">成人教育</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">就业指导</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                </div>
+                <p style="display: block;line-height: 36px;text-indent: 1em">信息公开</p>
+                <div style="height: 1px;background-color: #0e455b;"></div>
+                <p style="display: block;line-height: 36px;text-indent: 1em" onclick="open_super_menu(7)">学子家园</p>
+                <div style="height: 1px;background-color: #0e455b;"></div>
+                <div class="sms" id="sm7" style="background-color: white;color: black;font-size: 14px;height: 0px">
+                    <p style="display: block;line-height: 36px;text-indent: 2em">学子之家</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">学生组织</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">学在聊大</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">长在聊大</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">学子风采</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">阅读天地</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                </div>
+                <p style="display: block;line-height: 36px;text-indent: 1em" onclick="open_super_menu(8)">校园服务</p>
+                <div style="height: 1px;background-color: #0e455b;"></div>
+                <div class="sms" id="sm8" style="background-color: white;color: black;font-size: 14px;height: 0px;">
+                    <p style="display: block;line-height: 36px;text-indent: 2em">网络服务</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">媒体报道</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                    <p style="display: block;line-height: 36px;text-indent: 2em">生活服务</p>
+                    <div class="smsmgl" style="height: 1px;background-color: #949494;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="title_and_nav" id="title_and_nav">
             <a href="#" class="search"></a>
             <div class="links">
                 <a href="#" class="links_a">联系我们</a>
