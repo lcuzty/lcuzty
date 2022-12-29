@@ -459,21 +459,62 @@
                 document.getElementById("visitor_type").hidden=false;
             }
 
-            document.getElementById("foota_2_1").style.width=(width_website-60*2-33)/5 + "px";
-            document.getElementById("foota_2_2").style.width=(width_website-60*2-33)/5 + "px";
-            document.getElementById("foota_2_3").style.width=(width_website-60*2-33)/5 + "px";
-            document.getElementById("foota_2_4").style.width=(width_website-60*2-33)/5 + "px";
-            document.getElementById("foota_2_5").style.width=(width_website-60*2-33)/5 + "px";
+            document.getElementById("foota_2_1").style.width=(width_website-10*2-33)/5 + "px";
+            document.getElementById("foota_2_2").style.width=(width_website-10*2-33)/5 + "px";
+            document.getElementById("foota_2_3").style.width=(width_website-10*2-33)/5 + "px";
+            document.getElementById("foota_2_4").style.width=(width_website-10*2-33)/5 + "px";
+            document.getElementById("foota_2_5").style.width=(width_website-10*2-33)/5 + "px";
 
-            if(540+gap*2>=width_website){
-                document.getElementById("hdhb").style.width=width_website-gap*2 + "px";
-                document.getElementById("hdhbpicdiv").style.width=width_website-gap*2-60 + "px";
-                document.getElementById("hdhbpicwithcontrolbuttondiv").style.width=width_website-gap*2 + "px";
-            }else{
-
-                document.getElementById("hdhbpicdiv").style.width="470px";
-                document.getElementById("hdhbpicwithcontrolbuttondiv").style.width="540px";
+            document.getElementById("foota_2_1").style.fontSize="16px";
+            document.getElementById("foota_2_2").style.fontSize="16px";
+            document.getElementById("foota_2_3").style.fontSize="16px";
+            document.getElementById("foota_2_4").style.fontSize="16px";
+            document.getElementById("foota_2_5").style.fontSize="16px";
+            if(width_website<=450){
+                document.getElementById("foota_2_1").style.fontSize="11px";
+                document.getElementById("foota_2_2").style.fontSize="11px";
+                document.getElementById("foota_2_3").style.fontSize="11px";
+                document.getElementById("foota_2_4").style.fontSize="11px";
+                document.getElementById("foota_2_5").style.fontSize="11px";
             }
+
+            document.getElementById("hdhbpicwithcontrolbuttondiv").style.width="540px";
+            document.getElementById("hdhbpicwithcontrolbuttondiv").style.height="560px";
+            document.getElementById("hdhb").style.height="600px";
+            document.getElementById("hdhbjt1").style.height="560px";
+            document.getElementById("hdhbjt2").style.height="560px";
+            document.getElementById("hdhbpicdiv").style.width="470px";
+            document.getElementById("hdhbpicdiv").style.height="560px";
+            document.getElementById("hdhbct").style.height="560px";
+            document.getElementById("hdhbarttext").style.height="35px";
+            document.getElementById("cyljp").style.width="90px";
+            document.getElementById("cy").style.paddingTop="27px";
+            if(width_website<=600){
+                document.getElementById("hdhbpicwithcontrolbuttondiv").style.width="300px";
+                document.getElementById("hdhbpicwithcontrolbuttondiv").style.height="326px";
+                document.getElementById("hdhbjt1").style.height="326px";
+                document.getElementById("hdhbjt2").style.height="326px";
+                document.getElementById("hdhbpicdiv").style.width="230px";
+                document.getElementById("hdhbpicdiv").style.height="326px";
+                document.getElementById("hdhbct").style.height="326px";
+                document.getElementById("hdhb").style.height="326px";
+                document.getElementById("hdhbarttext").style.height="30px";
+                document.getElementById("aftermtld").style.height="1600px";
+                document.getElementById("cyljp").style.width="48px";
+                document.getElementById("cy").style.paddingTop="10px";
+
+            }
+
+
+            // if(540+gap*2>=width_website){
+            //     document.getElementById("hdhb").style.width=width_website-gap*2 + "px";
+            //     document.getElementById("hdhbpicdiv").style.width=width_website-gap*2-60 + "px";
+            //     document.getElementById("hdhbpicwithcontrolbuttondiv").style.width=width_website-gap*2 + "px";
+            // }else{
+            //
+            //     document.getElementById("hdhbpicdiv").style.width="470px";
+            //     document.getElementById("hdhbpicwithcontrolbuttondiv").style.width="540px";
+            // }
 
 
             document.getElementById("ftpg1").style.width="100px";
@@ -496,6 +537,19 @@
                     }
                 }
             }
+
+            // document.getElementById("hdhbpicwithcontrolbuttondiv").style.width="600px";
+            // document.getElementById("hdhbpicwithcontrolbuttondiv").style.height="600px";
+            // document.getElementById("hdhbht1").style.height="560px";
+            // document.getElementById("hdhbht2").style.height="560px";
+            // if(width_website<=600){
+            //     document.getElementById("hdhbpicwithcontrolbuttondiv").style.width="300px";
+            //     document.getElementById("hdhbpicwithcontrolbuttondiv").style.height="326px";
+            //     document.getElementById("hdhbht1").style.height="326px";
+            //     document.getElementById("hdhbht2").style.height="326px";
+            // }
+
+
 
         }
         function vt1_change_style_1(){
@@ -783,7 +837,7 @@
                 <a href="#" style="line-height: 20px;font-size: 14px;text-decoration: none;color: black">聊大师生“庆中秋•共团圆”</a>
             </div>
         </div>
-        <div class="ldyw_lists" id="ldyw_lists">
+        <div class="ldyw_lists" id="ldyw_lists" style="background-color: white;">
             <div class="ldyw_list" id="ldyw_list_1">
                 <div class="ldyw_lists_top_gray_lines"></div>
                 <ol>
@@ -815,7 +869,7 @@
                     </li>
                 </ol>
             </div>
-            <div class="ldyw_list" id="ldyw_list_2">
+            <div class="ldyw_list" id="ldyw_list_2" style="background-color: white;">
                 <div class="ldyw_lists_top_gray_lines"></div>
                 <ol>
                     <li class="ldyw_list_single_li">
@@ -846,7 +900,7 @@
                     </li>
                 </ol>
             </div>
-            <div class="ldyw_list" id="ldyw_list_3">
+            <div class="ldyw_list" id="ldyw_list_3" style="background-color: white;">
                 <div class="ldyw_lists_top_gray_lines"></div>
                 <ol>
                     <li class="ldyw_list_single_li">
@@ -1165,23 +1219,23 @@
 
             </div>
             <div id="hdhb" style="float: left;height: 600px;width: 540px">
-                <div style="height: 40px;">
-                    <img src="./资源/活动海报.png" alt="" style="height: 35px;margin-top: 3px;display: inline-block;float: left">
+                <div style="height: 65px;">
+                    <img id="hdhbarttext" src="./资源/活动海报.png" alt="" style="height: 35px;margin-top: 3px;display: inline-block;float: left">
                     <a href="#" style="display: inline-block;float: right;font-size: 14px">更多 >></a>
                 </div>
                 <div id="hdhbpicwithcontrolbuttondiv" style="height: 560px;background-color: #b4b4b4;width: 540px;margin: 0 auto">
-                    <div style="width: 30px;height: 560px;background-image: url(./资源/向左的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer">
+                    <div id="hdhbjt1" style="width: 30px;height: 560px;background-image: url(./资源/向左的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer">
                     </div>
-                    <div id="hdhbpicdiv" style="width: 470px;background-color: white;height: 560px;display: inline-block;cursor: pointer">
+                    <div id="hdhbpicdiv" style="width: 470px;background-color: white;display: inline-block;cursor: pointer;float: none">
                         <img id="hdhbct" src="./资源/活动海报插图1.png" alt="" style="width: 100%;height: 560px;float: left">
                     </div>
-                    <div style="width: 30px;height: 560px;background-image: url(./资源/向右的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer">
+                    <div id="hdhbjt2" style="width: 30px;height: 560px;background-image: url(./资源/向右的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer">
                     </div>
 
                 </div>
             </div>
         </div>
-        <div id="footas2" style="height: 170px;background-color: rgba(173,255,47,0);padding-top: 40px;padding-left: 60px;padding-right: 60px;position: absolute;width: 100%;background-color: #ffffff;">
+        <div id="footas2" style="height: 170px;background-color: rgba(173,255,47,0);padding-top: 40px;padding-left: 10px;padding-right: 10px;position: absolute;width: 100%;background-color: #ffffff;">
             <div id="foota2" style="height: 110px;background-color: rgba(255,255,0,0);overflow: hidden;float: left">
                 <div id="foota_2_1" style="height: 110px;display: inline-block;float: left;margin-right: 8px">
                     <div style="height: 55px">
@@ -1236,30 +1290,30 @@
                 <img src="./资源/链接1.png" alt="" style="display: inline-block"><img src="./资源/链接2.png" alt="" style="display: inline-block"><img src="./资源/链接3.jpg" alt="" style="display: inline-block"><img src="./资源/链接4.png" alt="" style="display: inline-block"><img src="./资源/链接5.jpg" alt="" style="display: inline-block"><img src="./资源/链接6.png" alt="" style="display: inline-block"><img src="./资源/链接7.png" alt="" style="display: inline-block"><img src="./资源/链接8.png" alt="" style="display: inline-block"><img src="./资源/链接9.jpg" alt="" style="display: inline-block">
             </div>
         </div>
-        <div style="height: 90px;background-color: #f0f5f7;padding-left: 15px;font-size: 14px">
-            <div style="height: 90px;width: 90px;background-color: #279394;display: inline-block;float: left;font-size: 16px">
-                <p style="line-height: 1.1em;color: white;padding-top: 27px;padding-left: 29px">常用</p>
+        <div id="cylj" style="height: 90px;background-color: #f0f5f7;padding-left: 15px;font-size: 14px">
+            <div id="cyljp" style="height: 90px;width: 90px;background-color: #279394;display: inline-block;float: left;font-size: 16px">
+                <p id="cy" style="line-height: 1.1em;color: white;padding-top: 27px;padding-left: 29px">常用</p>
                 <p style="line-height: 1.1em;color: white;padding-left: 29px">链接</p>
             </div>
-            <div style="width: 115px;height: 45px;display: inline-block">
+            <div style="width: 100px;height: 45px;display: inline-block">
                 <a href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">教育部</a>
             </div>
-            <div style="width: 115px;height: 45px;display: inline-block">
+            <div style="width: 100px;height: 45px;display: inline-block">
                 <a href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">山东省教育厅</a>
             </div>
-            <div style="width: 115px;height: 45px;display: inline-block">
+            <div style="width: 100px;height: 45px;display: inline-block">
                 <a href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">中国大学生在线</a>
             </div>
-            <div style="width: 115px;height: 45px;display: inline-block">
+            <div style="width: 100px;height: 45px;display: inline-block">
                 <a href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">校报</a>
             </div>
-            <div style="width: 115px;height: 45px;display: inline-block">
+            <div style="width: 100px;height: 45px;display: inline-block">
                 <a href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">聊大新闻网</a>
             </div>
         </div>
         <div id="foot2" style="height: 255px;background-image: url(./资源/页脚背景.png);overflow: hidden;position: absolute;width: 100%;visibility: hidden">
             <div style="height: 3px;background-color: rgb(161,150,74);"></div>
-            <div id="foot2_l" style="height: 255px;float: left;padding-left: 20px;padding-top: 60px">
+            <div id="foot2_l" style="height: 255px;float: left;padding-left: 20px;padding-top: 40px">
                 <p style="color: white;font-size: 14px;margin-bottom: 15px">招生热线: (0635) 8239405（本科）&#12288;&#12288;&#12288;&#12288;(0635) 8239267（研究生）</p>
                 <p style="color: white;font-size: 14px;margin-bottom: 15px">电话: (0635) 8239115 8239155校长信箱：xzxx@lcu.edu.cn</p>
                 <p style="color: white;font-size: 14px;margin-bottom: 15px">网站信箱：webmaster@lcu.edu.cn</p>
@@ -1278,7 +1332,7 @@
         </div>
         <div id="foot3" style="height: 255px;background-image: url(./资源/页脚背景.png);overflow: hidden;position: absolute;width: 100%;visibility: hidden">
             <div style="height: 3px;background-color: rgb(161,150,74);"></div>
-            <div id="foot3_l" style="height: 255px;float: left;padding-left: 20px;padding-top: 60px">
+            <div id="foot3_l" style="height: 255px;float: left;padding-left: 20px;padding-top: 40px">
                 <p style="color: white;font-size: 14px;margin-bottom: 15px">招生热线: (0635) 8239405（本科）&#12288;&#12288;&#12288;&#12288;(0635) 8239267（研究生）</p>
                 <p style="color: white;font-size: 14px;margin-bottom: 15px">电话: (0635) 8239115 8239155校长信箱：xzxx@lcu.edu.cn</p>
                 <p style="color: white;font-size: 14px;margin-bottom: 15px">网站信箱：webmaster@lcu.edu.cn</p>
