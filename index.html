@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>日历</title>
+    <title>主页</title>
     <style>
         /* 清除默认样式的代码 */
         /* 去除常见标签默认的 margin 和 padding */
@@ -220,7 +220,7 @@
                 document.getElementById("mainarea").style.textAlign="left";
             }
             if(width_of_website<=1824){
-                // document.getElementById("mainarea").style.paddingLeft=(width_of_website-345*4-30)/2 + "px";
+                document.getElementById("mainarea").style.paddingLeft=(width_of_website-345*4-70)/2 + "px";
                 document.getElementById("mainarea").style.marginLeft="0px";
             }else{
                 document.getElementById("mainarea").style.paddingLeft="15px";
@@ -231,61 +231,107 @@
                 }
             }
         }
-
     </script>
 </head>
 <body onresize="auto_adapt_size()" onload="auto_adapt_size()" style="background-color: rgb(255,255,255);margin: 0 0 0 0;padding: 0 0 0 0;">
     <div class="title" id="title">
         <div class="maintitle" id="maintitle">
-            <p class="titleh">日历</p>
+            <p class="titleh">lcuzty</p>
         </div>
     </div>
     <div class="main" id="main" style="width: 100%">
         <div class="mainarea" id="mainarea">
             <div style="height: 75px;width: 100%"></div>
-            <div style="font-size: 21px;line-height: 75px">主页</div>
+            <div style="font-size: 21px;line-height: 75px">个人</div>
             <div class="cards">
-                <div class="card" style="background-image: url(https://img2.baidu.com/it/u=757735590,3938109259&fm=253&fmt=auto&app=138&f=PNG?w=900&h=450);background-size: cover;background-position: center;background-repeat: no-repeat">
-                    <a href="https://lcuzty.github.io/lcuzty/" target="_self" class="card_top">
-                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">lcuzty</div>
-                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">点击返回主页</div>
-                    </a>
-                </div>
-            </div>
-            <div style="font-size: 21px;line-height: 75px;margin-top: 30px">2023兔年日历</div>
-            <div class="cards">
-                <div class="card" style="background-image: url(./RE/2023.png);background-size: cover;background-position: center;background-repeat: no-repeat">
-                    <a href="https://lcuzty.github.io/lcuzty/日历/storage/2023兔年日历.png" target="_self" class="card_top">
-                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">下载png文件</div>
-                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">发布：2022/12/31 上传：2022/12/31</div>
+                <div class="card" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fww4.sinaimg.cn%2Flarge%2F6830a53bly1g7gn0flwjcj20g809qgma.jpg&refer=http%3A%2F%2Fwww.sina.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1675066416&t=266378623a279d0da9c3fa16813fef5e);background-size: cover;background-position: center;background-repeat: no-repeat">
+                    <a href="https://lcuzty.github.io/lcuzty/weipe/" target="_self" class="card_top">
+                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">前端作业一</div>
+                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">2022/12/28</div>
                     </a>
                 </div>
             </div>
             <div class="cards">
-                <div class="card" style="background-image: url(./RE/2023.png);background-size: cover;background-position: center;background-repeat: no-repeat">
-                    <a href="https://lcuzty.github.io/lcuzty/日历/storage/2023兔年日历.jpg" target="_self" class="card_top">
-                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">下载jpg文件</div>
-                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">发布：2022/12/31 上传：2022/12/31</div>
+                <div class="card" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fww4.sinaimg.cn%2Flarge%2F6830a53bly1g7gn0flwjcj20g809qgma.jpg&refer=http%3A%2F%2Fwww.sina.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1675066416&t=266378623a279d0da9c3fa16813fef5e);background-size: cover;background-position: center;background-repeat: no-repeat">
+                    <a href="https://lcuzty.github.io/lcuzty/lcuhomepage" target="_self" class="card_top">
+                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">聊城大学官网首页（模仿）</div>
+                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">2022/12/29</div>
                     </a>
                 </div>
             </div>
             <div class="cards">
-                <div class="card" style="background-image: url(./RE/2023.png);background-size: cover;background-position: center;background-repeat: no-repeat">
-                    <a href="https://lcuzty.github.io/lcuzty/日历/storage/2023兔年日历.pptx" target="_self" class="card_top">
-                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">下载pptx文件</div>
-                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">发布：2022/12/31 上传：2022/12/31</div>
+                <div class="card" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fww4.sinaimg.cn%2Flarge%2F6830a53bly1g7gn0flwjcj20g809qgma.jpg&refer=http%3A%2F%2Fwww.sina.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1675066416&t=266378623a279d0da9c3fa16813fef5e);background-size: cover;background-position: center;background-repeat: no-repeat">
+                    <a href="https://lcuzty.github.io/lcuzty/格创计算机协会" target="_self" class="card_top">
+                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">格创计算机协会</div>
+                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">2022/12/29</div>
                     </a>
                 </div>
             </div>
             <div class="cards">
-                <div class="card" style="background-image: url(./RE/2023.png);background-size: cover;background-position: center;background-repeat: no-repeat">
-                    <a href="#" target="_self" class="card_top">
-                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">在线2023日历</div>
-                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">即将上线</div>
+                <div class="card" style="background-image: url(https://img0.baidu.com/it/u=681967007,1180314425&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500);background-size: cover;background-position: center;background-repeat: no-repeat">
+                    <a href="https://lcuzty.github.io/lcuzty/日历" target="_self" class="card_top">
+                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">日历</div>
+                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">2022/12/31</div>
                     </a>
                 </div>
             </div>
-
+            <div style="font-size: 21px;line-height: 75px;margin-top: 30px">推荐</div>
+            <div class="cards">
+                <div class="card" style="background-image: url(https://www.lcu.edu.cn/images/content/2015-03/20150322105707120943.jpg);background-size: cover;background-position: center;background-repeat: no-repeat">
+                    <a href="https://www.lcu.edu.cn/" target="_self" class="card_top">
+                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">聊城大学</div>
+                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">聊城大学官网</div>
+                    </a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card" style="background-image: url(https://www.lcu.edu.cn/images/content/2015-06/20150629161915191756.jpg);background-size: cover;background-position: center;background-repeat: no-repeat">
+                    <a href="https://cs.lcu.edu.cn/" target="_self" class="card_top">
+                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">聊城大学计算机学院</div>
+                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">聊城大学计算机学院官网</div>
+                    </a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card" style="background-image: url(https://img0.baidu.com/it/u=3803744022,761825036&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=477);background-size: cover;background-position: center;background-repeat: no-repeat">
+                    <a href="https://convertio.co/zh/" target="_self" class="card_top">
+                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">文件转换器</div>
+                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">将您的文件转换成任意格式</div>
+                    </a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card" style="background-image: url(https://img0.baidu.com/it/u=3803744022,761825036&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=477);background-size: cover;background-position: center;background-repeat: no-repeat">
+                    <a href="https://next.itellyou.cn/Identity/Account/Login?ReturnUrl=%2FOriginal%2FIndex" target="_self" class="card_top">
+                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">NEXT, ITELLYOU</div>
+                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">原版软件</div>
+                    </a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg-blog.csdnimg.cn%2Fimg_convert%2Fbbeecc6629bcdbc7242c352ce00957fe.png&refer=http%3A%2F%2Fimg-blog.csdnimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1675085203&t=53cedac42b33790c7b8328fdc9af843b);background-size: cover;background-position: center;background-repeat: no-repeat">
+                    <a href="https://cn.vuejs.org/guide/introduction.html" target="_self" class="card_top">
+                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">Vue.js</div>
+                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">简介</div>
+                    </a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F3659adbef323e9268d1d86b4a96f65a1592f475218332-ngLN9g_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1675086377&t=94302b2b80cb151fc0fca70da2005cb4);background-size: cover;background-position: center;background-repeat: no-repeat">
+                    <a href="https://www.w3school.com.cn/" target="_self" class="card_top">
+                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">w3school</div>
+                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">领先的 Web 技术教程 - 全部免费</div>
+                    </a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card" style="background-image: url(https://img0.baidu.com/it/u=3803744022,761825036&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=477);background-size: cover;background-position: center;background-repeat: no-repeat">
+                    <a href="https://www.programmercarl.com/" target="_self" class="card_top">
+                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">代码随想录</div>
+                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">认准代码随想录 学习算法不迷路</div>
+                    </a>
+                </div>
+            </div>
 
         </div>
     </div>
