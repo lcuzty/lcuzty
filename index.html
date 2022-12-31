@@ -97,9 +97,9 @@
         .title{
             height: 75px;
             width: 100%;
-            position: absolute;
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
             background-color: #070606;
+            position: absolute;
 
         }
 
@@ -126,6 +126,7 @@
         .cards{
             margin: 0 auto;
             display: inline-block;
+            text-align: left;
         }
 
         .card{
@@ -209,9 +210,16 @@
             if(width_of_website<=1920){
                 document.getElementById("maintitle").style.width="100%";
                 document.getElementById("main").style.width="100%";
+                //
             }else{
                 document.getElementById("maintitle").style.width="1920px";
                 document.getElementById("main").style.width="1920px";
+                //
+            }
+            if(width_of_website<=1460){
+                document.getElementById("mainarea").style.textAlign="center";
+            }else{
+                document.getElementById("mainarea").style.textAlign="left";
             }
         }
     </script>
