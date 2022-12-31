@@ -216,10 +216,21 @@
                 document.getElementById("main").style.width="1920px";
                 //
             }
-            if(width_of_website<=1460){
+            if(width_of_website<=1490){
                 document.getElementById("mainarea").style.textAlign="center";
             }else{
                 document.getElementById("mainarea").style.textAlign="left";
+            }
+            if(width_of_website<=1824){
+                document.getElementById("mainarea").style.paddingLeft=(width_of_website-345*4-30)/2 + "px";
+                document.getElementById("mainarea").style.marginLeft="0px";
+            }else{
+                document.getElementById("mainarea").style.paddingLeft="15px";
+                if(width_of_website<=1920){
+                    document.getElementById("mainarea").style.marginLeft=(width_of_website-345*5-98)/2 + "px";
+                }else{
+                    document.getElementById("mainarea").style.marginLeft=(1920-345*5-98)/2 + "px";
+                }
             }
         }
     </script>
