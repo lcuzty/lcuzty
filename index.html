@@ -231,6 +231,9 @@
                     document.getElementById("mainarea").style.marginLeft=(1920-345*5-98)/2 + "px";
                 }
             }
+
+            document.getElementById("waitshow").style.visibility="hidden";
+            document.getElementById("main").style.visibility="visible";
         }
     </script>
 </head>
@@ -240,7 +243,8 @@
             <p class="titleh">lcuzty</p>
         </div>
     </div>
-    <div class="main" id="main" style="width: 100%">
+    <div id="waitshow" style="width: 100%;text-align: center;position: absolute;top: 150px"></div>
+    <div class="main" id="main" style="width: 100%;visibility: hidden">
         <div class="mainarea" id="mainarea">
             <div style="height: 75px;width: 100%"></div>
             <div style="font-size: 21px;line-height: 75px">个人</div>
