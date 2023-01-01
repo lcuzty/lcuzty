@@ -98,11 +98,11 @@
             height: 75px;
             width: 100%;
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-            background-color: #070606;
-            position: absolute;
-
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(40px);
+            position: fixed;
+            z-index: 1000;
         }
-
         .maintitle{
             height: 75px;
             margin: 0 auto;
@@ -283,7 +283,7 @@
             </div>
             <div class="cards">
                 <div class="card" style="background-image: url(./RE/2023.png);background-size: cover;background-position: center;background-repeat: no-repeat">
-                    <a href="#" target="_self" class="card_top">
+                    <a href="#" target="_self" class="card_top" onclick="alert('即将上线，敬请期待！');">
                         <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">在线2023日历</div>
                         <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">即将上线</div>
                     </a>
