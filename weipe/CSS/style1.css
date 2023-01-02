@@ -192,6 +192,7 @@ div>input{
     padding-top: 1.5px;
     padding-left: 1.5px;
     background-image: url(../RE/dot_unselected.png);
+    cursor: pointer;
 }
 
 #sddts_b_1{
