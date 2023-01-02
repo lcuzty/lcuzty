@@ -76,6 +76,7 @@
                     document.getElementById("pic_1").style.marginTop=(innerHeight+11)*-6+ "px";
                     break;
             }
+            document.getElementById("pic_1").style.transition="all 0ms";
         }
         function open_link_1(){
             window.open("https://weibo.com/wepe");
@@ -100,7 +101,7 @@
             document.getElementById("pic_1").style.marginTop=cmt+"px";
         }
         function banner_move(dst_id){
-            move(current_page_location-dst_id);
+            // move(current_page_location-dst_id);
             current_page_location=dst_id;
             switch (dst_id){
                 case 1:
@@ -133,6 +134,8 @@
             document.getElementById("sddts_b_6").style.backgroundImage="url(./RE/dot_unselected.png)";
             document.getElementById("sddts_b_7").style.backgroundImage="url(./RE/dot_unselected.png)";
             document.getElementById("sddts_b_" + dst_id).style.backgroundImage="url(./RE/dot_selected.png)";
+
+            document.getElementById("pic_1").style.transition="all 700ms";
         }
         function test(){
             alert(1);
