@@ -165,11 +165,12 @@ div>input{
 }
 
 .pics{
-    transition: all 700ms;
+
 }
 
 #pic_1{
     margin-top: 0px;
+    transition: all 0ms;
 }
 
 .sddts{
@@ -197,4 +198,7 @@ div>input{
 
 #sddts_b_1{
     background-image: url(../RE/dot_selected.png);
+}
+
+#gap{
 }
