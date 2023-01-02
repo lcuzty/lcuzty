@@ -96,17 +96,29 @@
                 //网页主体尺寸随宽度变化
                 document.getElementById("main").style.width = "auto";
                 document.getElementById("banner").style.height = document.body.clientWidth / 3.4 + "px";
+                document.getElementById("banner_tran").style.height = document.body.clientWidth / 3.4 + "px";
 
                 height_banner = document.getElementById("banner").style.height;
                 height_banner = height_banner.replace("px", "");
                 height_visitor_type = document.getElementById("visitor_type").style.height;
                 height_visitor_type = height_visitor_type.replace("px", "");
                 document.getElementById("banner").style.paddingTop = height_banner - 65 + "px";
+
+                document.getElementById("banner_control_1").style.top =150+(parseInt(document.getElementById("banner").style.height.replace("px",""))-50)/2 + "px";
+                document.getElementById("banner_control_2").style.top =150+(parseInt(document.getElementById("banner").style.height.replace("px",""))-50)/2 + "px";
+                document.getElementById("banner_control_1").style.left ="10px";
+                document.getElementById("banner_control_2").style.right ="10px";
+
                 width_website = document.body.clientWidth;
             } else {
                 //网页主体尺寸静止不动
                 document.getElementById("main").style.width = "1920px";
                 width_website = 1920;
+
+                document.getElementById("banner_control_1").style.top =150+(parseInt(document.getElementById("banner").style.height.replace("px",""))-50)/2 + "px";
+                document.getElementById("banner_control_2").style.top =150+(parseInt(document.getElementById("banner").style.height.replace("px",""))-50)/2 + "px";
+                document.getElementById("banner_control_1").style.left =(innerWidth-1920)/2+10+"px";
+                document.getElementById("banner_control_2").style.right =(innerWidth-1920)/2+10+"px";
             }
 
             document.getElementById("visitor_type").style.paddingLeft=width_website/6 - 2 + "px";
@@ -506,15 +518,7 @@
             }
 
 
-            // if(540+gap*2>=width_website){
-            //     document.getElementById("hdhb").style.width=width_website-gap*2 + "px";
-            //     document.getElementById("hdhbpicdiv").style.width=width_website-gap*2-60 + "px";
-            //     document.getElementById("hdhbpicwithcontrolbuttondiv").style.width=width_website-gap*2 + "px";
-            // }else{
-            //
-            //     document.getElementById("hdhbpicdiv").style.width="470px";
-            //     document.getElementById("hdhbpicwithcontrolbuttondiv").style.width="540px";
-            // }
+
 
 
             document.getElementById("ftpg1").style.width="100px";
@@ -538,16 +542,7 @@
                 }
             }
 
-            // document.getElementById("hdhbpicwithcontrolbuttondiv").style.width="600px";
-            // document.getElementById("hdhbpicwithcontrolbuttondiv").style.height="600px";
-            // document.getElementById("hdhbht1").style.height="560px";
-            // document.getElementById("hdhbht2").style.height="560px";
-            // if(width_website<=600){
-            //     document.getElementById("hdhbpicwithcontrolbuttondiv").style.width="300px";
-            //     document.getElementById("hdhbpicwithcontrolbuttondiv").style.height="326px";
-            //     document.getElementById("hdhbht1").style.height="326px";
-            //     document.getElementById("hdhbht2").style.height="326px";
-            // }
+
 
 
 
@@ -608,6 +603,7 @@
             document.getElementById("sm7").style.height="0px";
             document.getElementById("sm8").style.height="0px";
         }
+
         function open_super_menu(menu_id){
             if(is_sm_open==0){
                 hide_all_sm();
@@ -615,6 +611,38 @@
                 is_sm_open=1;
             }else{
                 hide_all_sm();
+            }
+        }
+
+        setInterval(auto_change_banner,5000);
+        var current_banner_id=1;
+        function auto_change_banner(){
+            banner_anm(current_banner_id);
+            current_banner_id++;
+            if(current_banner_id>=5){
+                current_banner_id=1;
+            }
+            document.getElementById("banner").style.backgroundImage="url(./资源/banner" + current_banner_id + ".jpg)";
+        }
+        function auto_change_banner_up(){
+            banner_anm(current_banner_id);
+            current_banner_id--;
+            if(current_banner_id<=0){
+                current_banner_id=4;
+            }
+            document.getElementById("banner").style.backgroundImage="url(./资源/banner" + current_banner_id + ".jpg)";
+        }
+        var current_op=100;
+        function banner_anm(banner_id){
+            document.getElementById("banner_tran").style.backgroundImage="url(./资源/banner" + banner_id + ".jpg)";
+            document.getElementById("banner_tran").style.opacity="100%";
+            current_op=100;
+        }
+        setInterval(make_op_from_1_to_0,20);
+        function make_op_from_1_to_0(){
+            if(current_op){
+                current_op-=5;
+                document.getElementById("banner_tran").style.opacity=current_op + "%";
             }
         }
     </script>
@@ -813,6 +841,13 @@
                 <span onmouseenter="vt4_change_style_1()" onmouseleave="vt4_change_style_2()"  class="vts" id="vt4" style="display: inline-block;width: 100px;height: 65px"><a
                         href="#" class="vt_inside_a" id="vt_inside_a_4">学生</a></span>
             </div>
+            <div class="banner_tran" id="banner_tran">
+                <div style="width: 200px;height: 30px">
+
+                </div>
+            </div>
+            <a class="banner_control" id="banner_control_1" onclick="auto_change_banner_up()"></a>
+            <a class="banner_control" id="banner_control_2" onclick="auto_change_banner()"></a>
         </div>
         <div class="ldyw" id="ldyw">
             <div class="ldywtitle" id="ldywtitle" style="height: 95px;padding-top: 30px;padding-left: 30px">
