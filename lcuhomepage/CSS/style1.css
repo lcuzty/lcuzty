@@ -147,9 +147,47 @@ input {
     height: 500px;
     background-size:cover;
     background-repeat: no-repeat;
-    background-image: url(../资源/横幅2.jpg);
-    background-color:aqua;
+    background-image: url(../资源/banner1.jpg);
+    background-color:white;
     vertical-align: center;
+    z-index: 998;
+}
+.banner_tran{
+    height: 500px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 255, 255, 0);
+    vertical-align: center;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    top: 150px;
+    opacity: 0.5;
+}
+.banner_control{
+    width: 30px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0px;
+    cursor: pointer;
+    z-index: 1001;
+}
+#banner_control_1{
+    left: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../资源/banner_control_1.png");
+    cursor: pointer;
+}
+#banner_control_2{
+    right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../资源/banner_control_2.png");
+    cursor: pointer;
 }
 .menu_item{
     text-decoration: none;
@@ -166,6 +204,11 @@ input {
 .menu_item_box:hover{
     background-color: rgba(255, 255, 255, 0.9);
     font-weight: bold;
+}
+.menus{
+    position: absolute;
+    right: 0px;
+    z-index: 1000;
 }
 #menu1{
     margin-right: 787px;
@@ -207,6 +250,8 @@ input {
 }
 #visitor_type{
     height: 65px;
+    position: absolute;
+    z-index: 1000;
 }
 .vt_inside_a{
     display: inline-block;
