@@ -89,9 +89,14 @@
             document.getElementById('menu8_button').style.backgroundColor="white";
             document.getElementById('menu8_button').style.color="#34667b";
         }
+        var width_website;
+        var hdhb_inside_pic_width=0;
         function auto_adapt_banner_size(){
-            let width_website;
             let gap2_top;
+
+
+
+
             if (document.body.clientWidth <= 1920) {
                 //网页主体尺寸随宽度变化
                 document.getElementById("main").style.width = "auto";
@@ -120,6 +125,8 @@
                 document.getElementById("banner_control_1").style.left =(innerWidth-1920)/2+10+"px";
                 document.getElementById("banner_control_2").style.right =(innerWidth-1920)/2+10+"px";
             }
+
+            document.getElementById("banner_tran").style.width=width_website + "px";
 
             document.getElementById("visitor_type").style.paddingLeft=width_website/6 - 2 + "px";
             document.getElementById("vt1").style.width=width_website/6 + "px";
@@ -151,8 +158,15 @@
             document.getElementById("ldyw_text_3").style.visibility="visible";
             document.getElementById("ldyw_text_4").style.visibility="visible";
 
+            document.getElementById("ldyw_text_1").style.position="unset";
+            document.getElementById("ldyw_text_2").style.position="unset";
+            document.getElementById("ldyw_text_3").style.position="unset";
+            document.getElementById("ldyw_text_4").style.position="unset";
+
             if(width_website<=885){
                 if(width_website<=485){
+                    document.getElementById("ldyw_text_3").style.position="absolute";
+                    document.getElementById("ldyw_text_4").style.position="absolute";
                     document.getElementById("ldyw_pic_1").style.width=(width_website-3*gap)/2 + "px";
                     document.getElementById("ldyw_pic_2").style.width=(width_website-3*gap)/2 + "px";
                     document.getElementById("ldyw_pic_3").style.visibility="hidden";
@@ -167,6 +181,9 @@
                     document.getElementById("ldyw_text_4").style.width="0px";
                     gap2_top=(width_website-3*gap)/2/1.78+70;
                     if(width_website<=375){
+                        document.getElementById("ldyw_text_2").style.position="absolute";
+                        document.getElementById("ldyw_text_3").style.position="absolute";
+                        document.getElementById("ldyw_text_4").style.position="absolute";
                         document.getElementById("ldyw_pic_2").style.visibility="hidden";
                         document.getElementById("ldyw_pic_3").style.visibility="hidden";
                         document.getElementById("ldyw_pic_4").style.visibility="hidden";
@@ -184,6 +201,7 @@
                         document.getElementById("ldyw_text_1").style.width=(width_website-2*gap) + "px";
                     }
                 }else{
+                    document.getElementById("ldyw_text_4").style.position="absolute";
                     document.getElementById("ldyw_pic_1").style.width=(width_website-4*gap)/3 + "px";
                     document.getElementById("ldyw_pic_2").style.width=(width_website-4*gap)/3 + "px";
                     document.getElementById("ldyw_pic_3").style.width=(width_website-4*gap)/3 + "px";
@@ -207,6 +225,95 @@
                 document.getElementById("ldyw_text_4").style.width=(width_website-5*gap)/4 + "px";
                 gap2_top=(width_website-3*gap)/4/1.78+70;
             }
+
+            // ldyw_tran start
+            document.getElementById("ldywtitle_tran").style.paddingLeft=gap + "px";
+            document.getElementById("ldyw_pic_1_tran").style.marginLeft=gap + "px";
+            document.getElementById("ldyw_pic_2_tran").style.marginLeft=gap + "px";
+            document.getElementById("ldyw_pic_3_tran").style.marginLeft=gap + "px";
+            document.getElementById("ldyw_pic_4_tran").style.marginLeft=gap + "px";
+            document.getElementById("ldyw_text_1_tran").style.marginLeft=gap + "px";
+            document.getElementById("ldyw_text_2_tran").style.marginLeft=gap + "px";
+            document.getElementById("ldyw_text_3_tran").style.marginLeft=gap + "px";
+            document.getElementById("ldyw_text_4_tran").style.marginLeft=gap + "px";
+
+            document.getElementById("ldyw_pic_1_tran").style.visibility="visible";
+            document.getElementById("ldyw_pic_2_tran").style.visibility="visible";
+            document.getElementById("ldyw_pic_3_tran").style.visibility="visible";
+            document.getElementById("ldyw_pic_4_tran").style.visibility="visible";
+            document.getElementById("ldyw_text_1_tran").style.visibility="visible";
+            document.getElementById("ldyw_text_2_tran").style.visibility="visible";
+            document.getElementById("ldyw_text_3_tran").style.visibility="visible";
+            document.getElementById("ldyw_text_4_tran").style.visibility="visible";
+
+            document.getElementById("ldyw_text_1_tran").style.position="unset";
+            document.getElementById("ldyw_text_2_tran").style.position="unset";
+            document.getElementById("ldyw_text_3_tran").style.position="unset";
+            document.getElementById("ldyw_text_4_tran").style.position="unset";
+
+            if(width_website<=885){
+                if(width_website<=485){
+                    document.getElementById("ldyw_text_3_tran").style.position="absolute";
+                    document.getElementById("ldyw_text_4_tran").style.position="absolute";
+                    document.getElementById("ldyw_pic_1_tran").style.width=(width_website-3*gap)/2 + "px";
+                    document.getElementById("ldyw_pic_2_tran").style.width=(width_website-3*gap)/2 + "px";
+                    document.getElementById("ldyw_pic_3_tran").style.visibility="hidden";
+                    document.getElementById("ldyw_pic_4_tran").style.visibility="hidden";
+                    document.getElementById("ldyw_pic_3_tran").style.width="0px";
+                    document.getElementById("ldyw_pic_4_tran").style.width="0px";
+                    document.getElementById("ldyw_text_1_tran").style.width=(width_website-3*gap)/2 + "px";
+                    document.getElementById("ldyw_text_2_tran").style.width=(width_website-3*gap)/2 + "px";
+                    document.getElementById("ldyw_text_3_tran").style.visibility="hidden";
+                    document.getElementById("ldyw_text_4_tran").style.visibility="hidden";
+                    document.getElementById("ldyw_text_3_tran").style.width="0px";
+                    document.getElementById("ldyw_text_4_tran").style.width="0px";
+                    gap2_top=(width_website-3*gap)/2/1.78+70;
+                    if(width_website<=375){
+                        document.getElementById("ldyw_text_2_tran").style.position="absolute";
+                        document.getElementById("ldyw_text_3_tran").style.position="absolute";
+                        document.getElementById("ldyw_text_4_tran").style.position="absolute";
+                        document.getElementById("ldyw_pic_2_tran").style.visibility="hidden";
+                        document.getElementById("ldyw_pic_3_tran").style.visibility="hidden";
+                        document.getElementById("ldyw_pic_4_tran").style.visibility="hidden";
+                        document.getElementById("ldyw_text_2_tran").style.visibility="hidden";
+                        document.getElementById("ldyw_text_3_tran").style.visibility="hidden";
+                        document.getElementById("ldyw_text_4_tran").style.visibility="hidden";
+                        document.getElementById("ldyw_pic_2_tran").style.width="0px";
+                        document.getElementById("ldyw_pic_3_tran").style.width="0px";
+                        document.getElementById("ldyw_pic_4_tran").style.width="0px";
+                        document.getElementById("ldyw_text_2_tran").style.width="0px";
+                        document.getElementById("ldyw_text_3_tran").style.width="0px";
+                        document.getElementById("ldyw_text_4_tran").style.width="0px";
+
+                        document.getElementById("ldyw_pic_1_tran").style.width=(width_website-2*gap) + "px";
+                        document.getElementById("ldyw_text_1_tran").style.width=(width_website-2*gap) + "px";
+                    }
+                }else{
+                    document.getElementById("ldyw_text_4_tran").style.position="absolute";
+                    document.getElementById("ldyw_pic_1_tran").style.width=(width_website-4*gap)/3 + "px";
+                    document.getElementById("ldyw_pic_2_tran").style.width=(width_website-4*gap)/3 + "px";
+                    document.getElementById("ldyw_pic_3_tran").style.width=(width_website-4*gap)/3 + "px";
+                    document.getElementById("ldyw_pic_4_tran").style.visibility="hidden";
+                    document.getElementById("ldyw_pic_4_tran").style.width="0px";
+                    document.getElementById("ldyw_text_1_tran").style.width=(width_website-4*gap)/3 + "px";
+                    document.getElementById("ldyw_text_2_tran").style.width=(width_website-4*gap)/3 + "px";
+                    document.getElementById("ldyw_text_3_tran").style.width=(width_website-4*gap)/3 + "px";
+                    document.getElementById("ldyw_text_4_tran").style.visibility="hidden";
+                    document.getElementById("ldyw_text_4_tran").style.width="0px";
+                    gap2_top=(width_website-3*gap)/3/1.78+70;
+                }
+            }else{
+                document.getElementById("ldyw_pic_1_tran").style.width=(width_website-5*gap)/4 + "px";
+                document.getElementById("ldyw_pic_2_tran").style.width=(width_website-5*gap)/4 + "px";
+                document.getElementById("ldyw_pic_3_tran").style.width=(width_website-5*gap)/4 + "px";
+                document.getElementById("ldyw_pic_4_tran").style.width=(width_website-5*gap)/4 + "px";
+                document.getElementById("ldyw_text_1_tran").style.width=(width_website-5*gap)/4 + "px";
+                document.getElementById("ldyw_text_2_tran").style.width=(width_website-5*gap)/4 + "px";
+                document.getElementById("ldyw_text_3_tran").style.width=(width_website-5*gap)/4 + "px";
+                document.getElementById("ldyw_text_4_tran").style.width=(width_website-5*gap)/4 + "px";
+                gap2_top=(width_website-3*gap)/4/1.78+70;
+            }
+            // ldyw_tran end
 
             document.getElementById("title_and_nav").style.visibility="visible";
             document.getElementById("title_and_nav_2").style.visibility="hidden";
@@ -437,7 +544,6 @@
 
 
 
-
             document.getElementById("zywj").style.width=(width_website-130-540-30)/2 + "px";
             document.getElementById("tszs").style.width=(width_website-130-540-30)/2 + "px";
             document.getElementById("hdhb").style.width="540px";
@@ -518,7 +624,56 @@
             }
 
 
+// mtld_tran start
+            document.getElementById("mtld_main_tran").style.marginLeft=gap+"px";
+            document.getElementById("mtld_main_tran").style.width=width_website- gap+"px";
 
+            document.getElementById("mtld_news_1_tran").style.visibility="visible";
+            document.getElementById("mtld_news_2_tran").style.visibility="visible";
+            document.getElementById("mtld_news_3_tran").style.visibility="visible";
+            document.getElementById("mtld_news_4_tran").style.visibility="visible";
+            if(width_website<=1180){
+                //中等，显示三个
+                document.getElementById("mtld_news_4_tran").style.visibility="hidden";
+
+                document.getElementById("mtld_news_1_tran").style.width=(width_website-gap*2-35)/3 + "px";
+                document.getElementById("mtld_news_2_tran").style.width=(width_website-gap*2-35)/3 + "px";
+                document.getElementById("mtld_news_3_tran").style.width=(width_website-gap*2-35)/3 + "px";
+                document.getElementById("mtld_news_1_pic_tran").style.width=(width_website-gap*2-35)/3*0.6 + "px";
+                document.getElementById("mtld_news_2_pic_tran").style.width=(width_website-gap*2-35)/3*0.6 + "px";
+                document.getElementById("mtld_news_3_pic_tran").style.width=(width_website-gap*2-35)/3*0.6 + "px";
+                document.getElementById("mtld_news_1_title_tran").style.width=(width_website-gap*2-35)/3*0.4 + "px";
+                document.getElementById("mtld_news_2_title_tran").style.width=(width_website-gap*2-35)/3*0.4 + "px";
+                document.getElementById("mtld_news_3_title_tran").style.width=(width_website-gap*2-35)/3*0.4 + "px";
+                if(width_website<=880){
+                    //最小，显示两个
+                    document.getElementById("mtld_news_3_tran").style.visibility="hidden";
+                    document.getElementById("mtld_news_4_tran").style.visibility="hidden";
+
+                    document.getElementById("mtld_news_1_tran").style.width=(width_website-gap*2-20)/2 + "px";
+                    document.getElementById("mtld_news_2_tran").style.width=(width_website-gap*2-20)/2 + "px";
+                    document.getElementById("mtld_news_1_pic_tran").style.width=(width_website-gap*2-20)/2*0.6 + "px";
+                    document.getElementById("mtld_news_2_pic_tran").style.width=(width_website-gap*2-20)/2*0.6 + "px";
+                    document.getElementById("mtld_news_1_title_tran").style.width=(width_website-gap*2-20)/2*0.4 + "px";
+                    document.getElementById("mtld_news_2_title_tran").style.width=(width_website-gap*2-20)/2*0.4 + "px";
+                }
+            }else{
+                //最大，显示四个
+                document.getElementById("mtld_news_1_tran").style.width=(width_website-gap*2-50)/4 + "px";
+                document.getElementById("mtld_news_2_tran").style.width=(width_website-gap*2-50)/4 + "px";
+                document.getElementById("mtld_news_3_tran").style.width=(width_website-gap*2-50)/4 + "px";
+                document.getElementById("mtld_news_4_tran").style.width=(width_website-gap*2-50)/4 + "px";
+                document.getElementById("mtld_news_1_pic_tran").style.width=(width_website-gap*2-50)/4*0.6 + "px";
+                document.getElementById("mtld_news_2_pic_tran").style.width=(width_website-gap*2-50)/4*0.6 + "px";
+                document.getElementById("mtld_news_3_pic_tran").style.width=(width_website-gap*2-50)/4*0.6 + "px";
+                // 问题发生点
+                document.getElementById("mtld_news_4_pic_tran").style.width=(width_website-gap*2-50)/4*0.6 + "px";
+                document.getElementById("mtld_news_1_title_tran").style.width=(width_website-gap*2-50)/4*0.4 + "px";
+                document.getElementById("mtld_news_2_title_tran").style.width=(width_website-gap*2-50)/4*0.4 + "px";
+                document.getElementById("mtld_news_3_title_tran").style.width=(width_website-gap*2-50)/4*0.4 + "px";
+                document.getElementById("mtld_news_4_title_tran").style.width=(width_website-gap*2-50)/4*0.4 + "px";
+            }
+            //mtld_tran end
 
 
             document.getElementById("ftpg1").style.width="100px";
@@ -542,11 +697,114 @@
                 }
             }
 
-
-
-
+            document.getElementById("hdhbct_tran").style.width="470px";
+            if(width_website<=1190){
+                document.getElementById("hdhbct_tran").style.width="230px";
+            }
+            document.getElementById("hdhbct_tran").style.height=document.getElementById("hdhbct").style.height;
+            document.getElementById("hdhbct_tran_l").style.height=document.getElementById("hdhbct").style.height;
+            document.getElementById("hdhbct_tran_r").style.height=document.getElementById("hdhbct").style.height;
 
         }
+        var current_hdhb_page_id=1;
+        function hdhbct_change_next(){
+            adapt_hdhbct_tran(1);
+            last=current_hdhb_page_id;
+            if(width_website<=1190){
+                hdhb_inside_pic_width=230;
+            }else{
+                hdhb_inside_pic_width=470;
+            }
+
+            current_hdhb_page_id++;
+            if(current_hdhb_page_id==4){
+                current_hdhb_page_id=1;
+            }
+            document.getElementById("hdhbct").style.backgroundImage="url(./资源/活动海报插图" + current_hdhb_page_id + ".png)";
+            get_hdhbct_tran_ready(last,current_hdhb_page_id,0);
+        }
+
+        setInterval(hdhbct_auto_next,5000);
+        function hdhbct_auto_next(){
+            hdhbct_change_next();
+            setTimeout(hdhbct_auto_next_auto_recovery_tran_position,1000);
+        }
+        function hdhbct_auto_next_auto_recovery_tran_position(){
+            adapt_hdhbct_tran(0);
+        }
+        function auto_adapt_hdhbct_dir(){
+            if(width_website<=1190){
+                hdhb_inside_pic_width=230;
+            }else{
+                hdhb_inside_pic_width=470;
+            }
+
+        }
+        var hdhb_inside_pic_width;
+        function hdhbct_change_up(){
+            adapt_hdhbct_tran(0);
+            last=current_hdhb_page_id;
+            if(width_website<=1190){
+                hdhb_inside_pic_width=230;
+            }else{
+                hdhb_inside_pic_width=470;
+            }
+
+            current_hdhb_page_id--;
+            if(current_hdhb_page_id==0){
+                current_hdhb_page_id=3;
+            }
+            document.getElementById("hdhbct").style.backgroundImage="url(./资源/活动海报插图" + current_hdhb_page_id + ".png)";
+            get_hdhbct_tran_ready(current_hdhb_page_id,last,1);
+        }
+
+        function get_hdhbct_tran_ready(lid,rid,dir){
+            hdhbct_tran_is_tran=1;
+            document.getElementById("hdhbct_tran").style.visibility="visible";
+            document.getElementById("hdhbct_tran_l").style.backgroundImage="url(./资源/活动海报插图" + lid + ".png)";
+            document.getElementById("hdhbct_tran_r").style.backgroundImage="url(./资源/活动海报插图" + rid + ".png)";
+            if(dir){
+                document.getElementById("hdhbct_tran_l").style.width="0px";
+                document.getElementById("hdhbct_tran_r").style.width=hdhb_inside_pic_width + "px";
+
+
+                document.getElementById("hdhbct_tran_l").style.transition="width 1s";
+                document.getElementById("hdhbct_tran_r").style.transition="width 1s";
+
+                document.getElementById("hdhbct_tran_r").style.width="0px";
+                document.getElementById("hdhbct_tran_l").style.width=hdhb_inside_pic_width + "px";
+            }else{
+                document.getElementById("hdhbct_tran_r").style.width="0px";
+                document.getElementById("hdhbct_tran_l").style.width=hdhb_inside_pic_width + "px";
+
+                document.getElementById("hdhbct_tran_l").style.transition="width 1s";
+                document.getElementById("hdhbct_tran_r").style.transition="width 1s";
+
+                document.getElementById("hdhbct_tran_l").style.width="0px";
+                document.getElementById("hdhbct_tran_r").style.width=hdhb_inside_pic_width + "px";
+            }
+            setTimeout(close_hdhbct_tran,1000);
+        }
+var hdhbct_tran_is_tran=0;
+        function close_hdhbct_tran(){
+            document.getElementById("hdhbct_tran_l").style.transition="width 0s";
+            document.getElementById("hdhbct_tran_r").style.transition="width 0s";
+            document.getElementById("hdhbct_tran").style.visibility="hidden";
+            hdhbct_tran_is_tran=0;
+        }
+
+        function adapt_hdhbct_tran(dir){
+            if(!hdhbct_tran_is_tran){
+                if(dir){
+                    document.getElementById("hdhbct_tran_l").style.width="0px";
+                    document.getElementById("hdhbct_tran_r").style.width=hdhb_inside_pic_width + "px";
+                }else{
+                    document.getElementById("hdhbct_tran_r").style.width="0px";
+                    document.getElementById("hdhbct_tran_l").style.width=hdhb_inside_pic_width + "px";
+                }
+            }
+        }
+
         function vt1_change_style_1(){
             document.getElementById("vt1").style.paddingTop="0px";
             document.getElementById("vt_inside_a_1").style.lineHeight="65px";
@@ -645,10 +903,567 @@
                 document.getElementById("banner_tran").style.opacity=current_op + "%";
             }
         }
+
+        setInterval(auto_move_fd,50);
+        var cdx=(innerWidth-300)/2;
+        var cdy=(innerHeight-190)/2;
+        var cmdx=1;
+        var cmdy=1;
+        function auto_move_fd() {
+            document.getElementById("fd").style.top=cdy + "px";
+            document.getElementById("fd").style.left=cdx + "px";
+            if(cmdx){
+                cdx++;
+            }else{
+                cdx--;
+            }
+            if(cmdy){
+                cdy++;
+            }else{
+                cdy--;
+            }
+            if(cdx>=innerWidth-300){
+                if(cmdx){
+                    cmdx=0;
+                }else{
+                    cmdx=1;
+                }
+            }
+            if(cdy>=innerHeight-190){
+                if(cmdy){
+                    cmdy=0;
+                }else{
+                    cmdy=1;
+                }
+            }
+            if(cdx<=0){
+                if(cmdx){
+                    cmdx=0;
+                }else{
+                    cmdx=1;
+                }
+            }
+            if(cdy<=0){
+                if(cmdy){
+                    cmdy=0;
+                }else{
+                    cmdy=1;
+                }
+            }
+        }
+
+        setInterval(auto_change_ldyw,5000);
+        var current_ldyw=1;
+
+
+
+        function auto_change_ldyw(dir){
+            document.getElementById("page_id_show_1").style.backgroundColor="#c0cacc";
+            document.getElementById("page_id_show_2").style.backgroundColor="#c0cacc";
+            document.getElementById("page_id_show_3").style.backgroundColor="#c0cacc";
+            document.getElementById("page_id_show_4").style.backgroundColor="#c0cacc";
+            document.getElementById("page_id_show_1").style.width="6px";
+            document.getElementById("page_id_show_2").style.width="6px";
+            document.getElementById("page_id_show_3").style.width="6px";
+            document.getElementById("page_id_show_4").style.width="6px";
+            switch (current_ldyw){
+                case 1:
+                    document.getElementById("page_id_show_1").style.backgroundColor="#306377";
+                    document.getElementById("page_id_show_1").style.width="25px";
+                    break;
+                case 2:
+                    document.getElementById("page_id_show_2").style.backgroundColor="#306377";
+                    document.getElementById("page_id_show_2").style.width="25px";
+                    break;
+                case 3:
+                    document.getElementById("page_id_show_3").style.backgroundColor="#306377";
+                    document.getElementById("page_id_show_3").style.width="25px";
+                    break;
+                case 4:
+                    document.getElementById("page_id_show_4").style.backgroundColor="#306377";
+                    document.getElementById("page_id_show_4").style.width="25px";
+                    break;
+            }
+            switch (current_ldyw) {
+                case 1:
+                    get_ldyw_tran_ready(4);
+                    document.getElementById("ldyw_pic_1").src="./资源/ldywpic11.gif";
+                    document.getElementById("ldyw_pic_2").src="./资源/ldywpic12.gif";
+                    document.getElementById("ldyw_pic_3").src="./资源/ldywpic13.gif";
+                    document.getElementById("ldyw_pic_4").src="./资源/ldywpic14.gif";
+                    document.getElementById("ldyw_text_1_p").innerText="2022-12-06";
+                    document.getElementById("ldyw_text_1_a").innerText="“疫情期末考”， 聊大人交出了“团结卷”";
+                    document.getElementById("ldyw_text_2_p").innerText="2022-12-05";
+                    document.getElementById("ldyw_text_2_a").innerText="1000多名后勤安保人员在岗：克服困难，...";
+                    document.getElementById("ldyw_text_3_p").innerText="2022-12-04";
+                    document.getElementById("ldyw_text_3_a").innerText="1000多名聊大师生志愿者在岗：有需要，...";
+                    document.getElementById("ldyw_text_4_p").innerText="2022-12-01";
+                    document.getElementById("ldyw_text_4_a").innerText="聊城大学与古巴哈瓦那大学签署合作协议";
+                    break;
+                case 2:
+
+                    get_ldyw_tran_ready(1);
+                    document.getElementById("ldyw_pic_1").src="./资源/ldywpic21.jpg";
+                    document.getElementById("ldyw_pic_2").src="./资源/ldywpic22.gif";
+                    document.getElementById("ldyw_pic_3").src="./资源/ldywpic23.gif";
+                    document.getElementById("ldyw_pic_4").src="./资源/ldywpic24.jpg";
+                    document.getElementById("ldyw_text_1_p").innerText="2022-11-23";
+                    document.getElementById("ldyw_text_1_a").innerText="中国-太平洋岛国应对气候变化高级培训班顺...";
+                    document.getElementById("ldyw_text_2_p").innerText="2022-11-18";
+                    document.getElementById("ldyw_text_2_a").innerText="关延平作学习宣传贯彻党的二十大精神“第一...";
+                    document.getElementById("ldyw_text_3_p").innerText="2022-11-08";
+                    document.getElementById("ldyw_text_3_a").innerText="图书馆举行“弘扬生态文明 传播绿色文化”...";
+                    document.getElementById("ldyw_text_4_p").innerText="2022-10-19";
+                    document.getElementById("ldyw_text_4_a").innerText="聊城大学召开2023年国家自然科学基金申...";
+                    break;
+                case 3:
+
+                    get_ldyw_tran_ready(2);
+                    document.getElementById("ldyw_pic_1").src="./资源/ldywpic31.jpg";
+                    document.getElementById("ldyw_pic_2").src="./资源/ldywpic32.jpg";
+                    document.getElementById("ldyw_pic_3").src="./资源/ldywpic33.jpg";
+                    document.getElementById("ldyw_pic_4").src="./资源/ldywpic34.png";
+                    document.getElementById("ldyw_text_1_p").innerText="2022-10-11";
+                    document.getElementById("ldyw_text_1_a").innerText="聊大学子杜雨欣荣立个人三等功奖励";
+                    document.getElementById("ldyw_text_2_p").innerText="2022-09-29";
+                    document.getElementById("ldyw_text_2_a").innerText="太平洋岛国研究中心成立十周年座谈会成功召...\n";
+                    document.getElementById("ldyw_text_3_p").innerText="2022-09-29";
+                    document.getElementById("ldyw_text_3_a").innerText="王昭风调研指导大学生创新创业教育工作";
+                    document.getElementById("ldyw_text_4_p").innerText="2022-09-26";
+                    document.getElementById("ldyw_text_4_a").innerText="“喜迎二十大 家和万事兴”齐鲁好家风主题...";
+                    break;
+                case 4:
+
+                    get_ldyw_tran_ready(3);
+                    document.getElementById("ldyw_pic_1").src="./资源/ldywpic41.png";
+                    document.getElementById("ldyw_pic_2").src="./资源/ldywpic42.bmp";
+                    document.getElementById("ldyw_pic_3").src="./资源/ldywpic43.gif";
+                    document.getElementById("ldyw_pic_4").src="./资源/ldywpic44.gif";
+                    document.getElementById("ldyw_text_1_p").innerText="2022-09-19";
+                    document.getElementById("ldyw_text_1_a").innerText="聊城大学红色文献库举办“光辉的历程：在近...";
+                    document.getElementById("ldyw_text_2_p").innerText="2022-09-15";
+                    document.getElementById("ldyw_text_2_a").innerText="图书馆举办“喜迎二十大”红色主题展览";
+                    document.getElementById("ldyw_text_3_p").innerText="2022-09-10";
+                    document.getElementById("ldyw_text_3_a").innerText="农学与农业工程学院举办“感恩教师节 花香...";
+                    document.getElementById("ldyw_text_4_p").innerText="2022-09-10";
+                    document.getElementById("ldyw_text_4_a").innerText="聊大师生“庆中秋•共团圆”";
+                    break;
+            }
+            if(!dir){
+                current_ldyw++;
+                if(current_ldyw==5){
+                    current_ldyw=1;
+                }
+            }else{
+                get_ldyw_tran_ready(current_ldyw+1==5?1:current_ldyw+1);
+                current_ldyw--;
+                if(current_ldyw==0){
+                    current_ldyw=4;
+                }
+            }
+        }
+        var current_ldyw_tran_op=100;
+        function get_ldyw_tran_ready(page_id){
+            document.getElementById("ldyw_tran").style.visibility="visible";
+            document.getElementById("ldyw_tran").style.opacity="100%";
+            switch (page_id){
+                case 1:
+                    document.getElementById("ldyw_pic_1_tran").src="./资源/ldywpic11.gif";
+                    document.getElementById("ldyw_pic_2_tran").src="./资源/ldywpic12.gif";
+                    document.getElementById("ldyw_pic_3_tran").src="./资源/ldywpic13.gif";
+                    document.getElementById("ldyw_pic_4_tran").src="./资源/ldywpic14.gif";
+                    document.getElementById("ldyw_text_1_tran_p").innerText="2022-12-06";
+                    document.getElementById("ldyw_text_1_tran_a").innerText="“疫情期末考”， 聊大人交出了“团结卷”";
+                    document.getElementById("ldyw_text_2_tran_p").innerText="2022-12-05";
+                    document.getElementById("ldyw_text_2_tran_a").innerText="1000多名后勤安保人员在岗：克服困难，...";
+                    document.getElementById("ldyw_text_3_tran_p").innerText="2022-12-04";
+                    document.getElementById("ldyw_text_3_tran_a").innerText="1000多名聊大师生志愿者在岗：有需要，...";
+                    document.getElementById("ldyw_text_4_tran_p").innerText="2022-12-01";
+                    document.getElementById("ldyw_text_4_tran_a").innerText="聊城大学与古巴哈瓦那大学签署合作协议";
+                    break;
+                case 2:
+                    document.getElementById("ldyw_pic_1_tran").src="./资源/ldywpic21.jpg";
+                    document.getElementById("ldyw_pic_2_tran").src="./资源/ldywpic22.gif";
+                    document.getElementById("ldyw_pic_3_tran").src="./资源/ldywpic23.gif";
+                    document.getElementById("ldyw_pic_4_tran").src="./资源/ldywpic24.jpg";
+                    document.getElementById("ldyw_text_1_tran_p").innerText="2022-11-23";
+                    document.getElementById("ldyw_text_1_tran_a").innerText="中国-太平洋岛国应对气候变化高级培训班顺...";
+                    document.getElementById("ldyw_text_2_tran_p").innerText="2022-11-18";
+                    document.getElementById("ldyw_text_2_tran_a").innerText="关延平作学习宣传贯彻党的二十大精神“第一...";
+                    document.getElementById("ldyw_text_3_tran_p").innerText="2022-11-08";
+                    document.getElementById("ldyw_text_3_tran_a").innerText="图书馆举行“弘扬生态文明 传播绿色文化”...";
+                    document.getElementById("ldyw_text_4_tran_p").innerText="2022-10-19";
+                    document.getElementById("ldyw_text_4_tran_a").innerText="聊城大学召开2023年国家自然科学基金申...";
+                    break;
+                case 3:
+                    document.getElementById("ldyw_pic_1_tran").src="./资源/ldywpic31.jpg";
+                    document.getElementById("ldyw_pic_2_tran").src="./资源/ldywpic32.jpg";
+                    document.getElementById("ldyw_pic_3_tran").src="./资源/ldywpic33.jpg";
+                    document.getElementById("ldyw_pic_4_tran").src="./资源/ldywpic34.png";
+                    document.getElementById("ldyw_text_1_tran_p").innerText="2022-10-11";
+                    document.getElementById("ldyw_text_1_tran_a").innerText="聊大学子杜雨欣荣立个人三等功奖励";
+                    document.getElementById("ldyw_text_2_tran_p").innerText="2022-09-29";
+                    document.getElementById("ldyw_text_2_tran_a").innerText="太平洋岛国研究中心成立十周年座谈会成功召...\n";
+                    document.getElementById("ldyw_text_3_tran_p").innerText="2022-09-29";
+                    document.getElementById("ldyw_text_3_tran_a").innerText="王昭风调研指导大学生创新创业教育工作";
+                    document.getElementById("ldyw_text_4_tran_p").innerText="2022-09-26";
+                    document.getElementById("ldyw_text_4_tran_a").innerText="“喜迎二十大 家和万事兴”齐鲁好家风主题...";
+                    break;
+                case 4:
+                    document.getElementById("ldyw_pic_1_tran").src="./资源/ldywpic41.png";
+                    document.getElementById("ldyw_pic_2_tran").src="./资源/ldywpic42.bmp";
+                    document.getElementById("ldyw_pic_3_tran").src="./资源/ldywpic43.gif";
+                    document.getElementById("ldyw_pic_4_tran").src="./资源/ldywpic44.gif";
+                    document.getElementById("ldyw_text_1_tran_p").innerText="2022-09-19";
+                    document.getElementById("ldyw_text_1_tran_a").innerText="聊城大学红色文献库举办“光辉的历程：在近...";
+                    document.getElementById("ldyw_text_2_tran_p").innerText="2022-09-15";
+                    document.getElementById("ldyw_text_2_tran_a").innerText="图书馆举办“喜迎二十大”红色主题展览";
+                    document.getElementById("ldyw_text_3_tran_p").innerText="2022-09-10";
+                    document.getElementById("ldyw_text_3_tran_a").innerText="农学与农业工程学院举办“感恩教师节 花香...";
+                    document.getElementById("ldyw_text_4_tran_p").innerText="2022-09-10";
+                    document.getElementById("ldyw_text_4_tran_a").innerText="聊大师生“庆中秋•共团圆”";
+                    break;
+            }
+            current_ldyw_tran_op=100;
+        }
+        setInterval(make_ldyw_tran_op_from_1_to_0,20);
+        function make_ldyw_tran_op_from_1_to_0(){
+                current_ldyw_tran_op-=5;
+                document.getElementById("ldyw_tran").style.opacity=current_ldyw_tran_op + "%";
+        }
+
+        function change_ldyw(id){
+            document.getElementById("page_id_show_1").style.backgroundColor="#c0cacc";
+            document.getElementById("page_id_show_2").style.backgroundColor="#c0cacc";
+            document.getElementById("page_id_show_3").style.backgroundColor="#c0cacc";
+            document.getElementById("page_id_show_4").style.backgroundColor="#c0cacc";
+            document.getElementById("page_id_show_1").style.width="6px";
+            document.getElementById("page_id_show_2").style.width="6px";
+            document.getElementById("page_id_show_3").style.width="6px";
+            document.getElementById("page_id_show_4").style.width="6px";
+            get_ldyw_tran_ready(current_ldyw-1?current_ldyw-1:4);
+            switch (id){
+                case 1:
+                    document.getElementById("page_id_show_1").style.backgroundColor="#306377";
+                    document.getElementById("page_id_show_1").style.width="25px";
+                    break;
+                case 2:
+                    document.getElementById("page_id_show_2").style.backgroundColor="#306377";
+                    document.getElementById("page_id_show_2").style.width="25px";
+                    break;
+                case 3:
+                    document.getElementById("page_id_show_3").style.backgroundColor="#306377";
+                    document.getElementById("page_id_show_3").style.width="25px";
+                    break;
+                case 4:
+                    document.getElementById("page_id_show_4").style.backgroundColor="#306377";
+                    document.getElementById("page_id_show_4").style.width="25px";
+                    break;
+            }
+            switch (id){
+                case 1:
+                    document.getElementById("ldyw_pic_1").src="./资源/ldywpic11.gif";
+                    document.getElementById("ldyw_pic_2").src="./资源/ldywpic12.gif";
+                    document.getElementById("ldyw_pic_3").src="./资源/ldywpic13.gif";
+                    document.getElementById("ldyw_pic_4").src="./资源/ldywpic14.gif";
+                    document.getElementById("ldyw_text_1_p").innerText="2022-12-06";
+                    document.getElementById("ldyw_text_1_a").innerText="“疫情期末考”， 聊大人交出了“团结卷”";
+                    document.getElementById("ldyw_text_2_p").innerText="2022-12-05";
+                    document.getElementById("ldyw_text_2_a").innerText="1000多名后勤安保人员在岗：克服困难，...";
+                    document.getElementById("ldyw_text_3_p").innerText="2022-12-04";
+                    document.getElementById("ldyw_text_3_a").innerText="1000多名聊大师生志愿者在岗：有需要，...";
+                    document.getElementById("ldyw_text_4_p").innerText="2022-12-01";
+                    document.getElementById("ldyw_text_4_a").innerText="聊城大学与古巴哈瓦那大学签署合作协议";
+                    break;
+                case 2:
+                    document.getElementById("ldyw_pic_1").src="./资源/ldywpic21.jpg";
+                    document.getElementById("ldyw_pic_2").src="./资源/ldywpic22.gif";
+                    document.getElementById("ldyw_pic_3").src="./资源/ldywpic23.gif";
+                    document.getElementById("ldyw_pic_4").src="./资源/ldywpic24.jpg";
+                    document.getElementById("ldyw_text_1_p").innerText="2022-11-23";
+                    document.getElementById("ldyw_text_1_a").innerText="中国-太平洋岛国应对气候变化高级培训班顺...";
+                    document.getElementById("ldyw_text_2_p").innerText="2022-11-18";
+                    document.getElementById("ldyw_text_2_a").innerText="关延平作学习宣传贯彻党的二十大精神“第一...";
+                    document.getElementById("ldyw_text_3_p").innerText="2022-11-08";
+                    document.getElementById("ldyw_text_3_a").innerText="图书馆举行“弘扬生态文明 传播绿色文化”...";
+                    document.getElementById("ldyw_text_4_p").innerText="2022-10-19";
+                    document.getElementById("ldyw_text_4_a").innerText="聊城大学召开2023年国家自然科学基金申...";
+                    break;
+                case 3:
+                    document.getElementById("ldyw_pic_1").src="./资源/ldywpic31.jpg";
+                    document.getElementById("ldyw_pic_2").src="./资源/ldywpic32.jpg";
+                    document.getElementById("ldyw_pic_3").src="./资源/ldywpic33.jpg";
+                    document.getElementById("ldyw_pic_4").src="./资源/ldywpic34.png";
+                    document.getElementById("ldyw_text_1_p").innerText="2022-10-11";
+                    document.getElementById("ldyw_text_1_a").innerText="聊大学子杜雨欣荣立个人三等功奖励";
+                    document.getElementById("ldyw_text_2_p").innerText="2022-09-29";
+                    document.getElementById("ldyw_text_2_a").innerText="太平洋岛国研究中心成立十周年座谈会成功召...\n";
+                    document.getElementById("ldyw_text_3_p").innerText="2022-09-29";
+                    document.getElementById("ldyw_text_3_a").innerText="王昭风调研指导大学生创新创业教育工作";
+                    document.getElementById("ldyw_text_4_p").innerText="2022-09-26";
+                    document.getElementById("ldyw_text_4_a").innerText="“喜迎二十大 家和万事兴”齐鲁好家风主题...";
+                    break;
+                case 4:
+                    document.getElementById("ldyw_pic_1").src="./资源/ldywpic41.png";
+                    document.getElementById("ldyw_pic_2").src="./资源/ldywpic42.bmp";
+                    document.getElementById("ldyw_pic_3").src="./资源/ldywpic43.gif";
+                    document.getElementById("ldyw_pic_4").src="./资源/ldywpic44.gif";
+                    document.getElementById("ldyw_text_1_p").innerText="2022-09-19";
+                    document.getElementById("ldyw_text_1_a").innerText="聊城大学红色文献库举办“光辉的历程：在近...";
+                    document.getElementById("ldyw_text_2_p").innerText="2022-09-15";
+                    document.getElementById("ldyw_text_2_a").innerText="图书馆举办“喜迎二十大”红色主题展览";
+                    document.getElementById("ldyw_text_3_p").innerText="2022-09-10";
+                    document.getElementById("ldyw_text_3_a").innerText="农学与农业工程学院举办“感恩教师节 花香...";
+                    document.getElementById("ldyw_text_4_p").innerText="2022-09-10";
+                    document.getElementById("ldyw_text_4_a").innerText="聊大师生“庆中秋•共团圆”";
+                    break;
+            }
+            current_ldyw=id+1;
+            if(current_ldyw==5){
+                current_ldyw=1;
+            }
+        }
+        function ldyw_page_id_scale(id){
+            document.getElementById("page_id_show_" + id).style.width="25px";
+            document.getElementById("page_id_show_" + id).style.backgroundColor="#326478";
+        }
+        function ldyw_page_id_scale_exit(id){
+            if((current_ldyw-1?current_ldyw-1:4)==id) {
+            }else{
+                document.getElementById("page_id_show_" + id).style.width="6px";
+                document.getElementById("page_id_show_" + id).style.backgroundColor="#c0cacc";
+            }
+        }
+
+
+        function mtld_page_id_scale(id){
+            document.getElementById("mtld_page_id_show_" + id).style.width="25px";
+            document.getElementById("mtld_page_id_show_" + id).style.backgroundColor="#326478";
+        }
+        function mtld_page_id_scale_exit(id){
+            if(current_mtld_page_id==id) {
+            }else{
+                document.getElementById("mtld_page_id_show_" + id).style.width="6px";
+                document.getElementById("mtld_page_id_show_" + id).style.backgroundColor="#c0cacc";
+            }
+        }
+
+        var current_mtld_page_id=1;
+
+
+        setInterval(mtld_page_next,5000);
+        function mtld_page_next(){
+
+            mtld_get_tran_mode_ready(current_mtld_page_id);
+            switch (current_mtld_page_id){
+                case 1:
+                    current_mtld_page_id=2;
+                    break;
+                case 2:
+                    current_mtld_page_id=3;
+                    break;
+                case 3:
+                    current_mtld_page_id=1;
+                    break;
+            }
+            mtld_change_page(current_mtld_page_id);
+            document.getElementById("mtld_page_id_show_1").style.backgroundColor="#c0cacc";
+            document.getElementById("mtld_page_id_show_2").style.backgroundColor="#c0cacc";
+            document.getElementById("mtld_page_id_show_3").style.backgroundColor="#c0cacc";
+            document.getElementById("mtld_page_id_show_1").style.width="6px";
+            document.getElementById("mtld_page_id_show_2").style.width="6px";
+            document.getElementById("mtld_page_id_show_3").style.width="6px";
+            switch (current_mtld_page_id){
+                case 1:
+                    document.getElementById("mtld_page_id_show_1").style.backgroundColor="#306377";
+                    document.getElementById("mtld_page_id_show_1").style.width="25px";
+                    break;
+                case 2:
+                    document.getElementById("mtld_page_id_show_2").style.backgroundColor="#306377";
+                    document.getElementById("mtld_page_id_show_2").style.width="25px";
+                    break;
+                case 3:
+                    document.getElementById("mtld_page_id_show_3").style.backgroundColor="#306377";
+                    document.getElementById("mtld_page_id_show_3").style.width="25px";
+                    break;
+            }
+        }
+
+        function mtld_page_id_change_page(id){
+            mtld_get_tran_mode_ready(current_mtld_page_id);
+            mtld_change_page(id);
+            current_mtld_page_id=id;
+            document.getElementById("mtld_page_id_show_1").style.backgroundColor="#c0cacc";
+            document.getElementById("mtld_page_id_show_2").style.backgroundColor="#c0cacc";
+            document.getElementById("mtld_page_id_show_3").style.backgroundColor="#c0cacc";
+            document.getElementById("mtld_page_id_show_1").style.width="6px";
+            document.getElementById("mtld_page_id_show_2").style.width="6px";
+            document.getElementById("mtld_page_id_show_3").style.width="6px";
+            switch (current_mtld_page_id){
+                case 1:
+                    document.getElementById("mtld_page_id_show_1").style.backgroundColor="#306377";
+                    document.getElementById("mtld_page_id_show_1").style.width="25px";
+                    break;
+                case 2:
+                    document.getElementById("mtld_page_id_show_2").style.backgroundColor="#306377";
+                    document.getElementById("mtld_page_id_show_2").style.width="25px";
+                    break;
+                case 3:
+                    document.getElementById("mtld_page_id_show_3").style.backgroundColor="#306377";
+                    document.getElementById("mtld_page_id_show_3").style.width="25px";
+                    break;
+            }
+        }
+
+        function mtld_page_up(){
+            mtld_get_tran_mode_ready(current_mtld_page_id);
+            switch (current_mtld_page_id){
+                case 1:
+                    current_mtld_page_id=3;
+                    break;
+                case 2:
+                    current_mtld_page_id=1;
+                    break;
+                case 3:
+                    current_mtld_page_id=2;
+                    break;
+            }
+            mtld_change_page(current_mtld_page_id);
+            document.getElementById("mtld_page_id_show_1").style.backgroundColor="#c0cacc";
+            document.getElementById("mtld_page_id_show_2").style.backgroundColor="#c0cacc";
+            document.getElementById("mtld_page_id_show_3").style.backgroundColor="#c0cacc";
+            document.getElementById("mtld_page_id_show_1").style.width="6px";
+            document.getElementById("mtld_page_id_show_2").style.width="6px";
+            document.getElementById("mtld_page_id_show_3").style.width="6px";
+            switch (current_mtld_page_id){
+                case 1:
+                    document.getElementById("mtld_page_id_show_1").style.backgroundColor="#306377";
+                    document.getElementById("mtld_page_id_show_1").style.width="25px";
+                    break;
+                case 2:
+                    document.getElementById("mtld_page_id_show_2").style.backgroundColor="#306377";
+                    document.getElementById("mtld_page_id_show_2").style.width="25px";
+                    break;
+                case 3:
+                    document.getElementById("mtld_page_id_show_3").style.backgroundColor="#306377";
+                    document.getElementById("mtld_page_id_show_3").style.width="25px";
+                    break;
+            }
+        }
+
+        function mtld_get_tran_mode_ready(last_page_id){
+            document.getElementById("mtld_tran").style.opacity="100%";
+            mtld_tran_change_page(last_page_id);
+            current_mtld_tran_op=100;
+        }
+
+        var current_mtld_tran_op=100;
+        setInterval(mtld_make_op_from_1_to_0,20);
+        function mtld_make_op_from_1_to_0(){
+            if(current_mtld_tran_op){
+                current_mtld_tran_op-=5;
+                document.getElementById("mtld_tran").style.opacity=current_mtld_tran_op + "%";
+            }
+        }
+
+        function mtld_change_page(page_id){
+                switch (page_id){
+                    case 1:
+                        document.getElementById("mtld_news_1_pic").src="./资源/mtldpic11.png";
+                        document.getElementById("mtld_news_1_title_a").innerText="【海报新闻】聊城大学...";
+                        document.getElementById("mtld_news_1_title_p").innerText="2022-07-26";
+                        document.getElementById("mtld_news_2_pic").src="./资源/mtldpic12.png";
+                        document.getElementById("mtld_news_2_title_a").innerText="【中国教育报】“学、...";
+                        document.getElementById("mtld_news_2_title_p").innerText="2022-12-22";
+                        document.getElementById("mtld_news_3_pic").src="./资源/mtldpic13.jpg";
+                        document.getElementById("mtld_news_3_title_a").innerText="《中国青年报》报道聊...";
+                        document.getElementById("mtld_news_3_title_p").innerText="2022-11-16";
+                        document.getElementById("mtld_news_4_pic").src="./资源/mtldpic14.gif";
+                        document.getElementById("mtld_news_4_title_a").innerText="《光明日报》报道我校...";
+                        document.getElementById("mtld_news_4_title_p").innerText="2022-11-11";
+                        break;
+                    case 2:
+                        document.getElementById("mtld_news_1_pic").src="./资源/mtldpic21.gif";
+                        document.getElementById("mtld_news_1_title_a").innerText="【齐鲁壹点】聊城大学...";
+                        document.getElementById("mtld_news_1_title_p").innerText="2022-10-28";
+                        document.getElementById("mtld_news_2_pic").src="./资源/mtldpic22.png";
+                        document.getElementById("mtld_news_2_title_a").innerText="【海报新闻】聊城大学...";
+                        document.getElementById("mtld_news_2_title_p").innerText="2022-10-21";
+                        document.getElementById("mtld_news_3_pic").src="./资源/mtldpic23.png";
+                        document.getElementById("mtld_news_3_title_a").innerText="【山东教育新闻网】以...";
+                        document.getElementById("mtld_news_3_title_p").innerText="2022-10-14";
+                        document.getElementById("mtld_news_4_pic").src="./资源/mtldpic24.gif";
+                        document.getElementById("mtld_news_4_title_a").innerText="【大众日报】“如春在...";
+                        document.getElementById("mtld_news_4_title_p").innerText="2022-10-05";
+                        break;
+                    case 3:
+                        document.getElementById("mtld_news_1_pic").src="./资源/mtldpic31.png";
+                        document.getElementById("mtld_news_1_title_a").innerText="【山东省教育厅】我省...";
+                        document.getElementById("mtld_news_1_title_p").innerText="2022-09-27";
+                        document.getElementById("mtld_news_2_pic").src="./资源/mtldpic32.png";
+                        document.getElementById("mtld_news_2_title_a").innerText="新华社等央媒集体点赞...";
+                        document.getElementById("mtld_news_2_title_p").innerText="2022-09-23";
+                        document.getElementById("mtld_news_3_pic").src="./资源/mtldpic33.png";
+                        document.getElementById("mtld_news_3_title_a").innerText="山东卫视报道我校汤加...";
+                        document.getElementById("mtld_news_3_title_p").innerText="2022-09-12";
+                        document.getElementById("mtld_news_4_pic").src="./资源/mtldpic34.png";
+                        document.getElementById("mtld_news_4_title_a").innerText="约旦费城大学孔子学院...";
+                        document.getElementById("mtld_news_4_title_p").innerText="2022-09-12";
+                        break;
+                }
+        }
+
+        function mtld_tran_change_page(page_id){
+                switch (page_id){
+                    case 1:
+                        document.getElementById("mtld_news_1_pic_tran").src="./资源/mtldpic11.png";
+                        document.getElementById("mtld_news_1_title_a_tran").innerText="【海报新闻】聊城大学...";
+                        document.getElementById("mtld_news_1_title_p_tran").innerText="2022-07-26";
+                        document.getElementById("mtld_news_2_pic_tran").src="./资源/mtldpic12.png";
+                        document.getElementById("mtld_news_2_title_a_tran").innerText="【中国教育报】“学、...";
+                        document.getElementById("mtld_news_2_title_p_tran").innerText="2022-12-22";
+                        document.getElementById("mtld_news_3_pic_tran").src="./资源/mtldpic13.jpg";
+                        document.getElementById("mtld_news_3_title_a_tran").innerText="《中国青年报》报道聊...";
+                        document.getElementById("mtld_news_3_title_p_tran").innerText="2022-11-16";
+                        document.getElementById("mtld_news_4_pic_tran").src="./资源/mtldpic14.gif";
+                        document.getElementById("mtld_news_4_title_a_tran").innerText="《光明日报》报道我校...";
+                        document.getElementById("mtld_news_4_title_p_tran").innerText="2022-11-11";
+                        break;
+                    case 2:
+                        document.getElementById("mtld_news_1_pic_tran").src="./资源/mtldpic21.gif";
+                        document.getElementById("mtld_news_1_title_a_tran").innerText="【齐鲁壹点】聊城大学...";
+                        document.getElementById("mtld_news_1_title_p_tran").innerText="2022-10-28";
+                        document.getElementById("mtld_news_2_pic_tran").src="./资源/mtldpic22.png";
+                        document.getElementById("mtld_news_2_title_a_tran").innerText="【海报新闻】聊城大学...";
+                        document.getElementById("mtld_news_2_title_p_tran").innerText="2022-10-21";
+                        document.getElementById("mtld_news_3_pic_tran").src="./资源/mtldpic23.png";
+                        document.getElementById("mtld_news_3_title_a_tran").innerText="【山东教育新闻网】以...";
+                        document.getElementById("mtld_news_3_title_p_tran").innerText="2022-10-14";
+                        document.getElementById("mtld_news_4_pic_tran").src="./资源/mtldpic24.gif";
+                        document.getElementById("mtld_news_4_title_a_tran").innerText="【大众日报】“如春在...";
+                        document.getElementById("mtld_news_4_title_p_tran").innerText="2022-10-05";
+                        break;
+                    case 3:
+                        document.getElementById("mtld_news_1_pic_tran").src="./资源/mtldpic31.png";
+                        document.getElementById("mtld_news_1_title_a_tran").innerText="【山东省教育厅】我省...";
+                        document.getElementById("mtld_news_1_title_p_tran").innerText="2022-09-27";
+                        document.getElementById("mtld_news_2_pic_tran").src="./资源/mtldpic32.png";
+                        document.getElementById("mtld_news_2_title_a_tran").innerText="新华社等央媒集体点赞...";
+                        document.getElementById("mtld_news_2_title_p_tran").innerText="2022-09-23";
+                        document.getElementById("mtld_news_3_pic_tran").src="./资源/mtldpic33.png";
+                        document.getElementById("mtld_news_3_title_a_tran").innerText="山东卫视报道我校汤加...";
+                        document.getElementById("mtld_news_3_title_p_tran").innerText="2022-09-12";
+                        document.getElementById("mtld_news_4_pic_tran").src="./资源/mtldpic34.png";
+                        document.getElementById("mtld_news_4_title_a_tran").innerText="约旦费城大学孔子学院...";
+                        document.getElementById("mtld_news_4_title_p_tran").innerText="2022-09-12";
+                        break;
+                }
+        }
     </script>
     <link rel="shortcut icon" href="/资源/favicon.ico" type="image/x-icon">
 </head>
 <body onresize="auto_adapt_banner_size()" onload="auto_adapt_banner_size()">
+<img class="fd" id="fd" src="./资源/fdp.jpg" alt="" style="width: 300px;position: fixed">
     <div class="main" id="main" style="margin: 0 auto">
         <div id="title_and_nav_2" style="height: 150px;width: 100%;background-color: #185169;position: absolute;top: 0px;left: 0px">
             <div style="width: 100%;height: 36px;background-color: #1d6483;padding-left: 12px">
@@ -832,7 +1647,7 @@
         </div>
         <div class="banner" id="banner">
             <div class="visitor_type" id="visitor_type">
-                <span onmouseenter="vt1_change_style_1()" onmouseleave="vt1_change_style_2()" class="vts" id="vt1" style="display: inline-block;width: 100px;height: 65px"><a
+                <span onmouseenter="vt1_change_style_1()" onmouseleave="vt1_change_style_2()" class="vts" id="vt1" style="display: inline-block;width: 100px;height: 65px" onclick="mtld_page_next()"><a
                         href="#" class="vt_inside_a" id="vt_inside_a_1">校友</a></span>
                 <span onmouseenter="vt2_change_style_1()" onmouseleave="vt2_change_style_2()"  class="vts" id="vt2" style="display: inline-block;width: 100px;height: 65px"><a
                         href="#" class="vt_inside_a" id="vt_inside_a_2">访客及学生</a></span>
@@ -849,27 +1664,70 @@
             <a class="banner_control" id="banner_control_1" onclick="auto_change_banner_up()"></a>
             <a class="banner_control" id="banner_control_2" onclick="auto_change_banner()"></a>
         </div>
+<!--        ldyw_tran start-->
+        <div class="ldyw" id="ldyw_tran" style="">
+            <div class="ldywtitle" id="ldywtitle_tran" style="height: 95px;padding-top: 30px;padding-left: 30px">
+                <img src="./资源/聊大要闻.png" alt="聊大要闻" style="height: 35px;visibility: visible;">
+            </div>
+            <img src="./资源/聊大要闻1.png" alt="聊城大学红色文献库举办“光辉的历程：在近代文献中探寻党代会历史”图片展" class="ldyw_pic" id="ldyw_pic_1_tran"><img src="./资源/聊大要闻2.bmp" alt="图书馆举办“喜迎二十大”红色主题展览" class="ldyw_pic" id="ldyw_pic_2_tran"><img src="./资源/聊大要闻3.gif" alt="农学与农业工程学院举办“感恩教师节 花香进教室”活动" class="ldyw_pic" id="ldyw_pic_3_tran"><img src="./资源/聊大要闻4.gif" alt="聊大师生“庆中秋•共团圆”" class="ldyw_pic" id="ldyw_pic_4_tran">
+            <br>
+            <div class="ldyw_text" id="ldyw_text_1_tran">
+                <p id="ldyw_text_1_tran_p" style="color: gray;line-height: 26px;font-size: 14px"><i>2022-11-23</i></p>
+                <a id="ldyw_text_1_tran_a" href="#" style="line-height: 20px;font-size: 14px;text-decoration: none;color: black;">聊城大学红色文献库举办“光辉的历程：在近...</a>
+            </div>
+            <div class="ldyw_text" id="ldyw_text_2_tran">
+                <p id="ldyw_text_2_tran_p" style="color: gray;line-height: 26px;font-size: 14px"><em>2022-09-15 </em></p>
+                <a id="ldyw_text_2_tran_a" href="#" style="line-height: 20px;font-size: 14px;text-decoration: none;color: black">图书馆举办“喜迎二十大”红色主题展览</a>
+            </div>
+            <div class="ldyw_text" id="ldyw_text_3_tran">
+                <p id="ldyw_text_3_tran_p" style="color: gray;line-height: 26px;font-size: 14px"><em>2022-09-10</em></p>
+                <a id="ldyw_text_3_tran_a" href="#" style="line-height: 20px;font-size: 14px;text-decoration: none;color: black">农学与农业工程学院举办“感恩教师节 花香...</a>
+            </div>
+            <div class="ldyw_text" id="ldyw_text_4_tran">
+                <p id="ldyw_text_4_tran_p" style="color: gray;line-height: 26px;font-size: 14px"><em>2022-09-10</em></p>
+                <a id="ldyw_text_4_tran_a" href="#" style="line-height: 20px;font-size: 14px;text-decoration: none;color: black">聊大师生“庆中秋•共团圆”</a>
+            </div>
+        </div>
+<!--        ldyw_tran_end-->
         <div class="ldyw" id="ldyw">
             <div class="ldywtitle" id="ldywtitle" style="height: 95px;padding-top: 30px;padding-left: 30px">
                 <img src="./资源/聊大要闻.png" alt="聊大要闻" style="height: 35px">
+
+                <div style="width: 60px;height: 30px;float: right;margin-top: 5px;margin-right: 25px">
+                    <div class="ldyw_jt" style="width: 25px;height: 25px;background-color: #0d495f;float: left;display: inline-block;border-radius: 2px;background-image: url(./资源/向左的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer;cursor: pointer" onclick="auto_change_ldyw(1)"></div>
+                    <div class="ldyw_jt" style="width: 25px;height: 25px;background-color: #0d495f;float: right;display: inline-block;border-radius: 2px;background-image: url(./资源/向右的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer;cursor: pointer" onclick="auto_change_ldyw(0)"></div>
+                </div>
+
+
+                <div style="height: 40px;margin-left: 50px;margin-top: -22px;text-align: center">
+                    <div class="page_id_show_base" style="display: inline-block">
+                        <div class="page_id_show" id="page_id_show_1" style="display: inline-block;border-radius: 3px;margin-right: 5px" onclick="change_ldyw(1)" onmouseenter="ldyw_page_id_scale(1)" onmouseleave="ldyw_page_id_scale_exit(1)"></div>
+                        <div class="page_id_show" id="page_id_show_2" style="display: inline-block;border-radius: 3px;margin-right: 5px" onclick="change_ldyw(2)" onmouseenter="ldyw_page_id_scale(2)" onmouseleave="ldyw_page_id_scale_exit(2)"></div>
+                        <div class="page_id_show" id="page_id_show_3" style="display: inline-block;border-radius: 3px;margin-right: 5px" onclick="change_ldyw(3)" onmouseenter="ldyw_page_id_scale(3)" onmouseleave="ldyw_page_id_scale_exit(3)"></div>
+                        <div class="page_id_show" id="page_id_show_4" style="display: inline-block;border-radius: 3px;margin-right: 5px" onclick="change_ldyw(4)" onmouseenter="ldyw_page_id_scale(4)" onmouseleave="ldyw_page_id_scale_exit(4)"></div>
+                    </div>
+
+                </div>
+
+
             </div>
             <img src="./资源/聊大要闻1.png" alt="聊城大学红色文献库举办“光辉的历程：在近代文献中探寻党代会历史”图片展" class="ldyw_pic" id="ldyw_pic_1"><img src="./资源/聊大要闻2.bmp" alt="图书馆举办“喜迎二十大”红色主题展览" class="ldyw_pic" id="ldyw_pic_2"><img src="./资源/聊大要闻3.gif" alt="农学与农业工程学院举办“感恩教师节 花香进教室”活动" class="ldyw_pic" id="ldyw_pic_3"><img src="./资源/聊大要闻4.gif" alt="聊大师生“庆中秋•共团圆”" class="ldyw_pic" id="ldyw_pic_4">
             <br>
             <div class="ldyw_text" id="ldyw_text_1">
-                <p style="color: gray;line-height: 26px;font-size: 14px"><i>2022-11-23</i></p>
-                <a href="#" style="line-height: 20px;font-size: 14px;text-decoration: none;color: black">聊城大学红色文献库举办“光辉的历程：在近...</a>
+                <p id="ldyw_text_1_p" style="color: gray;line-height: 26px;font-size: 14px">2022-11-23</p>
+                <a id="ldyw_text_1_a" href="#" style="line-height: 20px;font-size: 14px;text-decoration: none;color: black">聊城大学红色文献库举办“光辉的历程：在近...</a>
             </div>
             <div class="ldyw_text" id="ldyw_text_2">
-                <p style="color: gray;line-height: 26px;font-size: 14px"><em>2022-09-15 </em></p>
-                <a href="#" style="line-height: 20px;font-size: 14px;text-decoration: none;color: black">图书馆举办“喜迎二十大”红色主题展览</a>
+                <p id="ldyw_text_2_p" style="color: gray;line-height: 26px;font-size: 14px">2022-09-15</p>
+                <a id="ldyw_text_2_a" href="#" style="line-height: 20px;font-size: 14px;text-decoration: none;color: black">图书馆举办“喜迎二十大”红色主题展览1</a>
             </div>
             <div class="ldyw_text" id="ldyw_text_3">
-                <p style="color: gray;line-height: 26px;font-size: 14px"><em>2022-09-10</em></p>
-                <a href="#" style="line-height: 20px;font-size: 14px;text-decoration: none;color: black">农学与农业工程学院举办“感恩教师节 花香...</a>
+                <p id="ldyw_text_3_p" style="color: gray;line-height: 26px;font-size: 14px">2022-09-10</p>
+                <a id="ldyw_text_3_a" href="#" style="line-height: 20px;font-size: 14px;text-decoration: none;color: black">农学与农业工程学院举办“感恩教师节 花香...</a>
             </div>
             <div class="ldyw_text" id="ldyw_text_4">
-                <p style="color: gray;line-height: 26px;font-size: 14px"><em>2022-09-10</em></p>
-                <a href="#" style="line-height: 20px;font-size: 14px;text-decoration: none;color: black">聊大师生“庆中秋•共团圆”</a>
+                <p id="ldyw_text_4_p" style="color: gray;line-height: 26px;font-size: 14px">2022-09-10</p>
+                <a id="ldyw_text_4_a" href="#" style="line-height: 20px;font-size: 14px;text-decoration: none;color: black">聊大师生“庆中秋•共团圆”</a>
             </div>
         </div>
         <div class="ldyw_lists" id="ldyw_lists" style="background-color: white;">
@@ -1084,6 +1942,62 @@
                 </div>
             </div>
         </div>
+<!--        mtld_tran start-->
+        <div id="mtld_tran" style="height: 340px;color: white;position: absolute">
+
+            <div style="height: 80px;text-align: center;line-height: 80px">
+                <img src="./资源/媒体聊大.png" alt="" style="height: 30px;">
+            </div>
+            <div id="mtld_main_tran" style="height: 200px;background-color: rgba(244,164,96,0);">
+                <div class="mtld_news" id="mtld_news_1_tran" style="margin-left: 0px">
+                    <img id="mtld_news_1_pic_tran" src="./资源/媒体聊大插图1.png" alt="" style="height: 200px;float: left;display: inline-block">
+                    <div class="mtld_news_title" id="mtld_news_1_title_tran" style="height: 200px;display: inline-block;float: right;background-color: rgb(22,80,104);">
+                        <div style="width: 100%;height: 100px">
+                            <a id="mtld_news_1_title_a_tran" href="#" style="color: white">【海报新闻】聊城大学...</a>
+
+                        </div>
+                        <p id="mtld_news_1_title_p_tran" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
+                    </div>
+                </div>
+                <div class="mtld_news" id="mtld_news_2_tran">
+                    <img id="mtld_news_2_pic_tran" src="./资源/媒体聊大插图2.png" alt="" style="height: 200px;float: left;display: inline-block">
+                    <div class="mtld_news_title" id="mtld_news_2_title_tran" style="height: 200px;display: inline-block;float: right;background-color: rgb(37,146,147);">
+                        <div style="width: 100%;height: 100px">
+                            <a id="mtld_news_2_title_a_tran" href="#" style="color: white">【海报新闻】聊城大学...</a>
+
+                        </div>
+                        <p id="mtld_news_2_title_p_tran" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
+                    </div>
+                </div>
+                <div class="mtld_news" id="mtld_news_3_tran">
+                    <img id="mtld_news_3_pic_tran" src="./资源/媒体聊大插图3.jpg" alt="" style="height: 200px;float: left;display: inline-block">
+                    <div class="mtld_news_title" id="mtld_news_3_title_tran" style="height: 200px;display: inline-block;float: right;background-color: rgb(22,80,104);">
+                        <div style="width: 100%;height: 100px">
+                            <a id="mtld_news_3_title_a_tran" href="#" style="color: white">【海报新闻】聊城大学...</a>
+
+                        </div>
+                        <p id="mtld_news_3_title_p_tran" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
+                    </div>
+                </div>
+                <div class="mtld_news" id="mtld_news_4_tran">
+                    <img id="mtld_news_4_pic_tran" src="./资源/媒体聊大插图4.jpg" alt="" style="height: 200px;float: left;display: inline-block">
+                    <div class="mtld_news_title" id="mtld_news_4_title_tran" style="height: 200px;display: inline-block;float: right;background-color: rgb(37,146,147);">
+                        <div style="width: 100%;height: 100px">
+                            <a id="mtld_news_4_title_a_tran" href="#" style="color: white">【海报新闻】聊城大学...</a>
+
+                        </div>
+                        <p id="mtld_news_4_title_p_tran" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
+                    </div>
+                </div>
+            </div>
+            <div style="height: 60px;padding-top: 18px">
+                <div style="width: 260px;height: 25px;background-color: rgba(255,255,255,0);margin: 0 auto">
+                    <div style="width: 25px;height: 25px;background-color: #0d495f;float: left;display: inline-block;border-radius: 2px;background-image: url(./资源/向左的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer" onclick="mtld_page_up()"></div>
+                    <div style="width: 25px;height: 25px;background-color: #0d495f;float: right;display: inline-block;border-radius: 2px;background-image: url(./资源/向右的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer" onclick="mtld_page_next()"></div>
+                </div>
+            </div>
+        </div>
+<!--        mtld_tran end-->
         <div id="mtld" style="height: 340px;background-color: rgba(255,255,0,0);color: white">
             <div style="height: 80px;text-align: center;line-height: 80px">
                 <img src="./资源/媒体聊大.png" alt="" style="height: 30px;">
@@ -1093,51 +2007,56 @@
                     <img id="mtld_news_1_pic" src="./资源/媒体聊大插图1.png" alt="" style="height: 200px;float: left;display: inline-block">
                     <div class="mtld_news_title" id="mtld_news_1_title" style="height: 200px;display: inline-block;float: right;background-color: rgb(22,80,104);">
                         <div style="width: 100%;height: 100px">
-                            <a href="#" style="color: white">【海报新闻】聊城大学...</a>
+                            <a id="mtld_news_1_title_a" href="#" style="color: white">【海报新闻】聊城大学...</a>
 
                         </div>
-<p style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
+                        <p id="mtld_news_1_title_p" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
                     </div>
                 </div>
                 <div class="mtld_news" id="mtld_news_2">
                     <img id="mtld_news_2_pic" src="./资源/媒体聊大插图2.png" alt="" style="height: 200px;float: left;display: inline-block">
                     <div class="mtld_news_title" id="mtld_news_2_title" style="height: 200px;display: inline-block;float: right;background-color: rgb(37,146,147);">
                         <div style="width: 100%;height: 100px">
-                            <a href="#" style="color: white">【中国教育报】“学、...</a>
+                            <a id="mtld_news_2_title_a" href="#" style="color: white">【海报新闻】聊城大学...</a>
 
                         </div>
-                        <p style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-12-22</p>
-
+                        <p id="mtld_news_2_title_p" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
                     </div>
                 </div>
                 <div class="mtld_news" id="mtld_news_3">
                     <img id="mtld_news_3_pic" src="./资源/媒体聊大插图3.jpg" alt="" style="height: 200px;float: left;display: inline-block">
                     <div class="mtld_news_title" id="mtld_news_3_title" style="height: 200px;display: inline-block;float: right;background-color: rgb(22,80,104);">
                         <div style="width: 100%;height: 100px">
-                            <a href="#" style="color: white">《中国青年报》报道聊...</a>
+                            <a id="mtld_news_3_title_a" href="#" style="color: white">【海报新闻】聊城大学...</a>
 
                         </div>
-                        <p style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-11-16</p>
-
-
+                        <p id="mtld_news_3_title_p" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
                     </div>
                 </div>
                 <div class="mtld_news" id="mtld_news_4">
                     <img id="mtld_news_4_pic" src="./资源/媒体聊大插图4.jpg" alt="" style="height: 200px;float: left;display: inline-block">
                     <div class="mtld_news_title" id="mtld_news_4_title" style="height: 200px;display: inline-block;float: right;background-color: rgb(37,146,147);">
                         <div style="width: 100%;height: 100px">
-                            <a href="#" style="color: white">《光明日报》报道我校...</a>
+                            <a id="mtld_news_4_title_a" href="#" style="color: white">【海报新闻】聊城大学...</a>
 
                         </div>
-                        <p style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-11-11</p>
-
+                        <p id="mtld_news_4_title_p" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
                     </div>
                 </div>
             </div>
             <div style="height: 60px;padding-top: 18px">
                 <div style="width: 260px;height: 25px;background-color: #ffffff;margin: 0 auto">
-                    <div style="width: 25px;height: 25px;background-color: #0d495f;float: left;display: inline-block;border-radius: 2px;background-image: url(./资源/向左的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer"></div>
-                    <div style="width: 25px;height: 25px;background-color: #0d495f;float: right;display: inline-block;border-radius: 2px;background-image: url(./资源/向右的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer"></div>
+                    <div style="width: 200px;height: 6px;position: absolute;margin-top: 9px;text-align: center;margin-left: 30px">
+                        <div style="position: absolute;margin-left: 70px;height: 6px;margin-top: -11px">
+                            <div class="page_id_show" id="mtld_page_id_show_1" onmouseenter="mtld_page_id_scale(1)" onmouseleave="mtld_page_id_scale_exit(1)" onclick="mtld_page_id_change_page(1)"></div>
+                            <div class="page_id_show" id="mtld_page_id_show_2" onmouseenter="mtld_page_id_scale(2)" onmouseleave="mtld_page_id_scale_exit(2)" onclick="mtld_page_id_change_page(2)"></div>
+                            <div class="page_id_show" id="mtld_page_id_show_3" onmouseenter="mtld_page_id_scale(3)" onmouseleave="mtld_page_id_scale_exit(3)" onclick="mtld_page_id_change_page(3)"></div>
+                        </div>
+
+
+                    </div>
+                    <div style="width: 25px;height: 25px;background-color: #0d495f;float: left;display: inline-block;border-radius: 2px;background-image: url(./资源/向左的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer" onclick="mtld_page_up()"></div>
+                    <div style="width: 25px;height: 25px;background-color: #0d495f;float: right;display: inline-block;border-radius: 2px;background-image: url(./资源/向右的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer" onclick="mtld_page_next()"></div>
                 </div>
             </div>
         </div>
@@ -1258,13 +2177,21 @@
                     <img id="hdhbarttext" src="./资源/活动海报.png" alt="" style="height: 35px;margin-top: 3px;display: inline-block;float: left">
                     <a href="#" style="display: inline-block;float: right;font-size: 14px">更多 >></a>
                 </div>
-                <div id="hdhbpicwithcontrolbuttondiv" style="height: 560px;background-color: #b4b4b4;width: 540px;margin: 0 auto">
-                    <div id="hdhbjt1" style="width: 30px;height: 560px;background-image: url(./资源/向左的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer">
+                <div id="hdhbpicwithcontrolbuttondiv" style="height: 560px;background-color: #b4b4b4;width: 540px;margin: 0 auto" onmousemove="auto_adapt_hdhbct_dir()">
+                    <div id="hdhbjt1" style="width: 30px;height: 560px;background-image: url(./资源/向左的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer" onclick="hdhbct_change_up()" onmousemove="adapt_hdhbct_tran(1)">
                     </div>
                     <div id="hdhbpicdiv" style="width: 470px;background-color: white;display: inline-block;cursor: pointer;float: none">
-                        <img id="hdhbct" src="./资源/活动海报插图1.png" alt="" style="width: 100%;height: 560px;float: left">
+                        <div class="hdhbct_tran" id="hdhbct_tran">
+                            <p style="position: absolute">tran</p>
+                            <div class="hdhbct_tran_inside" id="hdhbct_tran_l">
+
+                            </div><div class="hdhbct_tran_inside" id="hdhbct_tran_r">
+
+                            </div>
+                        </div>
+                        <div id="hdhbct" style="width: 100%;height: 560px;float: left;background-repeat: no-repeat;background-size: cover;background-position: center"></div>
                     </div>
-                    <div id="hdhbjt2" style="width: 30px;height: 560px;background-image: url(./资源/向右的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer">
+                    <div id="hdhbjt2" style="width: 30px;height: 560px;background-image: url(./资源/向右的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer" onclick="hdhbct_change_next()" onmousemove="adapt_hdhbct_tran(0)">
                     </div>
 
                 </div>
@@ -1321,7 +2248,7 @@
             </div>
         </div>
         <div id="footas" style="height: 170px;background-color: rgba(173,255,47,0);padding-top: 40px;padding-left: 60px;padding-right: 60px">
-            <div id="foota1" style="height: 110px;background-color: rgba(255,255,0,0);overflow: hidden;float: left">
+            <div id="foota1" style="height: 110px;background-color: rgba(255,255,0,0);overflow-y: hidden;float: left;overflow-x: scroll">
                 <img src="./资源/链接1.png" alt="" style="display: inline-block"><img src="./资源/链接2.png" alt="" style="display: inline-block"><img src="./资源/链接3.jpg" alt="" style="display: inline-block"><img src="./资源/链接4.png" alt="" style="display: inline-block"><img src="./资源/链接5.jpg" alt="" style="display: inline-block"><img src="./资源/链接6.png" alt="" style="display: inline-block"><img src="./资源/链接7.png" alt="" style="display: inline-block"><img src="./资源/链接8.png" alt="" style="display: inline-block"><img src="./资源/链接9.jpg" alt="" style="display: inline-block">
             </div>
         </div>
