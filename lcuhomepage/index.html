@@ -740,6 +740,8 @@
                 document.getElementById("wait_window").style.opacity="0%";
                 setTimeout(close_wait_window,500);
             }
+
+            is_load_end=1;
         }
         var is_first_3=1;
         function close_wait_window(){
@@ -1592,10 +1594,18 @@ var hdhbct_tran_is_tran=0;
             document.getElementById("wait_window_anm").style.rotate="36000deg";
         }
 
+        var is_load_end=0;
+
+        function body_onresize(){
+            if(is_load_end){
+                auto_adapt_banner_size();
+            }
+        }
+
     </script>
     <link rel="shortcut icon" href="/资源/favicon.ico" type="image/x-icon">
 </head>
-<body onresize="auto_adapt_banner_size()" onload="auto_adapt_banner_size()">
+<body onresize="body_onresize()" onload="auto_adapt_banner_size()">
 <div class="fdbs" id="fdbs">
     <div class="fdbs_inside" id="fdbs_inside_1" onmouseenter="fdzk_show(1)" onmouseleave="fdzk_hide_all()" onclick="al()"></div>
     <div class="fdbs_inside" id="fdbs_inside_2" onmouseenter="fdzk_show(2)" onmouseleave="fdzk_hide_all()"></div>
