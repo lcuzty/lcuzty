@@ -318,6 +318,7 @@
             document.getElementById("title_and_nav").style.visibility="visible";
             document.getElementById("title_and_nav_2").style.visibility="hidden";
             document.getElementById("title_and_nav_2").style.height="150px";
+            document.getElementById("title_and_nav_on_scrolling").style.visibility="visible";
             document.getElementById("lculogo2").style.height="65px";
             if(width_website<=455){
                 document.getElementById("title_and_nav_2").style.height="135px";
@@ -325,6 +326,7 @@
             if(width_website<=1175){
                 document.getElementById("title_and_nav").style.visibility="hidden";
                 document.getElementById("title_and_nav_2").style.visibility="visible";
+                document.getElementById("title_and_nav_on_scrolling").style.visibility="hidden";
                 if(width_website<=580){
                     document.getElementById("lculogo2").style.height="50px";
                     if(width_website<=335){
@@ -698,19 +700,60 @@
             }
 
             document.getElementById("hdhbct_tran").style.width="470px";
-            if(width_website<=1190){
+            if(width_website<=617){
                 document.getElementById("hdhbct_tran").style.width="230px";
             }
             document.getElementById("hdhbct_tran").style.height=document.getElementById("hdhbct").style.height;
             document.getElementById("hdhbct_tran_l").style.height=document.getElementById("hdhbct").style.height;
             document.getElementById("hdhbct_tran_r").style.height=document.getElementById("hdhbct").style.height;
 
+            document.getElementById("fdbs").style.visibility="visible";
+            if(width_website<=1200){
+                document.getElementById("fdbs").style.visibility="hidden";
+            }
+
+
+            document.getElementById("title_and_nav").style.width=width_website+"px";
+
+            document.getElementById("title_and_nav_on_scrolling_inside").style.width="1220px";
+            if(width_website<=1220){
+                document.getElementById("title_and_nav_on_scrolling_inside").style.width=width_website + "px";
+            }
+
+            document.getElementById("footas").style.paddingLeft=gap + "px";
+            document.getElementById("footas").style.paddingRight=gap + "px";
+            document.getElementById("foota1_img_1").style.width=(width_website-gap*2)/9+"px";
+            document.getElementById("foota1_img_2").style.width=(width_website-gap*2)/9-1+"px";
+            document.getElementById("foota1_img_3").style.width=(width_website-gap*2)/9-1+"px";
+            document.getElementById("foota1_img_4").style.width=(width_website-gap*2)/9-1+"px";
+            document.getElementById("foota1_img_5").style.width=(width_website-gap*2)/9-1+"px";
+            document.getElementById("foota1_img_6").style.width=(width_website-gap*2)/9-1+"px";
+            document.getElementById("foota1_img_7").style.width=(width_website-gap*2)/9-1+"px";
+            document.getElementById("foota1_img_8").style.width=(width_website-gap*2)/9-1+"px";
+            document.getElementById("foota1_img_9").style.width=(width_website-gap*2)/9-1+"px";
+            for(i=1;i<=9;i++){
+                document.getElementById("foota1_img_" + i).style.height="110px";
+            }
+
+            if(is_first_3){
+                is_first_3=0;
+                document.getElementById("wait_window").style.opacity="0%";
+                setTimeout(close_wait_window,500);
+            }
+        }
+        var is_first_3=1;
+        function close_wait_window(){
+            document.body.style.overflowY="scroll";
+            auto_adapt_banner_size();
+            document.getElementById("wait_window").style.visibility="hidden";
+            document.getElementById("wait_window").style.width="0px";
+            document.getElementById("wait_window").style.height="0px";
         }
         var current_hdhb_page_id=1;
         function hdhbct_change_next(){
             adapt_hdhbct_tran(1);
             last=current_hdhb_page_id;
-            if(width_website<=1190){
+            if(width_website<=617){
                 hdhb_inside_pic_width=230;
             }else{
                 hdhb_inside_pic_width=470;
@@ -733,7 +776,7 @@
             adapt_hdhbct_tran(0);
         }
         function auto_adapt_hdhbct_dir(){
-            if(width_website<=1190){
+            if(width_website<=617){
                 hdhb_inside_pic_width=230;
             }else{
                 hdhb_inside_pic_width=470;
@@ -744,7 +787,7 @@
         function hdhbct_change_up(){
             adapt_hdhbct_tran(0);
             last=current_hdhb_page_id;
-            if(width_website<=1190){
+            if(width_website<=617){
                 hdhb_inside_pic_width=230;
             }else{
                 hdhb_inside_pic_width=470;
@@ -842,10 +885,18 @@ var hdhbct_tran_is_tran=0;
         }
         let is_sm_p_open=0;
         function open_or_close_menu(){
-            if(document.getElementById("super_menu").style.visibility=="visible"){
-                document.getElementById("super_menu").style.visibility="hidden";
+            if(is_sm_p_open){
+                hide_all_sm();
+                document.getElementById("super_menu").style.opacity="0%";
+                document.getElementById("super_menu").style.scale="0%";
+                document.getElementById("super_menu").style.top="-114px";
+                document.getElementById("super_menu").style.left=width_website/-2 + "px";
                 is_sm_p_open=0;
             }else{
+                document.getElementById("super_menu").style.opacity="100%";
+                document.getElementById("super_menu").style.scale="100%";
+                document.getElementById("super_menu").style.top="36px";
+                document.getElementById("super_menu").style.left="0px";
                 document.getElementById("super_menu").style.visibility="visible";
                 is_sm_p_open=1;
             }
@@ -860,12 +911,43 @@ var hdhbct_tran_is_tran=0;
             document.getElementById("sm5").style.height="0px";
             document.getElementById("sm7").style.height="0px";
             document.getElementById("sm8").style.height="0px";
+            document.getElementById("super_menu").style.height="301px";
         }
 
         function open_super_menu(menu_id){
             if(is_sm_open==0){
                 hide_all_sm();
-                document.getElementById("sm" + menu_id).style.height="auto";
+                switch (menu_id){
+                    case 1:current_sm_height=222;
+                        document.getElementById("super_menu").style.height=301 +current_sm_height +"px";
+                        document.getElementById("sm" + menu_id).style.height=current_sm_height +"px";
+                        break;
+                    case 2:current_sm_height=185;
+                        document.getElementById("super_menu").style.height=301 +current_sm_height +"px";
+                        document.getElementById("sm" + menu_id).style.height=current_sm_height +"px";
+                        break;
+                    case 3:current_sm_height=111;
+                        document.getElementById("super_menu").style.height=301 +current_sm_height +"px";
+                        document.getElementById("sm" + menu_id).style.height=current_sm_height +"px";
+                        break;
+                    case 4:current_sm_height=185;
+                        document.getElementById("super_menu").style.height=301 +current_sm_height +"px";
+                        document.getElementById("sm" + menu_id).style.height=current_sm_height +"px";
+                        break;
+                    case 5:current_sm_height=185;
+                        document.getElementById("super_menu").style.height=301 +current_sm_height +"px";
+                        document.getElementById("sm" + menu_id).style.height=current_sm_height +"px";
+                        break;
+                    case 7:current_sm_height=222;
+                        document.getElementById("super_menu").style.height=301 +current_sm_height +"px";
+                        document.getElementById("sm" + menu_id).style.height=current_sm_height +"px";
+                        break;
+                    case 8:current_sm_height=111;
+                        document.getElementById("super_menu").style.height=301 +current_sm_height +"px";
+                        document.getElementById("sm" + menu_id).style.height=current_sm_height +"px";
+                        break;
+                }
+                // document.getElementById("sm" + menu_id).style.height="auto";
                 is_sm_open=1;
             }else{
                 hide_all_sm();
@@ -1315,6 +1397,10 @@ var hdhbct_tran_is_tran=0;
             }
         }
 
+        function back_to_top(){
+            window.scrollTo(0,0);
+        }
+
         function mtld_page_up(){
             mtld_get_tran_mode_ready(current_mtld_page_id);
             switch (current_mtld_page_id){
@@ -1459,12 +1545,100 @@ var hdhbct_tran_is_tran=0;
                         break;
                 }
         }
+
+        function open_or_close_search_box(){
+            if(document.getElementById("search_box_").style.visibility=="visible"){
+                document.getElementById("search_box_").style.visibility="hidden";
+                document.getElementById("search_warning_text").style.visibility="hidden";
+            }else{
+                document.getElementById("search_box_").style.visibility="visible";
+                if(document.getElementById("search_box_text").value==""){
+                    document.getElementById("search_warning_text").style.visibility="visible";
+                }
+            }
+        }
+
+        function fdzk_show(id){
+            document.getElementById("fdzk_pic_" + id).style.height="110px";
+            document.getElementById("fdzk_jt_" + id).style.height="20px";
+        }
+
+        function fdzk_hide_all(){
+            document.getElementById("fdzk_pic_1").style.height="0px";
+            document.getElementById("fdzk_jt_1").style.height="0px";
+            document.getElementById("fdzk_pic_2").style.height="0px";
+            document.getElementById("fdzk_jt_2").style.height="0px";
+            document.getElementById("fdzk_pic_3").style.height="0px";
+            document.getElementById("fdzk_jt_3").style.height="0px";
+            document.getElementById("fdzk_pic_4").style.height="0px";
+            document.getElementById("fdzk_jt_4").style.height="0px";
+            document.getElementById("fdzk_pic_5").style.height="0px";
+            document.getElementById("fdzk_jt_5").style.height="0px";
+        }
+
+        function al(){
+            alert(document.body.scrollTop);
+        }
+
+        function auto_show_or_hide_search_box_warning_text(){
+            if(document.getElementById("search_box_text").value==""){
+                document.getElementById("search_warning_text").style.visibility="visible";
+            }else{
+                document.getElementById("search_warning_text").style.visibility="hidden";
+            }
+        }
+
+        function wait_window_anm(){
+            document.getElementById("wait_window_anm").style.rotate="36000deg";
+        }
+
     </script>
     <link rel="shortcut icon" href="/资源/favicon.ico" type="image/x-icon">
 </head>
 <body onresize="auto_adapt_banner_size()" onload="auto_adapt_banner_size()">
+<div class="fdbs" id="fdbs">
+    <div class="fdbs_inside" id="fdbs_inside_1" onmouseenter="fdzk_show(1)" onmouseleave="fdzk_hide_all()" onclick="al()"></div>
+    <div class="fdbs_inside" id="fdbs_inside_2" onmouseenter="fdzk_show(2)" onmouseleave="fdzk_hide_all()"></div>
+    <div class="fdbs_inside" id="fdbs_inside_3" onmouseenter="fdzk_show(3)" onmouseleave="fdzk_hide_all()"></div>
+    <div class="fdbs_inside" id="fdbs_inside_4" onmouseenter="fdzk_show(4)" onmouseleave="fdzk_hide_all()"></div>
+    <div class="fdbs_inside" id="fdbs_inside_5" onmouseenter="fdzk_show(5)" onmouseleave="fdzk_hide_all()"></div>
+    <div class="fdbs_inside" id="fdbs_inside_6" onclick="back_to_top()"></div>
+</div>
+<div class="fdzk" id="fdzk1">
+    <img class="fdzk_pic" id="fdzk_pic_1" src="资源/浮动1展开.png">
+    <div id="fdzk_jt_1" class="fdzk_jt"></div>
+</div>
+<div class="fdzk" id="fdzk2">
+    <img class="fdzk_pic" id="fdzk_pic_2" src="资源/浮动2展开.png">
+    <div id="fdzk_jt_2" class="fdzk_jt"></div>
+</div>
+<div class="fdzk" id="fdzk3">
+    <img class="fdzk_pic" id="fdzk_pic_3" src="资源/浮动3展开.png">
+    <div id="fdzk_jt_3" class="fdzk_jt"></div>
+</div>
+<div class="fdzk" id="fdzk4">
+    <img class="fdzk_pic" id="fdzk_pic_4" src="资源/浮动4展开.png">
+    <div id="fdzk_jt_4" class="fdzk_jt"></div>
+</div>
+<div class="fdzk" id="fdzk5">
+    <img class="fdzk_pic" id="fdzk_pic_5" src="资源/浮动5展开.png">
+    <div id="fdzk_jt_5" class="fdzk_jt"></div>
+</div>
+<div class="white_background"></div>
 <img class="fd" id="fd" src="./资源/fdp.jpg" alt="" style="width: 300px;position: fixed">
-    <div class="main" id="main" style="margin: 0 auto">
+    <div class="title_and_nav_on_scrolling" id="title_and_nav_on_scrolling">
+        <div class="title_and_nav_on_scrolling_inside" id="title_and_nav_on_scrolling_inside">
+            <img src="./资源/lculogo_of_fixed_nav.png" alt="">
+            <div class="fxnavs">
+                <a href="#" class="nav fxnav" id="fxmenu1_button" onmouseenter="show_menu_1()" onmouseleave="hide_all_menu()">学校概况</a><a href="#" class="nav fxnav" id="fxmenu2_button" onmouseenter="show_menu_2()" onmouseleave="hide_all_menu()">组织机构</a><a href="#" class="nav fxnav" id="fxmenu3_button" onmouseenter="show_menu_3()" onmouseleave="hide_all_menu()">师资队伍</a><a href="#" class="nav fxnav" id="fxmenu4_button" onmouseenter="show_menu_4()" onmouseleave="hide_all_menu()">教学科研</a><a href="#" class="nav fxnav" id="fxmenu5_button" onmouseenter="show_menu_5()" onmouseleave="hide_all_menu()">招生就业</a><a href="#" class="nav fxnav" id="fxmenu6_button">信息公开</a><a href="#" class="nav fxnav" id="fxmenu7_button" onmouseenter="show_menu_7()" onmouseleave="hide_all_menu()">学子家园</a><a href="#" class="nav fxnav" id="fxmenu8_button" style="margin-right: 7px;" onmouseenter="show_menu_8()" onmouseleave="hide_all_menu()">校园服务</a>
+            </div>
+        </div>
+    </div>
+<div id="wait_window">
+    <img id="wait_window_anm" src="./资源/加载.png" alt="" style="width: 50px;margin: 0 auto;text-align: center;margin-top: 200px" onload="wait_window_anm()">
+<p style="display: block;width: 100%;text-align: center;margin-top: 30px">正在准备张天予-2022400614的2023.1.2前端作业二</p>
+</div>
+<div class="main" id="main" style="margin: 0 auto">
         <div id="title_and_nav_2" style="height: 150px;width: 100%;background-color: #185169;position: absolute;top: 0px;left: 0px">
             <div style="width: 100%;height: 36px;background-color: #1d6483;padding-left: 12px">
                 <div style="margin-top: 4px;margin-left: 5px;float: left;display: inline-block;color: white">
@@ -1477,7 +1651,7 @@ var hdhbct_tran_is_tran=0;
             <div style="width: 100%;height: 114px;text-align: center;line-height: 114px">
                 <img id="lculogo2" src="./资源/聊城大学.png" alt="" style="height:65px;margin: 0 auto">
             </div>
-            <div id="super_menu" style="width: 100%;background-color: #185169;position: absolute;top: 36px;padding-bottom: 5px;visibility: hidden;color: white">
+            <div id="super_menu" style="width: 100%;background-color: #185169;position: absolute;top: 36px;padding-bottom: 5px;color: white">
                 <p style="display: block;line-height: 36px;text-indent: 1em" onclick="open_super_menu(1)">学校概况</p>
                 <div style="height: 1px;background-color: #0e455b;"></div>
                 <div class="sms" id="sm1" style="background-color: white;color: black;font-size: 14px;height: 0px">
@@ -1577,7 +1751,14 @@ var hdhbct_tran_is_tran=0;
             </div>
         </div>
         <div class="title_and_nav" id="title_and_nav">
-            <a href="#" class="search"></a>
+            <a href="#" class="search" onclick="open_or_close_search_box()"></a>
+            <div id="search_box_" style="display: inline-block;float: right;width: 180px;height: 30px;right: 120px;top: 60px;position: absolute;border-radius: 3px;background-repeat: no-repeat;background-position: left;background-size: auto;background-color: rgba(255,255,255,0.1)">
+                <div id="search_box_logo">
+
+                </div>
+                <input id="search_box_text" type="text" name="" id="" oninput="auto_show_or_hide_search_box_warning_text()">
+                <p id="search_warning_text">请输入关键字</p>
+            </div>
             <div class="links">
                 <a href="#" class="links_a">联系我们</a>
                 &ThinSpace;|&ThinSpace;
@@ -1844,19 +2025,19 @@ var hdhbct_tran_is_tran=0;
                                     <div style="width: 15px;height: 70px;float: left;display: inline-block;padding-top: 10px">
                                         <div style="width: 6px;height: 6px;background-color:#a1964a;"></div>
                                     </div>
-                                    <a href="#">聊大讲坛：柳建辉讲解党的二十大的主要精神和历史贡献</a>
+                                    <a class="ldg" href="#">聊大讲坛：柳建辉讲解党的二十大的主要精神和历史贡献</a>
                                 </li>
                                 <li>
                                     <div style="width: 15px;height: 70px;float: left;display: inline-block;padding-top: 10px">
                                         <div style="width: 6px;height: 6px;background-color:#a1964a;"></div>
                                     </div>
-                                    <a href="#">聊大讲坛：刘森林谈激进启蒙与合理启蒙</a>
+                                    <a class="ldg" href="#">聊大讲坛：刘森林谈激进启蒙与合理启蒙</a>
                                 </li>
                                 <li>
                                     <div style="width: 15px;height: 70px;float: left;display: inline-block;padding-top: 10px">
                                         <div style="width: 6px;height: 6px;background-color:#a1964a;"></div>
                                     </div>
-                                    <a href="#">第五届太平洋岛国研究高层论坛获评“山东省社科论坛十佳研讨会”</a>
+                                    <a class="ldg" href="#">第五届太平洋岛国研究高层论坛获评“山东省社科论坛十佳研讨会”</a>
                                 </li>
                             </ol>
                         </span>
@@ -1866,19 +2047,19 @@ var hdhbct_tran_is_tran=0;
                                     <div style="width: 15px;height: 70px;float: left;display: inline-block;padding-top: 10px">
                                         <div style="width: 6px;height: 6px;background-color:#a1964a;"></div>
                                     </div>
-                                    <a href="#">黄小洲谈科学解释学的解构之维</a>
+                                    <a class="ldg" href="#">黄小洲谈科学解释学的解构之维</a>
                                 </li>
                                 <li>
                                     <div style="width: 15px;height: 70px;float: left;display: inline-block;padding-top: 10px">
                                         <div style="width: 6px;height: 6px;background-color:#a1964a;"></div>
                                     </div>
-                                    <a href="#">聊大讲坛：刘鸿武谈“区域国别学集成建设，人类共享知识伙伴关系”</a>
+                                    <a class="ldg" href="#">聊大讲坛：刘鸿武谈“区域国别学集成建设，人类共享知识伙伴关系”</a>
                                 </li>
                                 <li>
                                     <div style="width: 15px;height: 70px;float: left;display: inline-block;padding-top: 10px">
                                         <div style="width: 6px;height: 6px;background-color:#a1964a;"></div>
                                     </div>
-                                    <a href="#">校园文艺与文化研究会举办“潜心实践，诗意生活” 文艺分享交流会</a>
+                                    <a class="ldg" href="#">校园文艺与文化研究会举办“潜心实践，诗意生活” 文艺分享交流会</a>
                                 </li>
                             </ol>
                         </span>
@@ -1898,21 +2079,21 @@ var hdhbct_tran_is_tran=0;
                             <ol class="no_area_inside_ol">
                                 <li>
                                     <div style="width: 75px;height: 30px;float: left;display: inline-block;padding-top: 0px;background-color: #299495;">
-                                        <p style="width: 75px;line-height: 30px;font-family: 'Times New Roman';color: white;font-size: 20px;text-align: center">12/20</p>
+                                        <p style="width: 75px;line-height: 30px;font-family: Times New Roman;color: white;font-size: 20px;text-align: center">12/20</p>
                                     </div>
-                                    <a href="#">2022年聊城大学教职工健康体检补充通知</a>
+                                    <a class="ldg" href="#">2022年聊城大学教职工健康体检补充通知</a>
                                 </li>
                                 <li>
                                     <div style="width: 75px;height: 30px;float: left;display: inline-block;padding-top: 0px;background-color: #299495;">
                                         <p style="width: 75px;line-height: 30px;font-family: 'Times New Roman';color: white;font-size: 20px;text-align: center">11/30</p>
                                     </div>
-                                    <a href="#">聊城大学2023届省级师范类优秀毕业生拟推荐人选公示</a>
+                                    <a class="ldg" href="#">聊城大学2023届省级师范类优秀毕业生拟推荐人选公示</a>
                                 </li>
                                 <li>
                                     <div style="width: 75px;height: 30px;float: left;display: inline-block;padding-top: 0px;background-color: #299495;">
                                         <p style="width: 75px;line-height: 30px;font-family: 'Times New Roman';color: white;font-size: 20px;text-align: center">11/16</p>
                                     </div>
-                                    <a href="#">聊城大学2022年研究生学业奖学金获得者名单公示</a>
+                                    <a class="ldg" href="#">聊城大学2022年研究生学业奖学金获得者名单公示</a>
                                 </li>
                             </ol>
                         </span>
@@ -1922,19 +2103,19 @@ var hdhbct_tran_is_tran=0;
                                     <div style="width: 75px;height: 30px;float: left;display: inline-block;padding-top: 0px;background-color: #299495;">
                                         <p style="width: 75px;line-height: 30px;font-family: 'Times New Roman';color: white;font-size: 20px;text-align: center">04/11</p>
                                     </div>
-                                    <a href="#">聊城大学重要节日纪念日思想政治教育年历</a>
+                                    <a class="ldg" href="#">聊城大学重要节日纪念日思想政治教育年历</a>
                                 </li>
                                 <li>
                                     <div style="width: 75px;height: 30px;float: left;display: inline-block;padding-top: 0px;background-color: #299495;">
                                         <p style="width: 75px;line-height: 30px;font-family: 'Times New Roman';color: white;font-size: 20px;text-align: center">12/19</p>
                                     </div>
-                                    <a href="#">聊城大学新闻网新版的投稿说明</a>
+                                    <a class="ldg" href="#">聊城大学新闻网新版的投稿说明</a>
                                 </li>
                                 <li>
                                     <div style="width: 75px;height: 30px;float: left;display: inline-block;padding-top: 0px;background-color: #299495;">
                                         <p style="width: 75px;line-height: 30px;font-family: 'Times New Roman';color: white;font-size: 20px;text-align: center">11/13</p>
                                     </div>
-                                    <a href="#">聊城大学2022-2023学年国家助学金受助学生初选名单</a>
+                                    <a class="ldg" href="#">聊城大学2022-2023学年国家助学金受助学生初选名单</a>
                                 </li>
                             </ol>
                         </span>
@@ -2077,41 +2258,41 @@ var hdhbct_tran_is_tran=0;
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #288f90;"></div>
                         </div>
-                        <a href="#">中共中央宣传部、教育部联合印发《面向2035高校哲学社会科学高质量发展行...</a>
+                        <a class="ldg" href="#">中共中央宣传部、教育部联合印发《面向2035高校哲学社会科学高质量发展行...</a>
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #288f90;"></div>
                         </div>
-                        <a href="#">政府工作报告</a>
+                        <a class="ldg" href="#">政府工作报告</a>
 
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #288f90;"></div>
                         </div>
-                        <a href="#">教育部2022年工作要点</a>
+                        <a class="ldg" href="#">教育部2022年工作要点</a>
 
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #288f90;"></div>
                         </div>
-                        <a href="#">2022年全国教育工作会议：加快教育高质量发展</a>
+                        <a class="ldg" href="#">2022年全国教育工作会议：加快教育高质量发展</a>
 
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #288f90;"></div>
                         </div>
-                        <a href="#">教育部等九部门印发《“十四五”学前教育发展提升行动计划》和《“十四五”县...</a>
+                        <a class="ldg" href="#">教育部等九部门印发《“十四五”学前教育发展提升行动计划》和《“十四五”县...</a>
 
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #288f90;"></div>
                         </div>
-                        <a href="#">中国共产党第十九届中央委员会第六次全体会议公报</a>
+                        <a class="ldg" href="#">中国共产党第十九届中央委员会第六次全体会议公报</a>
 
                     </li>
                 </ol>
@@ -2122,7 +2303,7 @@ var hdhbct_tran_is_tran=0;
                     <div style="height: 60px;text-align: center;">
                         <img src="./资源/他山之石.png" alt="" style="height: 30px;margin-top: 30px;display: inline">
                     </div>
-                        <a href="#" style="float: right;margin-right: 30px;font-size: 11px;color: white">更多内容 >></a>
+                        <a class="ldg" href="#" style="float: right;margin-right: 30px;font-size: 11px;color: white">更多内容 >></a>
                 </div>
                 <div style="height: 30px;"></div>
 
@@ -2132,41 +2313,41 @@ var hdhbct_tran_is_tran=0;
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #a2974b;"></div>
                         </div>
-                        <a href="#">裂变之年—时代呼唤教育家</a>
+                        <a class="ldg" href="#">裂变之年—时代呼唤教育家</a>
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #a2974b;"></div>
                         </div>
-                        <a href="#">浙江大学以“网上浙大2.0”为抓手 加快打造数字时代办学新空间</a>
+                        <a class="ldg" href="#">浙江大学以“网上浙大2.0”为抓手 加快打造数字时代办学新空间</a>
 
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #a2974b;"></div>
                         </div>
-                        <a href="#">四川大学以“四个注重”为抓手 深入推进创新创业教育改革提质升级</a>
+                        <a class="ldg" href="#">四川大学以“四个注重”为抓手 深入推进创新创业教育改革提质升级</a>
 
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #a2974b;"></div>
                         </div>
-                        <a href="#">山东师大构建“4+X”模式 以教育评价改革引领高质量发展</a>
+                        <a class="ldg" href="#">山东师大构建“4+X”模式 以教育评价改革引领高质量发展</a>
 
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #a2974b;"></div>
                         </div>
-                        <a href="#">天津大学以“四个突出”推进教师职称制度改革</a>
+                        <a class="ldg" href="#">天津大学以“四个突出”推进教师职称制度改革</a>
 
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #a2974b;"></div>
                         </div>
-                        <a href="#">青岛科技大学“四个强化”推进教师评价改革</a>
+                        <a class="ldg" href="#">青岛科技大学“四个强化”推进教师评价改革</a>
 
                     </li>
                 </ol>
@@ -2248,8 +2429,8 @@ var hdhbct_tran_is_tran=0;
             </div>
         </div>
         <div id="footas" style="height: 170px;background-color: rgba(173,255,47,0);padding-top: 40px;padding-left: 60px;padding-right: 60px">
-            <div id="foota1" style="height: 110px;background-color: rgba(255,255,0,0);overflow-y: hidden;float: left;overflow-x: scroll">
-                <img src="./资源/链接1.png" alt="" style="display: inline-block"><img src="./资源/链接2.png" alt="" style="display: inline-block"><img src="./资源/链接3.jpg" alt="" style="display: inline-block"><img src="./资源/链接4.png" alt="" style="display: inline-block"><img src="./资源/链接5.jpg" alt="" style="display: inline-block"><img src="./资源/链接6.png" alt="" style="display: inline-block"><img src="./资源/链接7.png" alt="" style="display: inline-block"><img src="./资源/链接8.png" alt="" style="display: inline-block"><img src="./资源/链接9.jpg" alt="" style="display: inline-block">
+            <div id="foota1" style="height: 110px;background-color: rgba(255,255,0,0);overflow-y: hidden;float: left;">
+                <img id="foota1_img_1" src="./资源/链接1.png" alt="" style="display: inline-block"><img id="foota1_img_2" src="./资源/链接2.png" alt="" style="display: inline-block"><img id="foota1_img_3" src="./资源/链接3.jpg" alt="" style="display: inline-block"><img id="foota1_img_4" src="./资源/链接4.png" alt="" style="display: inline-block"><img id="foota1_img_5" src="./资源/链接5.jpg" alt="" style="display: inline-block"><img id="foota1_img_6" src="./资源/链接6.png" alt="" style="display: inline-block"><img id="foota1_img_7" src="./资源/链接7.png" alt="" style="display: inline-block"><img id="foota1_img_8" src="./资源/链接8.png" alt="" style="display: inline-block"><img id="foota1_img_9" src="./资源/链接9.jpg" alt="" style="display: inline-block">
             </div>
         </div>
         <div id="cylj" style="height: 90px;background-color: #f0f5f7;padding-left: 15px;font-size: 14px">
@@ -2258,19 +2439,19 @@ var hdhbct_tran_is_tran=0;
                 <p style="line-height: 1.1em;color: white;padding-left: 29px">链接</p>
             </div>
             <div style="width: 100px;height: 45px;display: inline-block">
-                <a href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">教育部</a>
+                <a class="ldg" href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">教育部</a>
             </div>
             <div style="width: 100px;height: 45px;display: inline-block">
-                <a href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">山东省教育厅</a>
+                <a class="ldg" href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">山东省教育厅</a>
             </div>
             <div style="width: 100px;height: 45px;display: inline-block">
-                <a href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">中国大学生在线</a>
+                <a class="ldg" href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">中国大学生在线</a>
             </div>
             <div style="width: 100px;height: 45px;display: inline-block">
-                <a href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">校报</a>
+                <a class="ldg" href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">校报</a>
             </div>
             <div style="width: 100px;height: 45px;display: inline-block">
-                <a href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">聊大新闻网</a>
+                <a class="ldg" href="#" style="display: block;line-height: 45px;width: 100%;text-align: center">聊大新闻网</a>
             </div>
         </div>
         <div id="foot2" style="height: 255px;background-image: url(./资源/页脚背景.png);overflow: hidden;position: absolute;width: 100%;visibility: hidden">
