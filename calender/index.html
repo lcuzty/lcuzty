@@ -336,6 +336,10 @@
             40% { opacity: 1; }
         }
 
+        body{
+            overflow: hidden;
+        }
+
     </style>
     <script>
 
@@ -365,8 +369,10 @@
                 }
 
 
-            }document.getElementById("waitshow").style.visibility="hidden";
+            }
+            document.getElementById("waitshow").style.visibility="hidden";
             document.getElementById("main").style.visibility="visible";
+            document.body.style.overflowY="scroll";
         }
 
     </script>
