@@ -5,29 +5,51 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>格创计算机协会-首页</title>
+    <title>聊城大学格创计算机协会</title>
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/mainbody.css">
     <script src="./JS/mainbody.js"></script>
+
+
+    <link rel="stylesheet" href="./control/CSS/style_of_control.css">
+    <script src="./control/JS/control.js"></script>
 </head>
-<body onresize="auto_adapt_size()" onload="auto_adapt_size()">
+<body onload="auto_adapt()" onresize="auto_adapt()">
+
+<div class="control">
+    <div class="control_back" id="control_back" onclick="open_or_close_sidebar()" onmousemove="control_adapt()">
+
+    </div>
+    <div class="control_button_base" id="control_button_base">
+        <div class="control_button" onclick="open_or_close_sidebar()" onmousemove="control_adapt()">
+        </div>
+        <p>lcuzty</p>
+    </div>
+    <div class="control_sidebar" id="control_sidebar">
+        <div class="control_sidebar_button_base">
+            <iframe src="https://lcuzty.github.io/lcuzty/control/iframe.html" class="control_sidebar_iframe" id="control_sidebar_iframe">
+
+            </iframe>
+        </div>
+    </div>
+</div>
+
+
     <div class="title" id="title">
-        <div class="maintitle" id="maintitle">
-<!--            <img src="./RE/maintitlelogo1.png" alt="" class="maintitlelogo" id="maintitlelogo">-->
-            <p style="line-height: 75px;font-size: 25px;color: white;display: inline-block">格创</p>
-            <div class="title_navs" style="float: right;margin-top: 10px;height: 55px;">
-                <a href="#" target="_self">意见反馈</a>
-                <a href="https://www.lcu.edu.cn/" target="_self">学校主页</a>
-                <a href="./introduction.html" target="_self">社团介绍</a>
-                <a href="#" target="_self">首页</a>
+        <div class="title_main" id="title_main">
+            <img src="./RE/gclogo.png" alt="">
+            <a href="http://www.lcu.edu.cn/">聊大官网</a><br>
+            <div class="search" id="search">
+                <img src="./RE/searchlogo.png" alt="">
+                <p id="search_warning_text">请输入关键字</p>
+                <input id="search_input_text_box" type="text" name="" id="" oninput="search_input_text_change_event()">
             </div>
         </div>
     </div>
-    <div class="banner" id="banner">
-
-    </div>
-    <div class="main" id="main">
-        1字体测试
+    <div class="nav" id="nav">
+        <div class="nav_main" id="nav_main">
+            <a href="#"></a>
+        </div>
     </div>
 </body>
 </html>
