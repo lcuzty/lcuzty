@@ -18,10 +18,37 @@
         function open_link_1(){
             window.open("https://item.taobao.com/item.htm?id=592831650924");
         }
+
+
+
+
     </script>
+    <link rel="icon" href="./RE/wepelogo.ico">
+
+    <link rel="stylesheet" href="./control/CSS/style_of_control.css">
+    <script src="./control/JS/control.js"></script>
 </head>
 <body onresize="auto_change_size()" onmouseover="auto_change_size()" onload="auto_change_size()">
-    <div class="title" id="title" style="height: 70px;position:fixed;width: 100%;box-shadow: 0 3px 4px 0 rgba(0,0,0,0.1);text-align: center;padding-top: 0px;background-color: white;">
+
+<div class="control">
+    <div class="control_back" id="control_back" onclick="open_or_close_sidebar()" onmousemove="control_adapt()">
+
+    </div>
+    <div class="control_button_base" id="control_button_base">
+        <div class="control_button" onclick="open_or_close_sidebar()" onmousemove="control_adapt()">
+        </div>
+        <p>lcuzty</p>
+    </div>
+    <div class="control_sidebar" id="control_sidebar">
+        <div class="control_sidebar_button_base">
+            <iframe src="https://lcuzty.github.io/lcuzty/control/iframe.html" class="control_sidebar_iframe" id="control_sidebar_iframe">
+
+            </iframe>
+        </div>
+    </div>
+</div>
+
+    <div class="title" id="title" style="height: 70px;position:fixed;width: 100%;box-shadow: 0 3px 4px 0 rgba(0,0,0,0.1);text-align: center;padding-top: 0px;background-color: white">
         <div class="main_title" id="main_title" style="height: 70px;width: 1040px;display: inline-block;background-image: url(./RE/title4.png);background-size: cover">
             <img src="./RE/logo.png" alt="logo" style="height: 45px;display: inline-block;float: left;margin-top: 13px;margin-left: 19px">
             <a href="./learnmore.html" class="title_link" target="_self">技术规格</a>
