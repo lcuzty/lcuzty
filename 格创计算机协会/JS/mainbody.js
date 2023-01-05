@@ -1,17 +1,20 @@
-function auto_adapt_size(){
-    bodyWidth=document.body.clientWidth;
-
-    let maintitleWidth;
-    if(bodyWidth<=830){
-        maintitleWidth=bodyWidth;
-    }else if(bodyWidth<=1060){
-        maintitleWidth=bodyWidth-60;
-    }else if(bodyWidth<=1760){
-        maintitleWidth=bodyWidth*0.9;
+function auto_adapt(){
+    if(innerWidth<=1400){
+        document.body.style.width="1400px";
+        document.getElementById("title_main").style.width=1400*0.9 + "px";
+        document.getElementById("nav_main").style.width=1400*0.9 + "px";
     }else{
-        maintitleWidth=1760;
+        document.body.style.width="100%";
+        document.getElementById("title_main").style.width=innerWidth*0.9 + "px";
+        document.getElementById("nav_main").style.width=innerWidth*0.9 + "px";
     }
-    document.getElementById("maintitle").style.width=maintitleWidth + "px";
-    document.getElementById("main").style.width=maintitleWidth + "px";
 }
 
+function search_input_text_change_event(){
+    if(document.getElementById('search_input_text_box').value==""){
+        document.getElementById('search_warning_text').style.visibility="visible";
+    }else{
+        document.getElementById('search_warning_text').style.visibility="hidden";
+
+    }
+}

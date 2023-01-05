@@ -1,63 +1,67 @@
-#title{
-    height: 75px;
+.title{
     width: 100%;
-    position: fixed;
-    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(40px);
+    height: 160px;
+    background-color: #185169;
+    padding-top: 30px;
 }
-#maintitle{
-    height: 75px;
+
+.title_main{
+    height: 130px;
     margin: 0 auto;
-    background-color: rgba(222, 184, 135, 0);
 }
-#maintitlelogo{
-    height: 30px;
-    float: left;
-    margin-left: 8px;
-    margin-top: 10px;
-}
-.main{
-    margin: 0 auto;
-    background-size: contain;
-    box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.5);
-    margin-top: 40px;
-    border-radius: 10px;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-.banner{
-    height: 500px;
-    background-color: rgba(0, 0, 0, 0);
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center;
-    background-image: url(../RE/ct3.jpeg);
-}
-.title_navs>a{
-    text-decoration: none;
+
+.title_main>img{
+    height: 100px;
     display: inline-block;
-    float: right;
-    line-height: 55px;
+}
+
+.title_main>a{
     color: white;
-    font-size: 19px;
-    padding-left: 1em;
-    padding-right: 1em;
+    float: right;
+    font-size: 16px;
 }
-.main *{
-    margin-bottom: 30px;
+
+.search{
+    float: right;
+    height: 39px;
+    width: 176px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    margin-top: -60px;
 }
-.h1{
-    font-size: 30px;
+
+.search>img{
+    float: right;
+    height: 27px;
+    margin-top: 6px;
+    margin-right: 9px;
 }
-.h2{
-    font-size: 20px;
+
+.search>input{
+    float: right;
+    width: 129px;
+    background-color: rgba(255, 255, 255, 0);
+    height: 15px;
+    margin-top: -18px;
+    z-index: 10;
+    color: rgb(22,80,104);
 }
-.p{
-    text-indent: 2em;
+
+.search>p{
+    font-size: 14px;
+    color: rgb(22,80,104);
+    float: left;
+    margin-top: 9px;
+    margin-left: 10px;
+    z-index: 9;
 }
-.img{
-    width: 100%;
+
+.nav{
+    height: 69px;
+    background-color: #11485f;
+}
+
+.nav_main{
+    height: 69px;
+    margin: 0 auto;
 }
