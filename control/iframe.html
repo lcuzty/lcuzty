@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 清除默认样式的代码 */
+        /* 去除常见标签默认的 margin 和 padding */
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        ol,
+        li,
+        dl,
+        dt,
+        dd,
+        input {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 內减模式 */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* 设置网页统一的字体大小、行高、字体系列相关属性 */
+        body {
+            font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei",
+            "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+            color: #333;
+        }
+
+        /* 去除列表默认样式 */
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        /* 去除默认的倾斜效果 */
+        em,
+        i {
+            font-style: normal;
+        }
+
+        /* 去除a标签默认下划线，并设置默认文字颜色 */
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
+        img {
+            vertical-align: middle;
+        }
+
+        /* 去除input默认样式 */
+        input {
+            border: none;
+            outline: none;
+            color: #333;
+        }
+
+        /* 左浮动 */
+        .fl {
+            float: left;
+        }
+
+        /* 右浮动 */
+        .fr {
+            float: right;
+        }
+
+        /* 双伪元素清除法 */
+        .clearfix::before,
+        .clearfix::after {
+            content: "";
+            display: table;
+        }
+        .clearfix::after {
+            clear: both;
+        }
+
+
+
+
+        body{
+            background-color: white;
+            padding: 5px 5px;
+        }
+
+        .control_button_base{
+            height: 35px;
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            transition: all 0.05s;
+            position: relative;
+            z-index: 10;
+        }
+
+        .control_button_base:hover{
+            background-color: rgba(0, 0, 0, 0.15);
+
+        }
+
+        .control_button_icon{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 7px 7px;
+            position: relative;
+            margin-left: 12px;
+            top: -1px;
+        }
+
+        .control_button_text{
+            line-height: 35px;
+            font-size: 14px;
+            display: inline-block;
+            position: relative;
+            height: 35px;
+            z-index: 9;
+            top: 0px;
+        }
+
+        .control_button_base:active{
+            scale: 99%;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+    <script !src="">
+        function open_link(id){
+            switch (id){
+                case 1:
+                    window.open("https://lcuzty.github.io/lcuzty/","_self");
+                    break;
+                case 5:
+                    window.open("https://lcuzty.github.io/lcuzty/calender","_self");
+                    break;
+                case 2:
+                    window.open("https://lcuzty.github.io/lcuzty/weipe","_self");
+                    break;
+                case 3:
+                    window.open("https://lcuzty.github.io/lcuzty/lcuhpmepage","_self");
+                    break;
+                case 4:
+                    window.open("https://lcuzty.github.io/lcuzty/格创计算机协会","_self");
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="control_button_base" onclick="open_link(1)">
+    <img class="control_button_icon" src="RE/gongnengdingyi_1.png">
+    <p class="control_button_text">主页</p>
+</div>
+<div class="control_button_base" onclick="open_link(2)">
+    <img class="control_button_icon" src="RE/icon_使用文档.png">
+    <p class="control_button_text">前端作业一</p>
+</div>
+<div class="control_button_base" onclick="open_link(3)">
+    <img class="control_button_icon" src="RE/icon_使用文档.png">
+    <p class="control_button_text">前端作业二</p>
+</div>
+<div class="control_button_base" onclick="open_link(4)">
+    <img class="control_button_icon" src="RE/icon_使用文档.png">
+    <p class="control_button_text">格创计算机协会</p>
+</div>
+<div class="control_button_base" onclick="open_link(5)">
+    <img class="control_button_icon" src="RE/changjingguanli.png">
+    <p class="control_button_text">日历</p>
+</div>
+</body>
+</html>
