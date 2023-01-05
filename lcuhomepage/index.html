@@ -751,7 +751,10 @@
             document.getElementById("wait_window").style.height="0px";
         }
         var current_hdhb_page_id=1;
-        function hdhbct_change_next(){
+        function hdhbct_change_next(is_auto){
+            if(!is_auto){
+                current_hdhbct_time=50;
+            }
             adapt_hdhbct_tran(1);
             last=current_hdhb_page_id;
             if(width_website<=617){
@@ -767,10 +770,18 @@
             document.getElementById("hdhbct").style.backgroundImage="url(./资源/活动海报插图" + current_hdhb_page_id + ".png)";
             get_hdhbct_tran_ready(last,current_hdhb_page_id,0);
         }
-
-        setInterval(hdhbct_auto_next,5000);
+        var current_hdhbct_time=50;
+        var current_banner_time=50;
+        setInterval(timer_hdhbct,100);
+        function timer_hdhbct(){
+            current_hdhbct_time--;
+            if(!current_hdhbct_time){
+                current_hdhbct_time=50;
+                hdhbct_auto_next();
+            }
+        }
         function hdhbct_auto_next(){
-            hdhbct_change_next();
+            hdhbct_change_next(1);
             setTimeout(hdhbct_auto_next_auto_recovery_tran_position,1000);
         }
         function hdhbct_auto_next_auto_recovery_tran_position(){
@@ -786,6 +797,7 @@
         }
         var hdhb_inside_pic_width;
         function hdhbct_change_up(){
+            current_hdhbct_time=50;
             adapt_hdhbct_tran(0);
             last=current_hdhb_page_id;
             if(width_website<=617){
@@ -955,9 +967,19 @@ var hdhbct_tran_is_tran=0;
             }
         }
 
-        setInterval(auto_change_banner,5000);
+        setInterval(banner_timer,100);
+        function banner_timer(){
+            current_banner_time--;
+            if(!current_banner_time){
+                current_banner_time=50;
+                auto_change_banner(1);
+            }
+        }
         var current_banner_id=1;
-        function auto_change_banner(){
+        function auto_change_banner(is_auto){
+            if(!is_auto){
+                current_banner_time=50;
+            }
             banner_anm(current_banner_id);
             current_banner_id++;
             if(current_banner_id>=5){
@@ -966,6 +988,7 @@ var hdhbct_tran_is_tran=0;
             document.getElementById("banner").style.backgroundImage="url(./资源/banner" + current_banner_id + ".jpg)";
         }
         function auto_change_banner_up(){
+            current_banner_time=50;
             banner_anm(current_banner_id);
             current_banner_id--;
             if(current_banner_id<=0){
@@ -1035,12 +1058,24 @@ var hdhbct_tran_is_tran=0;
             }
         }
 
-        setInterval(auto_change_ldyw,5000);
+
         var current_ldyw=1;
 
+        setInterval(ldyw_timer,100);
+        function ldyw_timer(){
+            current_ldyw_time--;
+            if(!current_ldyw_time){
+                current_ldyw_time=50;
+                auto_change_ldyw(0,1);
+            }
+        }
 
+        var current_ldyw_time=50;
 
-        function auto_change_ldyw(dir){
+        function auto_change_ldyw(dir,is_auto){
+            if(!is_auto){
+                current_ldyw_time=50;
+            }
             document.getElementById("page_id_show_1").style.backgroundColor="#c0cacc";
             document.getElementById("page_id_show_2").style.backgroundColor="#c0cacc";
             document.getElementById("page_id_show_3").style.backgroundColor="#c0cacc";
@@ -1666,7 +1701,22 @@ var hdhbct_tran_is_tran=0;
         </div>
     </div>
 <div id="wait_window">
-    <img id="wait_window_anm" src="./资源/加载.png" alt="" style="width: 50px;margin: 0 auto;text-align: center;margin-top: 200px" onload="wait_window_anm()">
+    <div id="wait_window_anm" src="./资源/加载.png" alt="" style="width: 50px;margin: 0 auto;text-align: center;margin-top: 200px" onload="wait_window_anm()">
+        <div class="sk-fading-circle">
+            <div class="sk-circle1 sk-circle"></div>
+            <div class="sk-circle2 sk-circle"></div>
+            <div class="sk-circle3 sk-circle"></div>
+            <div class="sk-circle4 sk-circle"></div>
+            <div class="sk-circle5 sk-circle"></div>
+            <div class="sk-circle6 sk-circle"></div>
+            <div class="sk-circle7 sk-circle"></div>
+            <div class="sk-circle8 sk-circle"></div>
+            <div class="sk-circle9 sk-circle"></div>
+            <div class="sk-circle10 sk-circle"></div>
+            <div class="sk-circle11 sk-circle"></div>
+            <div class="sk-circle12 sk-circle"></div>
+        </div>
+    </div>
 <p style="display: block;width: 100%;text-align: center;margin-top: 30px">正在准备张天予-2022400614的2023.1.2前端作业二</p>
 </div>
 <div class="main" id="main" style="margin: 0 auto">
@@ -1874,7 +1924,7 @@ var hdhbct_tran_is_tran=0;
                 </div>
             </div>
             <a class="banner_control" id="banner_control_1" onclick="auto_change_banner_up()"></a>
-            <a class="banner_control" id="banner_control_2" onclick="auto_change_banner()"></a>
+            <a class="banner_control" id="banner_control_2" onclick="auto_change_banner(0)"></a>
         </div>
 <!--        ldyw_tran start-->
         <div class="ldyw" id="ldyw_tran" style="">
@@ -1906,8 +1956,8 @@ var hdhbct_tran_is_tran=0;
                 <img src="./资源/聊大要闻.png" alt="聊大要闻" style="height: 35px">
 
                 <div style="width: 60px;height: 30px;float: right;margin-top: 5px;margin-right: 25px">
-                    <div class="ldyw_jt" style="width: 25px;height: 25px;background-color: #0d495f;float: left;display: inline-block;border-radius: 2px;background-image: url(./资源/向左的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer;cursor: pointer" onclick="auto_change_ldyw(1)"></div>
-                    <div class="ldyw_jt" style="width: 25px;height: 25px;background-color: #0d495f;float: right;display: inline-block;border-radius: 2px;background-image: url(./资源/向右的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer;cursor: pointer" onclick="auto_change_ldyw(0)"></div>
+                    <div class="ldyw_jt" style="width: 25px;height: 25px;background-color: #0d495f;float: left;display: inline-block;border-radius: 2px;background-image: url(./资源/向左的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer;cursor: pointer" onclick="auto_change_ldyw(1,0)"></div>
+                    <div class="ldyw_jt" style="width: 25px;height: 25px;background-color: #0d495f;float: right;display: inline-block;border-radius: 2px;background-image: url(./资源/向右的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer;cursor: pointer" onclick="auto_change_ldyw(0,0)"></div>
                 </div>
 
 
@@ -2366,7 +2416,7 @@ var hdhbct_tran_is_tran=0;
                         </div>
                         <div id="hdhbct" style="width: 100%;height: 560px;float: left;background-repeat: no-repeat;background-size: cover;background-position: center"></div>
                     </div>
-                    <div id="hdhbjt2" style="width: 30px;height: 560px;background-image: url(./资源/向右的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer" onclick="hdhbct_change_next()" onmousemove="adapt_hdhbct_tran(0)">
+                    <div id="hdhbjt2" style="width: 30px;height: 560px;background-image: url(./资源/向右的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer" onclick="hdhbct_change_next(0)" onmousemove="adapt_hdhbct_tran(0)">
                     </div>
                 </div>
             </div>
