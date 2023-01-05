@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>聊城大学官网首页（22级9班张天予）</title>
+    <title>聊城大学</title>
     <link rel="stylesheet" href="./CSS/style1.css">
     <script>
         var is_first=1;
@@ -722,19 +722,18 @@
 
             document.getElementById("footas").style.paddingLeft=gap + "px";
             document.getElementById("footas").style.paddingRight=gap + "px";
-            document.getElementById("foota1_img_1").style.width=(width_website-gap*2)/9+"px";
-            document.getElementById("foota1_img_2").style.width=(width_website-gap*2)/9-1+"px";
-            document.getElementById("foota1_img_3").style.width=(width_website-gap*2)/9-1+"px";
-            document.getElementById("foota1_img_4").style.width=(width_website-gap*2)/9-1+"px";
-            document.getElementById("foota1_img_5").style.width=(width_website-gap*2)/9-1+"px";
-            document.getElementById("foota1_img_6").style.width=(width_website-gap*2)/9-1+"px";
-            document.getElementById("foota1_img_7").style.width=(width_website-gap*2)/9-1+"px";
-            document.getElementById("foota1_img_8").style.width=(width_website-gap*2)/9-1+"px";
-            document.getElementById("foota1_img_9").style.width=(width_website-gap*2)/9-1+"px";
+            // document.getElementById("foota1_img_1").style.width=(width_website-gap*2)/9+"px";
+            // document.getElementById("foota1_img_2").style.width=(width_website-gap*2)/9-1+"px";
+            // document.getElementById("foota1_img_3").style.width=(width_website-gap*2)/9-1+"px";
+            // document.getElementById("foota1_img_4").style.width=(width_website-gap*2)/9-1+"px";
+            // document.getElementById("foota1_img_5").style.width=(width_website-gap*2)/9-1+"px";
+            // document.getElementById("foota1_img_6").style.width=(width_website-gap*2)/9-1+"px";
+            // document.getElementById("foota1_img_7").style.width=(width_website-gap*2)/9-1+"px";
+            // document.getElementById("foota1_img_8").style.width=(width_website-gap*2)/9-1+"px";
+            // document.getElementById("foota1_img_9").style.width=(width_website-gap*2)/9-1+"px";
             for(i=1;i<=9;i++){
                 document.getElementById("foota1_img_" + i).style.height="110px";
             }
-
             if(is_first_3){
                 is_first_3=0;
                 document.getElementById("wait_window").style.opacity="0%";
@@ -1604,8 +1603,30 @@ var hdhbct_tran_is_tran=0;
 
     </script>
     <link rel="shortcut icon" href="/资源/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./control/CSS/style_of_control.css">
+    <script src="./control/JS/control.js"></script>
 </head>
 <body onresize="body_onresize()" onload="auto_adapt_banner_size()">
+
+<div class="control">
+    <div class="control_back" id="control_back" onclick="open_or_close_sidebar()" onmousemove="control_adapt()">
+
+    </div>
+    <div class="control_button_base" id="control_button_base">
+        <div class="control_button" onclick="open_or_close_sidebar()" onmousemove="control_adapt()">
+        </div>
+        <p>lcuzty</p>
+    </div>
+    <div class="control_sidebar" id="control_sidebar">
+        <div class="control_sidebar_button_base">
+            <iframe src="https://lcuzty.github.io/lcuzty/control/iframe.html" class="control_sidebar_iframe" id="control_sidebar_iframe">
+
+            </iframe>
+        </div>
+    </div>
+</div>
+
 <div class="fdbs" id="fdbs">
     <div class="fdbs_inside" id="fdbs_inside_1" onmouseenter="fdzk_show(1)" onmouseleave="fdzk_hide_all()" onclick="al()"></div>
     <div class="fdbs_inside" id="fdbs_inside_2" onmouseenter="fdzk_show(2)" onmouseleave="fdzk_hide_all()"></div>
@@ -1640,7 +1661,7 @@ var hdhbct_tran_is_tran=0;
         <div class="title_and_nav_on_scrolling_inside" id="title_and_nav_on_scrolling_inside">
             <img src="./资源/lculogo_of_fixed_nav.png" alt="">
             <div class="fxnavs">
-                <a href="#" class="nav fxnav" id="fxmenu1_button" onmouseenter="show_menu_1()" onmouseleave="hide_all_menu()">学校概况</a><a href="#" class="nav fxnav" id="fxmenu2_button" onmouseenter="show_menu_2()" onmouseleave="hide_all_menu()">组织机构</a><a href="#" class="nav fxnav" id="fxmenu3_button" onmouseenter="show_menu_3()" onmouseleave="hide_all_menu()">师资队伍</a><a href="#" class="nav fxnav" id="fxmenu4_button" onmouseenter="show_menu_4()" onmouseleave="hide_all_menu()">教学科研</a><a href="#" class="nav fxnav" id="fxmenu5_button" onmouseenter="show_menu_5()" onmouseleave="hide_all_menu()">招生就业</a><a href="#" class="nav fxnav" id="fxmenu6_button">信息公开</a><a href="#" class="nav fxnav" id="fxmenu7_button" onmouseenter="show_menu_7()" onmouseleave="hide_all_menu()">学子家园</a><a href="#" class="nav fxnav" id="fxmenu8_button" style="margin-right: 7px;" onmouseenter="show_menu_8()" onmouseleave="hide_all_menu()">校园服务</a>
+                <a href="#" class="nav fxnav" id="fxmenu1_button">学校概况</a><a href="#" class="nav fxnav" id="fxmenu2_button">组织机构</a><a href="#" class="nav fxnav" id="fxmenu3_button">师资队伍</a><a href="#" class="nav fxnav" id="fxmenu4_button">教学科研</a><a href="#" class="nav fxnav" id="fxmenu5_button">招生就业</a><a href="#" class="nav fxnav" id="fxmenu6_button">信息公开</a><a href="#" class="nav fxnav" id="fxmenu7_button">学子家园</a><a href="#" class="nav fxnav" id="fxmenu8_button" style="margin-right: 7px;">校园服务</a>
             </div>
         </div>
     </div>
@@ -1940,7 +1961,6 @@ var hdhbct_tran_is_tran=0;
                             <p style="font-size: 12px;line-height: 16px">2022.12</p>
                         </div>
                         <a href="#">第五届太平洋岛国研究高层论坛获评“山东省社科论坛十佳研讨会”</a>
-
                     </li>
                     <li class="ldyw_list_single_li">
                         <div class="ldyw_list_single_li_date">
@@ -1949,7 +1969,6 @@ var hdhbct_tran_is_tran=0;
                             <p style="font-size: 12px;line-height: 16px">2022.12</p>
                         </div>
                         <a href="#">【中国教育报】“学、练、践、思”贯通一体——聊城大学历史学专业教育实践课程体系的构建与探索</a>
-
                     </li>
                 </ol>
             </div>
@@ -1971,7 +1990,6 @@ var hdhbct_tran_is_tran=0;
                             <p style="font-size: 12px;line-height: 16px">2022.12</p>
                         </div>
                         <a href="#">学校14个项目入选2022年省本科教学改革研究项目拟立项名单</a>
-
                     </li>
                     <li class="ldyw_list_single_li">
                         <div class="ldyw_list_single_li_date">
@@ -1980,7 +1998,6 @@ var hdhbct_tran_is_tran=0;
                             <p style="font-size: 12px;line-height: 16px">2022.12</p>
                         </div>
                         <a href="#">【大众日报】用好四个“镜头” 精准靶向施策——聊城大学打造高水平师资队伍全链条式引育模式</a>
-
                     </li>
                 </ol>
             </div>
@@ -2002,7 +2019,6 @@ var hdhbct_tran_is_tran=0;
                             <p style="font-size: 12px;line-height: 16px">2022.12</p>
                         </div>
                         <a href="#">聊大发放驱寒防疫热饮！暖胃又暖心！！</a>
-
                     </li>
                     <li class="ldyw_list_single_li">
                         <div class="ldyw_list_single_li_date">
@@ -2011,7 +2027,6 @@ var hdhbct_tran_is_tran=0;
                             <p style="font-size: 12px;line-height: 16px">2022.12</p>
                         </div>
                         <a href="#">济南嘉旺家具有限公司向聊城大学捐赠医学发热诊疗站</a>
-
                     </li>
                 </ol>
             </div>
@@ -2023,7 +2038,6 @@ var hdhbct_tran_is_tran=0;
             <div class="whxs" id="whxs" style="display: inline-block;background-color: rgba(127,255,212,0);">
                 <div class="whxs_l" id="whxs_l" style="width: 180px;height: 240px;background-color: #a1964a;margin-top: 17px;float: left;padding-top: 80px;padding-left: 30px">
                     <img src="./资源/文化学术.png" alt="" style="height: 30px">
-
                     <a id="gdnr1" href="#" style="margin-left: 34px;font-size: 13px;color: white" class="gengduoneirong">更多内容 >></a>
                 </div>
                 <div class="whxs_r" id="whxs_r" style="height: 274px;background-color: white;float: right">
@@ -2079,7 +2093,6 @@ var hdhbct_tran_is_tran=0;
             <div class="tzgg" id="tzgg" style="display: inline-block;background-color: rgba(127,255,212,0)">
                 <div class="tzgg_l" id="tzgg_l" style="width: 180px;height: 240px;background-color: #279394;margin-top: 17px;float: right;padding-top: 80px;padding-left: 30px">
                     <img src="./资源/通知公告.png" alt="" style="height: 30px">
-
                     <a id="gdnr2" href="#" style="margin-left: 34px;font-size: 13px;color: white" class="gengduoneirong">更多内容 >></a>
                 </div>
                 <div class="tzgg_r" id="tzgg_r" style="height: 274px;background-color: white;float: left">
@@ -2135,7 +2148,6 @@ var hdhbct_tran_is_tran=0;
         </div>
 <!--        mtld_tran start-->
         <div id="mtld_tran" style="height: 340px;color: white;position: absolute">
-
             <div style="height: 80px;text-align: center;line-height: 80px">
                 <img src="./资源/媒体聊大.png" alt="" style="height: 30px;">
             </div>
@@ -2145,7 +2157,6 @@ var hdhbct_tran_is_tran=0;
                     <div class="mtld_news_title" id="mtld_news_1_title_tran" style="height: 200px;display: inline-block;float: right;background-color: rgb(22,80,104);">
                         <div style="width: 100%;height: 100px">
                             <a id="mtld_news_1_title_a_tran" href="#" style="color: white">【海报新闻】聊城大学...</a>
-
                         </div>
                         <p id="mtld_news_1_title_p_tran" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
                     </div>
@@ -2155,7 +2166,6 @@ var hdhbct_tran_is_tran=0;
                     <div class="mtld_news_title" id="mtld_news_2_title_tran" style="height: 200px;display: inline-block;float: right;background-color: rgb(37,146,147);">
                         <div style="width: 100%;height: 100px">
                             <a id="mtld_news_2_title_a_tran" href="#" style="color: white">【海报新闻】聊城大学...</a>
-
                         </div>
                         <p id="mtld_news_2_title_p_tran" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
                     </div>
@@ -2165,7 +2175,6 @@ var hdhbct_tran_is_tran=0;
                     <div class="mtld_news_title" id="mtld_news_3_title_tran" style="height: 200px;display: inline-block;float: right;background-color: rgb(22,80,104);">
                         <div style="width: 100%;height: 100px">
                             <a id="mtld_news_3_title_a_tran" href="#" style="color: white">【海报新闻】聊城大学...</a>
-
                         </div>
                         <p id="mtld_news_3_title_p_tran" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
                     </div>
@@ -2175,7 +2184,6 @@ var hdhbct_tran_is_tran=0;
                     <div class="mtld_news_title" id="mtld_news_4_title_tran" style="height: 200px;display: inline-block;float: right;background-color: rgb(37,146,147);">
                         <div style="width: 100%;height: 100px">
                             <a id="mtld_news_4_title_a_tran" href="#" style="color: white">【海报新闻】聊城大学...</a>
-
                         </div>
                         <p id="mtld_news_4_title_p_tran" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
                     </div>
@@ -2199,7 +2207,6 @@ var hdhbct_tran_is_tran=0;
                     <div class="mtld_news_title" id="mtld_news_1_title" style="height: 200px;display: inline-block;float: right;background-color: rgb(22,80,104);">
                         <div style="width: 100%;height: 100px">
                             <a id="mtld_news_1_title_a" href="#" style="color: white">【海报新闻】聊城大学...</a>
-
                         </div>
                         <p id="mtld_news_1_title_p" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
                     </div>
@@ -2209,7 +2216,6 @@ var hdhbct_tran_is_tran=0;
                     <div class="mtld_news_title" id="mtld_news_2_title" style="height: 200px;display: inline-block;float: right;background-color: rgb(37,146,147);">
                         <div style="width: 100%;height: 100px">
                             <a id="mtld_news_2_title_a" href="#" style="color: white">【海报新闻】聊城大学...</a>
-
                         </div>
                         <p id="mtld_news_2_title_p" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
                     </div>
@@ -2219,7 +2225,6 @@ var hdhbct_tran_is_tran=0;
                     <div class="mtld_news_title" id="mtld_news_3_title" style="height: 200px;display: inline-block;float: right;background-color: rgb(22,80,104);">
                         <div style="width: 100%;height: 100px">
                             <a id="mtld_news_3_title_a" href="#" style="color: white">【海报新闻】聊城大学...</a>
-
                         </div>
                         <p id="mtld_news_3_title_p" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
                     </div>
@@ -2229,7 +2234,6 @@ var hdhbct_tran_is_tran=0;
                     <div class="mtld_news_title" id="mtld_news_4_title" style="height: 200px;display: inline-block;float: right;background-color: rgb(37,146,147);">
                         <div style="width: 100%;height: 100px">
                             <a id="mtld_news_4_title_a" href="#" style="color: white">【海报新闻】聊城大学...</a>
-
                         </div>
                         <p id="mtld_news_4_title_p" style="color: #bdbdbd;font-size: 10px;float: right;font-style: italic">2022-07-26</p>
                     </div>
@@ -2243,8 +2247,6 @@ var hdhbct_tran_is_tran=0;
                             <div class="page_id_show" id="mtld_page_id_show_2" onmouseenter="mtld_page_id_scale(2)" onmouseleave="mtld_page_id_scale_exit(2)" onclick="mtld_page_id_change_page(2)"></div>
                             <div class="page_id_show" id="mtld_page_id_show_3" onmouseenter="mtld_page_id_scale(3)" onmouseleave="mtld_page_id_scale_exit(3)" onclick="mtld_page_id_change_page(3)"></div>
                         </div>
-
-
                     </div>
                     <div style="width: 25px;height: 25px;background-color: #0d495f;float: left;display: inline-block;border-radius: 2px;background-image: url(./资源/向左的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer" onclick="mtld_page_up()"></div>
                     <div style="width: 25px;height: 25px;background-color: #0d495f;float: right;display: inline-block;border-radius: 2px;background-image: url(./资源/向右的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer" onclick="mtld_page_next()"></div>
@@ -2261,8 +2263,6 @@ var hdhbct_tran_is_tran=0;
                     <a href="#" style="float: right;margin-right: 30px;font-size: 11px;color: white">更多内容 >></a>
                 </div>
                 <div style="height: 30px;"></div>
-
-
                 <ol>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
@@ -2275,38 +2275,32 @@ var hdhbct_tran_is_tran=0;
                             <div style="height: 5px;width: 5px;background-color: #288f90;"></div>
                         </div>
                         <a class="ldg" href="#">政府工作报告</a>
-
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #288f90;"></div>
                         </div>
                         <a class="ldg" href="#">教育部2022年工作要点</a>
-
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #288f90;"></div>
                         </div>
                         <a class="ldg" href="#">2022年全国教育工作会议：加快教育高质量发展</a>
-
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #288f90;"></div>
                         </div>
                         <a class="ldg" href="#">教育部等九部门印发《“十四五”学前教育发展提升行动计划》和《“十四五”县...</a>
-
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #288f90;"></div>
                         </div>
                         <a class="ldg" href="#">中国共产党第十九届中央委员会第六次全体会议公报</a>
-
                     </li>
                 </ol>
-
             </div>
             <div id="tszs" style="width: 350px;height: 600px;background-color: rgba(245,222,179,0);display: inline-block;margin-left: 50px;float: left;margin-right: 50px">
                 <div style="width: 100%;height: 120px;background-color: #a2974b;margin-top: 0px;background-image: url(./资源/他山之石背景.png);background-size: cover;background-repeat: no-repeat;">
@@ -2316,8 +2310,6 @@ var hdhbct_tran_is_tran=0;
                         <a class="ldg" href="#" style="float: right;margin-right: 30px;font-size: 11px;color: white">更多内容 >></a>
                 </div>
                 <div style="height: 30px;"></div>
-
-
                 <ol>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
@@ -2330,38 +2322,32 @@ var hdhbct_tran_is_tran=0;
                             <div style="height: 5px;width: 5px;background-color: #a2974b;"></div>
                         </div>
                         <a class="ldg" href="#">浙江大学以“网上浙大2.0”为抓手 加快打造数字时代办学新空间</a>
-
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #a2974b;"></div>
                         </div>
                         <a class="ldg" href="#">四川大学以“四个注重”为抓手 深入推进创新创业教育改革提质升级</a>
-
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #a2974b;"></div>
                         </div>
                         <a class="ldg" href="#">山东师大构建“4+X”模式 以教育评价改革引领高质量发展</a>
-
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #a2974b;"></div>
                         </div>
                         <a class="ldg" href="#">天津大学以“四个突出”推进教师职称制度改革</a>
-
                     </li>
                     <li style="height: 65px;">
                         <div style="width: 15px;margin-top: 0px;display: inline-block">
                             <div style="height: 5px;width: 5px;background-color: #a2974b;"></div>
                         </div>
                         <a class="ldg" href="#">青岛科技大学“四个强化”推进教师评价改革</a>
-
                     </li>
                 </ol>
-
             </div>
             <div id="hdhb" style="float: left;height: 600px;width: 540px">
                 <div style="height: 65px;">
@@ -2375,16 +2361,13 @@ var hdhbct_tran_is_tran=0;
                         <div class="hdhbct_tran" id="hdhbct_tran">
                             <p style="position: absolute">tran</p>
                             <div class="hdhbct_tran_inside" id="hdhbct_tran_l">
-
                             </div><div class="hdhbct_tran_inside" id="hdhbct_tran_r">
-
                             </div>
                         </div>
                         <div id="hdhbct" style="width: 100%;height: 560px;float: left;background-repeat: no-repeat;background-size: cover;background-position: center"></div>
                     </div>
                     <div id="hdhbjt2" style="width: 30px;height: 560px;background-image: url(./资源/向右的箭头2.png);background-repeat: no-repeat;background-size: contain;background-position: center;display: inline-block;cursor: pointer" onclick="hdhbct_change_next()" onmousemove="adapt_hdhbct_tran(0)">
                     </div>
-
                 </div>
             </div>
         </div>
@@ -2393,47 +2376,38 @@ var hdhbct_tran_is_tran=0;
                 <div id="foota_2_1" style="height: 110px;display: inline-block;float: left;margin-right: 8px">
                     <div style="height: 55px">
                         <a href="#" style="line-height: 55px;background-color: #0555bb;display: block;text-align: center;color: white">聊大慕课</a>
-
                     </div>
                     <div style="height: 55px">
                         <a href="#" style="line-height: 55px;background-color: #752564;display: block;text-align: center;color: white">图书馆</a>
-
                     </div>
                 </div>
                 <div id="foota_2_2" style="height: 110px;display: inline-block;float: left;margin-right: 8px">
                     <div style="height: 55px">
                         <a href="#" style="line-height: 55px;background-color: #2da9b7;display: block;text-align: center;color: white">数字聊大</a>
-
                     </div>
                     <div style="height: 55px">
                         <a href="#" style="line-height: 55px;background-color: #02bae3;display: block;text-align: center;color: white">聊大媒体</a>
-
                     </div>
                 </div>
                 <div id="foota_2_3" style="height: 110px;display: inline-block;float: left;margin-right: 8px">
                     <div style="height: 55px">
                         <a href="#" style="line-height: 55px;background-color: #4a7a27;display: block;text-align: center;color: white">聊大邮箱</a>
-
                     </div>
                     <div style="height: 55px">
                         <a href="#" style="line-height: 55px;background-color: #0555bb;display: block;text-align: center;color: white">聊大易班</a>
-
                     </div>
                 </div>
                 <div id="foota_2_4" style="height: 110px;display: inline-block;float: left;margin-right: 8px">
                     <div style="height: 55px">
                         <a href="#" style="line-height: 55px;background-color: #02bae3;display: block;text-align: center;color: white">自动化办公</a>
-
                     </div>
                     <div style="height: 55px">
                         <a href="#" style="line-height: 55px;background-color: #2da9b7;display: block;text-align: center;color: white">全景聊大</a>
-
                     </div>
                 </div>
                 <div id="foota_2_5" style="height: 110px;display: inline-block;float: left;margin-right:0px">
                     <div style="height: 55px">
                         <a href="#" style="line-height: 55px;background-color: #752564;display: block;text-align: center;color: white">聊大VPN</a>
-
                     </div>
                 </div>
             </div>
@@ -2471,7 +2445,6 @@ var hdhbct_tran_is_tran=0;
                 <p style="color: white;font-size: 14px;margin-bottom: 15px">电话: (0635) 8239115 8239155校长信箱：xzxx@lcu.edu.cn</p>
                 <p style="color: white;font-size: 14px;margin-bottom: 15px">网站信箱：webmaster@lcu.edu.cn</p>
                 <p style="color: white;font-size: 14px;margin-bottom: 15px">地址：中国山东聊城市湖南路1号邮编：252000</p>
-
             </div>
             <div id="foot2_r" style="height: 255px;width: 550px;float: right;display: inline-block;background-color: rgba(245,222,179,0);">
                 <div style="display: inline-block;float: left;width: 3px;background-image: url(./资源/页脚分割线.png);background-size: contain;background-position: center;height: 255px;background-repeat: no-repeat"></div>
@@ -2490,7 +2463,6 @@ var hdhbct_tran_is_tran=0;
                 <p style="color: white;font-size: 14px;margin-bottom: 15px">电话: (0635) 8239115 8239155校长信箱：xzxx@lcu.edu.cn</p>
                 <p style="color: white;font-size: 14px;margin-bottom: 15px">网站信箱：webmaster@lcu.edu.cn</p>
                 <p style="color: white;font-size: 14px;margin-bottom: 15px">地址：中国山东聊城市湖南路1号邮编：252000</p>
-
             </div>
             <div id="foot3_r" style="height: 255px;width: 550px;float: right;display: inline-block;background-color: rgba(245,222,179,0);">
                 <div style="display: inline-block;float: left;width: 3px;background-image: url(./资源/页脚分割线.png);background-size: contain;background-position: center;height: 255px;background-repeat: no-repeat"></div>
@@ -2499,9 +2471,6 @@ var hdhbct_tran_is_tran=0;
                     <div style="height: 50px;width: 50px;"><img src="./资源/微博.png" alt="" style="height: 35px;display: block;margin: 0 auto"></div>
                     <div style="height: 50px;width: 50px;"><img src="./资源/事业单位.png" alt="" style="height: 35px;display: block;margin: 0 auto"></div>
                 </div>
-
-
-
             </div>
         </div>
         <div style="height: 255px;background-image: url(./资源/页脚背景.png);overflow: hidden">
@@ -2535,13 +2504,11 @@ var hdhbct_tran_is_tran=0;
                     <p href="#" style="line-height: 40px;color: white;margin-top: 0px;width: 300px;display: block">地址：中国山东聊城市湖南路1号</p>
                     <p href="#" style="line-height: 40px;color: white;margin-top: 0px;width: 300px;display: block">邮编：252000</p>
                 </div>
-
             </div>
         </div>
         <div id="foott" style="height: 40px;background-color: #0e4e6a;text-align: center ">
             <p style="display: inline;line-height: 40px;color: #d5dbe0;font-size: 14px">版权所有©聊城大学 鲁ICP备05001955号 鲁公网安备 37150202000174号 建设管理：党委宣传部</p>
         </div>
     </div>
-    
 </body>
 </html>
