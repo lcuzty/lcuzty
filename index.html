@@ -362,7 +362,11 @@
             0%, 39%, 100% { opacity: 0; }
             40% { opacity: 1; }
         }
-        
+
+        body{
+            overflow: hidden;
+        }
+
 
     </style>
     <script>
@@ -394,6 +398,7 @@
             }
             document.getElementById("waitshow").style.visibility="hidden";
             document.getElementById("main").style.visibility="visible";
+            document.body.style.overflowY="scroll";
 
             document.getElementById("blkbgcinside").style.left=(window.innerWidth-document.getElementById("blkbgcinside").style.width.replace("px",""))/2 + "px";
             document.getElementById("blkbgcinside").style.top=(window.innerHeight-document.getElementById("blkbgcinside").style.height.replace("px",""))/2 + "px";
@@ -448,7 +453,7 @@
                 <div class="card" style="background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fww4.sinaimg.cn%2Flarge%2F6830a53bly1g7gn0flwjcj20g809qgma.jpg&refer=http%3A%2F%2Fwww.sina.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1675066416&t=266378623a279d0da9c3fa16813fef5e);background-size: cover;background-position: center;background-repeat: no-repeat">
                     <a href="https://lcuzty.github.io/lcuzty/lcuhomepage" target="_self" class="card_top">
                         <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">前端作业二</div>
-                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">2023/1/4</div>
+                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">2022/1/4</div>
                     </a>
                 </div>
             </div>
@@ -552,7 +557,7 @@
 
         </div>
         <div style="width: 100%;height: 60px;background-color: rgb(230,230,230);text-align: center;margin-top: 50px;">
-            <p style="line-height: 60px">Copyright © 2023 by Zhang Tianyu</p>
+            <p style="line-height: 60px">Copyright © 2022 by Zhang Tianyu</p>
         </div>
     </div>
 </body>
