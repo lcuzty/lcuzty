@@ -138,6 +138,30 @@
             background-color: rgba(0, 0, 0, 0.1);
         }
 
+        #contact_me{
+            height: 120px;
+            width: 100%;
+            position: fixed;
+            bottom: 0px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .contact_me_qrcode{
+            width: 100%;
+            height: 100px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 80px;
+            background-image: url("./RE/contact_QQ.png");
+
+        }
+
+        .contact_me_text{
+            position: relative;
+            top: -8px;
+        }
+
     </style>
     <script !src="">
         function open_link(id){
@@ -188,6 +212,11 @@
 <div class="control_button_base" onclick="open_link(6)">
     <img class="control_button_icon" src="RE/changjingguanli.png">
     <p class="control_button_text">在线日历</p>
+</div>
+
+<div class="contact_me control_button_base" id="contact_me">
+    <div class="contact_me_qrcode"></div>
+    <p class="contact_me_text">QQ</p>
 </div>
 </body>
 </html>
