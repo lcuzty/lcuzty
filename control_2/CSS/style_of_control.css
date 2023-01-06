@@ -1,0 +1,75 @@
+.control{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 10000;
+    color: black;
+}
+
+.control_button_base{
+    width: 310px;
+    height: 75px;
+    position: relative;
+    z-index: 10000;
+}
+
+.control_button_base>p{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: -13px;
+    left: -2px;
+    visibility: hidden;
+}
+
+.control_button{
+    width: 310px;
+    height: 75px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+    z-index: 10000;
+    display: inline-block;
+    transition: all .05s;
+
+}
+
+.control_button:hover{
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.control_button:active{
+    background-color: rgba(0, 0, 0, 0.10);
+    scale: 99%;
+}
+
+.control_sidebar{
+    width: 310px;
+    height: 700px;
+    box-shadow: 0px 13px 10px 2px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(40px);
+    position: relative;
+    margin-left: -330px;
+    transition: margin-left .2s;
+    z-index: 10000;
+    padding: 5px 5px;
+    margin-top: -3000px;
+}
+
+.control_back{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 9999;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(217, 32, 32, 0);
+    visibility: hidden;
+}
+
+.control_sidebar_iframe{
+    border-style: none;
+}
