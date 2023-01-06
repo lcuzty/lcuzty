@@ -20,7 +20,7 @@ function open_or_close_sidebar(){
 
 function control_adapt(){
     document.getElementById("control_sidebar").style.height=window.innerHeight-75 + "px";
-    document.getElementById("control_sidebar_iframe").style.height=window.innerHeight-83 + "px";
+    document.getElementById("control_sidebar_iframe").style.height=window.innerHeight-84 + "px";
 }
 
 function control_small(){
