@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>日历</title>
+    <title>lcuzty - 日历</title>
     <style>
         /* 清除默认样式的代码 */
         /* 去除常见标签默认的 margin 和 padding */
@@ -376,11 +376,33 @@
         }
 
     </script>
+
+    <link rel="stylesheet" href="./control_2/CSS/style_of_control.css">
+    <script src="./control_2/JS/control.js"></script>
 </head>
 <body onresize="auto_adapt_size()" onload="auto_adapt_size()" style="background-color: rgb(255,255,255);margin: 0 0 0 0;padding: 0 0 0 0;">
+
+<div class="control">
+    <div class="control_back" id="control_back" onclick="open_or_close_sidebar()" onmousemove="control_adapt()">
+
+    </div>
+    <div class="control_button_base" id="control_button_base">
+        <div class="control_button" onclick="open_or_close_sidebar()" onmousemove="control_adapt()">
+        </div>
+        <p>lcuzty</p>
+    </div>
+    <div class="control_sidebar" id="control_sidebar">
+        <div class="control_sidebar_button_base">
+            <iframe src="https://lcuzty.github.io/lcuzty/control/iframe.html" class="control_sidebar_iframe" id="control_sidebar_iframe">
+
+            </iframe>
+        </div>
+    </div>
+</div>
+
     <div class="title" id="title">
         <div class="maintitle" id="maintitle">
-            <p class="titleh">日历</p>
+            <p class="titleh">lcuzty - 日历</p>
         </div>
     </div>
     <div id="waitshow" style="width: 100%;text-align: center;position: absolute;top: 200px">
@@ -402,15 +424,6 @@
     <div class="main" id="main" style="width: 100%;visibility: hidden">
         <div class="mainarea" id="mainarea">
             <div style="height: 75px;width: 100%"></div>
-            <div style="font-size: 21px;line-height: 75px">主页</div>
-            <div class="cards">
-                <div class="card" style="background-image: url(https://img2.baidu.com/it/u=757735590,3938109259&fm=253&fmt=auto&app=138&f=PNG?w=900&h=450);background-size: cover;background-position: center;background-repeat: no-repeat">
-                    <a href="https://lcuzty.github.io/lcuzty/" target="_self" class="card_top">
-                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">lcuzty</div>
-                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">点击返回主页</div>
-                    </a>
-                </div>
-            </div>
             <div style="font-size: 21px;line-height: 75px;margin-top: 30px">2023兔年日历</div>
             <div class="cards">
                 <div class="card" style="background-image: url(./RE/2023.png);background-size: cover;background-repeat: no-repeat">
@@ -438,7 +451,7 @@
             </div>
             <div class="cards">
                 <div class="card" style="background-image: url(./RE/2023.png);background-size: cover;background-repeat: no-repeat">
-                    <a href="https://lcuzty.github.io/lcuzty/lcuzty - warning/index.html?12" target="_self" class="card_top">
+                    <a href="https://lcuzty.github.io/lcuzty/lcuzty - warning/index.html?11" target="_self" class="card_top">
                         <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">在线2023日历</div>
                         <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">即将上线</div>
                     </a>
@@ -465,6 +478,7 @@
 
 
         </div>
+        <div style="height: 75px;width: 100%"></div>
         <div style="width: 100%;height: 60px;background-color: rgb(230,230,230);text-align: center;margin-top: 50px">
             <p style="line-height: 60px">Copyright © 2023 by Zhang Tianyu</p>
         </div>
