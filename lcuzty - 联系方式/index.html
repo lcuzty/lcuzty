@@ -434,6 +434,28 @@
             font-size: 24px;
         }
 
+        .open_link_now{
+            border: 0px;
+            height: 30px;
+            position: absolute;
+            padding-left: 1em;
+            padding-right: 1em;
+            font-size: 14px;
+            margin-left: -57px;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: all 0.1s;
+        }
+
+        .open_link_now:hover{
+            background-color: rgb(234,234,234);
+        }
+
+        .open_link_now:active{
+            background-color: rgb(239,239,239);
+            scale: 90%;
+        }
+
     </style>
     <script>
 
@@ -581,6 +603,7 @@
                     <div class="contact_way">
                         <img class="contact_qrcode" src="./RE/contact_bilibili.png" alt="">
                         <p class="contact_way_name">哔哩哔哩</p>
+                        <button class="open_link_now" onclick="window.open('https://space.bilibili.com/1237940274?spm_id_from=333.337.0.0','_blank')">在电脑上访问</button>
                     </div>
                 </div>
             </div>
