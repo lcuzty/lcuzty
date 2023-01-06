@@ -413,6 +413,17 @@
     </style>
     <script>
 
+        function open_link(){
+            switch (mode2) {
+                case '1':
+                    window.open("https://lcuzty.github.io/lcuzty/","_self");
+                    break;
+                case '2':
+                    window.open("https://lcuzty.github.io/lcuzty/calender","_self");
+                    break;
+            }
+        }
+
         function auto_adapt_size(){
             let width_of_website=window.innerWidth;
             if(width_of_website<=1920){
@@ -453,10 +464,13 @@
             show_warning_text();
         }
 
+        var a,b,mode,mode2=1;
+
         function show_warning_text(){
-            var a=window.document.location.href;
-            var b="?";
-            var mode = a[a.lastIndexOf(b)+1];
+            a=window.document.location.href;
+            b="?";
+            mode = a[a.lastIndexOf(b)+1];
+            mode2 = a[a.lastIndexOf(b)+2];
             switch (mode) {
                 case '1':
                     document.getElementById("warning_img").src="./RE/time.png";
@@ -508,7 +522,7 @@
                 <br><br>
                 <p id="warning_text"></p>
                 <br><br>
-                <button id="back" onclick="window.open('https://lcuzty.github.io/lcuzty','_self')">返回主页</button>
+                <button id="back" onclick="open_link()">返回主页</button>
             </div>
         </div>
     </div>
