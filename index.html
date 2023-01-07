@@ -367,6 +367,19 @@
             overflow: hidden;
         }
 
+        .autoplay_test_iframe{
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            width: 305px;
+            height: 125px;
+            background-color: rgba(255, 255, 255, 0);
+            border: 0px;
+            transition: all 500ms;
+            overflow: hidden;
+            z-index: 9998;
+        }
+
 
     </style>
     <script>
@@ -414,6 +427,8 @@
     <script src="./control_2/JS/control.js"></script>
 </head>
 <body onresize="auto_adapt_size()" onload="auto_adapt_size()" style="background-color: rgb(255,255,255);margin: 0 0 0 0;padding: 0 0 0 0;">
+
+<iframe class="autoplay_test_iframe" src="https://lcuzty.github.io/lcuzty/autoplay_test/iframe.html"></iframe>
 
 <div class="control">
     <div class="control_back" id="control_back" onclick="open_or_close_sidebar()" onmousemove="control_adapt()">
