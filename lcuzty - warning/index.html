@@ -369,7 +369,12 @@
 
         #warning_img{
             width: 150px;
+            height: 150px;
             display: inline-block;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+
         }
 
         #warning_text{
@@ -473,11 +478,11 @@
             mode2 = a[a.lastIndexOf(b)+2];
             switch (mode) {
                 case '1':
-                    document.getElementById("warning_img").src="./RE/time.png";
+                    document.getElementById("warning_img").style.backgroundImage="url('./RE/time.png')";
                     document.getElementById("warning_text").innerText="该页面正在开发，即将上线。";
                     break;
                 case '2':
-                    document.getElementById("warning_img").src="./RE/view_off.png";
+                    document.getElementById("warning_img").style.backgroundImage="url('./RE/view_off.png')";
                     document.getElementById("warning_text").innerText="很抱歉，该页面暂停浏览。";
                     break;
 
@@ -540,11 +545,11 @@
         <div style="height: 75px;width: 100%"></div>
         <div class="mainarea" id="mainarea">
             <div class="warning_content">
-                <img id="warning_img" src="" alt="">
+                <div id="warning_img"></div>
                 <br><br>
                 <p id="warning_text"></p>
                 <br><br>
-                <button id="back" onclick="open_link()">返回</button>
+                <button id="back" onclick="open_link()">返回主页</button>
             </div>
         </div>
     </div>
