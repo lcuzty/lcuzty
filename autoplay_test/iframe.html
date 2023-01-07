@@ -307,10 +307,12 @@
             process_width=document.getElementById("process").clientWidth;
             document.getElementById("process_inside").style.width=current_time/top_time*process_width + "px";
             if(current_time==top_time){
-                is_play=0;
-                document.getElementById("play_or_suspend").style.backgroundImage="url('./RE/bofang.png')";
-                if(auto_next){
+                if(auto_next && is_play){
                     change_music(1);
+                }
+                if(!auto_next && is_play){
+                    is_play=0;
+                    document.getElementById("play_or_suspend").style.backgroundImage="url('./RE/bofang.png')";
                 }
             }
 
@@ -460,11 +462,11 @@
         <div class="music_pic" id="music_pic"></div>
         <p class="music_name" id="music_name">播放器</p>
         <div class="music_control">
-            <div class="music_control_button play_or_suspend" id="up" onclick="change_music(1)"></div>
+            <div class="music_control_button play_or_suspend" id="up" onclick="change_music(0)"></div>
             <div class="music_control_button auto_next" id="auto_next" onclick="change_auto_next()"></div>
             <div class="music_control_button play_or_suspend" id="play_or_suspend" onclick="play_or_suspend()"></div>
             <div class="music_control_button stop" id="stop" onclick="stop()"></div>
-            <div class="music_control_button stop" id="next" onclick="change_music(0)"></div>
+            <div class="music_control_button stop" id="next" onclick="change_music(1)"></div>
         </div>
         <p class="time_show" id="time_show_1">0:00</p>
         <div class="process" id="process" onclick="adapt_time()">
