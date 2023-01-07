@@ -270,7 +270,7 @@
         }
 
         #auto_next{
-            background-image: url("./RE/danxuanweixuanzhong.png");
+            background-image: url("./RE/danxuanxuanzhong.png");
         }
 
     </style>
@@ -391,13 +391,13 @@
             switch (music_id){
                 case 1:
                     document.getElementById("music_pic").style.backgroundImage="url('http://p2.music.126.net/v0LaYOX44ZiJjC1bzZbKOg==/109951163884032084.jpg')";
-                    document.getElementById("au").src="https://music.163.com/song/media/outer/url?id=28892409.mp3";
-                    document.getElementById("music_name").innerText="我的天空（伴奏）";
-                    break;
-                case 2:
-                    document.getElementById("music_pic").style.backgroundImage="url('http://p2.music.126.net/v0LaYOX44ZiJjC1bzZbKOg==/109951163884032084.jpg')";
                     document.getElementById("au").src="https://music.163.com/song/media/outer/url?id=28892408.mp3";
                     document.getElementById("music_name").innerText="我的天空";
+                    break;
+                case 2:
+                    document.getElementById("music_pic").style.backgroundImage="url('http://p2.music.126.net/wS-ah1iIxJVbJL12VUDiSA==/19078725765213958.jpg')";
+                    document.getElementById("au").src="https://music.163.com/song/media/outer/url?id=467595235.mp3";
+                    document.getElementById("music_name").innerText="明天";
                     break;
                 case 3:
                     document.getElementById("music_pic").style.backgroundImage="url('http://p2.music.126.net/Brn39jwEDNPVV6pNWcv_rA==/1391981724588577.jpg')";
@@ -447,7 +447,7 @@
             }
         }
 
-        var auto_next=0;
+        var auto_next=1;
 
         function change_auto_next(){
             if(auto_next){
@@ -467,11 +467,11 @@
         <div class="music_pic" id="music_pic"></div>
         <p class="music_name" id="music_name">播放器</p>
         <div class="music_control">
-            <div class="music_control_button play_or_suspend" id="up" onclick="change_music(0)"></div>
-            <div class="music_control_button auto_next" id="auto_next" onclick="change_auto_next()"></div>
-            <div class="music_control_button play_or_suspend" id="play_or_suspend" onclick="play_or_suspend()"></div>
-            <div class="music_control_button stop" id="stop" onclick="stop()"></div>
-            <div class="music_control_button stop" id="next" onclick="change_music(1)"></div>
+            <div class="music_control_button play_or_suspend" id="up" onclick="change_music(0)" title="上一首"></div>
+            <div class="music_control_button auto_next" id="auto_next" onclick="change_auto_next()" title="自动播放下一首"></div>
+            <div class="music_control_button play_or_suspend" id="play_or_suspend" onclick="play_or_suspend()" title="播放/暂停"></div>
+            <div class="music_control_button stop" id="stop" onclick="stop()" title="停止"></div>
+            <div class="music_control_button stop" id="next" onclick="change_music(1)" title="下一首"></div>
         </div>
         <p class="time_show" id="time_show_1">0:00</p>
         <div class="process" id="process" onclick="adapt_time()">
