@@ -1369,8 +1369,20 @@ var hdhbct_tran_is_tran=0;
         var current_mtld_page_id=1;
 
 
-        setInterval(mtld_page_next,5000);
-        function mtld_page_next(){
+        setInterval(auto_change_mtld_page,100);
+
+        function auto_change_mtld_page(){
+            current_mtld_time--;
+            if(!current_mtld_time){
+                current_mtld_time=50;
+                mtld_page_next(1);
+            }
+        }
+
+        function mtld_page_next(is_auto){
+            if(!is_auto){
+                current_mtld_time=50;
+            }
 
             mtld_get_tran_mode_ready(current_mtld_page_id);
             switch (current_mtld_page_id){
@@ -1433,11 +1445,14 @@ var hdhbct_tran_is_tran=0;
             }
         }
 
+        var current_mtld_time=50;
+
         function back_to_top(){
             window.scrollTo(0,0);
         }
 
         function mtld_page_up(){
+            current_mtld_time=50;
             mtld_get_tran_mode_ready(current_mtld_page_id);
             switch (current_mtld_page_id){
                 case 1:
@@ -1624,16 +1639,22 @@ var hdhbct_tran_is_tran=0;
             }
         }
 
-        function wait_window_anm(){
-            document.getElementById("wait_window_anm").style.rotate="36000deg";
-        }
-
         var is_load_end=0;
 
         function body_onresize(){
             if(is_load_end){
                 auto_adapt_banner_size();
             }
+        }
+
+        function change_ldyw_2(id){
+            change_ldyw(id);
+            current_ldyw_time=50;
+        }
+
+        function change_mtld_2(id){
+            mtld_page_id_change_page(id);
+            current_mtld_time=50;
         }
 
     </script>
@@ -1701,7 +1722,7 @@ var hdhbct_tran_is_tran=0;
         </div>
     </div>
 <div id="wait_window">
-    <div id="wait_window_anm" src="./资源/加载.png" alt="" style="width: 50px;margin: 0 auto;text-align: center;margin-top: 200px">
+    <div id="wait_window_anm" src="./资源/加载.png" alt="" style="width: 50px;margin: 0 auto;text-align: center;margin-top: 300px">
         <div class="sk-fading-circle">
             <div class="sk-circle1 sk-circle"></div>
             <div class="sk-circle2 sk-circle"></div>
@@ -1717,7 +1738,7 @@ var hdhbct_tran_is_tran=0;
             <div class="sk-circle12 sk-circle"></div>
         </div>
     </div>
-<p style="display: block;width: 100%;text-align: center;margin-top: 30px">张天予的前端作业二<br>正在准备就绪</p>
+<p style="display: block;width: 100%;text-align: center;margin-top: 0px;position: relative;top: -80px">正在准备就绪</p>
 </div>
 <div class="main" id="main" style="margin: 0 auto">
         <div id="title_and_nav_2" style="height: 150px;width: 100%;background-color: #185169;position: absolute;top: 0px;left: 0px">
@@ -1909,7 +1930,7 @@ var hdhbct_tran_is_tran=0;
         </div>
         <div class="banner" id="banner">
             <div class="visitor_type" id="visitor_type">
-                <span onmouseenter="vt1_change_style_1()" onmouseleave="vt1_change_style_2()" class="vts" id="vt1" style="display: inline-block;width: 100px;height: 65px" onclick="mtld_page_next()"><a
+                <span onmouseenter="vt1_change_style_1()" onmouseleave="vt1_change_style_2()" class="vts" id="vt1" style="display: inline-block;width: 100px;height: 65px"><a
                         href="#" class="vt_inside_a" id="vt_inside_a_1">校友</a></span>
                 <span onmouseenter="vt2_change_style_1()" onmouseleave="vt2_change_style_2()"  class="vts" id="vt2" style="display: inline-block;width: 100px;height: 65px"><a
                         href="#" class="vt_inside_a" id="vt_inside_a_2">访客及学生</a></span>
@@ -1963,10 +1984,10 @@ var hdhbct_tran_is_tran=0;
 
                 <div style="height: 40px;margin-left: 50px;margin-top: -22px;text-align: center">
                     <div class="page_id_show_base" style="display: inline-block">
-                        <div class="page_id_show" id="page_id_show_1" style="display: inline-block;border-radius: 3px;margin-right: 5px" onclick="change_ldyw(1)" onmouseenter="ldyw_page_id_scale(1)" onmouseleave="ldyw_page_id_scale_exit(1)"></div>
-                        <div class="page_id_show" id="page_id_show_2" style="display: inline-block;border-radius: 3px;margin-right: 5px" onclick="change_ldyw(2)" onmouseenter="ldyw_page_id_scale(2)" onmouseleave="ldyw_page_id_scale_exit(2)"></div>
-                        <div class="page_id_show" id="page_id_show_3" style="display: inline-block;border-radius: 3px;margin-right: 5px" onclick="change_ldyw(3)" onmouseenter="ldyw_page_id_scale(3)" onmouseleave="ldyw_page_id_scale_exit(3)"></div>
-                        <div class="page_id_show" id="page_id_show_4" style="display: inline-block;border-radius: 3px;margin-right: 5px" onclick="change_ldyw(4)" onmouseenter="ldyw_page_id_scale(4)" onmouseleave="ldyw_page_id_scale_exit(4)"></div>
+                        <div class="page_id_show" id="page_id_show_1" style="display: inline-block;border-radius: 3px;margin-right: 5px" onclick="change_ldyw_2(1)" onmouseenter="ldyw_page_id_scale(1)" onmouseleave="ldyw_page_id_scale_exit(1)"></div>
+                        <div class="page_id_show" id="page_id_show_2" style="display: inline-block;border-radius: 3px;margin-right: 5px" onclick="change_ldyw_2(2)" onmouseenter="ldyw_page_id_scale(2)" onmouseleave="ldyw_page_id_scale_exit(2)"></div>
+                        <div class="page_id_show" id="page_id_show_3" style="display: inline-block;border-radius: 3px;margin-right: 5px" onclick="change_ldyw_2(3)" onmouseenter="ldyw_page_id_scale(3)" onmouseleave="ldyw_page_id_scale_exit(3)"></div>
+                        <div class="page_id_show" id="page_id_show_4" style="display: inline-block;border-radius: 3px;margin-right: 5px" onclick="change_ldyw_2(4)" onmouseenter="ldyw_page_id_scale(4)" onmouseleave="ldyw_page_id_scale_exit(4)"></div>
                     </div>
 
                 </div>
@@ -2293,9 +2314,9 @@ var hdhbct_tran_is_tran=0;
                 <div style="width: 260px;height: 25px;background-color: #ffffff;margin: 0 auto">
                     <div style="width: 200px;height: 6px;position: absolute;margin-top: 9px;text-align: center;margin-left: 30px">
                         <div style="position: absolute;margin-left: 70px;height: 6px;margin-top: -11px">
-                            <div class="page_id_show" id="mtld_page_id_show_1" onmouseenter="mtld_page_id_scale(1)" onmouseleave="mtld_page_id_scale_exit(1)" onclick="mtld_page_id_change_page(1)"></div>
-                            <div class="page_id_show" id="mtld_page_id_show_2" onmouseenter="mtld_page_id_scale(2)" onmouseleave="mtld_page_id_scale_exit(2)" onclick="mtld_page_id_change_page(2)"></div>
-                            <div class="page_id_show" id="mtld_page_id_show_3" onmouseenter="mtld_page_id_scale(3)" onmouseleave="mtld_page_id_scale_exit(3)" onclick="mtld_page_id_change_page(3)"></div>
+                            <div class="page_id_show" id="mtld_page_id_show_1" onmouseenter="mtld_page_id_scale(1)" onmouseleave="mtld_page_id_scale_exit(1)" onclick="change_mtld_2(1)"></div>
+                            <div class="page_id_show" id="mtld_page_id_show_2" onmouseenter="mtld_page_id_scale(2)" onmouseleave="mtld_page_id_scale_exit(2)" onclick="change_mtld_2(2)"></div>
+                            <div class="page_id_show" id="mtld_page_id_show_3" onmouseenter="mtld_page_id_scale(3)" onmouseleave="mtld_page_id_scale_exit(3)" onclick="change_mtld_2(3)"></div>
                         </div>
                     </div>
                     <div style="width: 25px;height: 25px;background-color: #0d495f;float: left;display: inline-block;border-radius: 2px;background-image: url(./资源/向左的箭头.png);background-repeat: no-repeat;background-position: center;background-size: contain;cursor: pointer" onclick="mtld_page_up()"></div>
