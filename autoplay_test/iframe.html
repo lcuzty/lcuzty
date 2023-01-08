@@ -345,6 +345,18 @@
             }
             document.getElementById("time_show_1").innerText=t1;
             document.getElementById("time_show_2").innerText=t2;
+
+            if(document.getElementById("au").paused){
+                is_play=0;
+                document.getElementById("au").pause();
+                document.getElementById("play_or_suspend").style.backgroundImage="url('./RE/bofang.png')";
+                document.getElementById("process_inside").style.backgroundColor="rgb(95,95,95)";
+            }else{
+                is_play=1;
+                document.getElementById("au").play();
+                document.getElementById("play_or_suspend").style.backgroundImage="url('./RE/zanting.png')";
+                document.getElementById("process_inside").style.backgroundColor="rgb(0,120,215)";
+            }
         }
 
         function adapt_time(){
