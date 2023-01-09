@@ -270,10 +270,6 @@
             background-image: url("./RE/anniu-jiantouxiangyou.png");
         }
 
-        #auto_next{
-            background-image: url("./RE/danxuanxuanzhong.png");
-        }
-
     </style>
 
     <script>
@@ -308,8 +304,12 @@
             process_width=document.getElementById("process").clientWidth;
             document.getElementById("process_inside").style.width=current_time/top_time*process_width + "px";
             if(current_time==top_time){
-                if(auto_next && is_play){
+                if(auto_next==2 && is_play){
                     change_music(1);
+                }
+                if(auto_next==1 && is_play){
+                    document.getElementById("au").currentTime=0;
+                    setTimeout(play_or_suspend,100);
                 }
                 if(!auto_next && is_play){
                     is_play=0;
@@ -357,6 +357,23 @@
                 document.getElementById("play_or_suspend").style.backgroundImage="url('./RE/zanting.png')";
                 document.getElementById("process_inside").style.backgroundColor="rgb(0,120,215)";
             }
+
+
+
+            switch (auto_next){
+                case 0:
+                    document.getElementById("auto_next").style.backgroundImage="url('./RE/danxuanweixuanzhong.png')";
+                    document.getElementById("auto_next").title="当前无操作";
+                    break;
+                case 1:
+                    document.getElementById("auto_next").style.backgroundImage="url('./RE/danquxunhuan.png')";
+                    document.getElementById("auto_next").title="当前单曲循环";
+                    break;
+                case 2:
+                    document.getElementById("auto_next").style.backgroundImage="url('./RE/xunhuanbofang.png')";
+                    document.getElementById("auto_next").title="当前循环播放";
+                    break;
+            }
         }
 
         function adapt_time(){
@@ -365,7 +382,7 @@
         }
 
         var is_first=1;
-        // setTimeout(auto_play,100);
+
         function auto_play(){
             if(is_first){
                 is_first=0;
@@ -468,19 +485,50 @@
 
         var auto_next=1;
 
+
+
         function change_auto_next(){
-            if(auto_next){
+            if(auto_next==2){
                 auto_next=0;
                 document.getElementById("auto_next").style.backgroundImage="url('./RE/danxuanweixuanzhong.png')";
-            }else{
+                document.getElementById("auto_next").title="当前无操作";
+            }else if(!auto_next){
                 auto_next=1;
-                document.getElementById("auto_next").style.backgroundImage="url('./RE/danxuanxuanzhong.png')";
+                document.getElementById("auto_next").style.backgroundImage="url('./RE/danquxunhuan.png')";
+                document.getElementById("auto_next").title="当前单曲循环";
+            }else{
+                auto_next=2;
+                document.getElementById("auto_next").style.backgroundImage="url('./RE/xunhuanbofang.png')";
+                document.getElementById("auto_next").title="当前循环播放";
+            }
+            localStorage.setItem("auto_next",auto_next);
+        }
+
+        function loaded(){
+            if(localStorage.getItem("auto_next")){
+                auto_next=parseInt(localStorage.getItem("auto_next"));
+            }else{
+                localStorage.setItem("auto_next","1");
+            }
+            switch (auto_next){
+                case 0:
+                    document.getElementById("auto_next").style.backgroundImage="url('./RE/danxuanweixuanzhong.png')";
+                    document.getElementById("auto_next").title="当前无操作";
+                    break;
+                case 1:
+                    document.getElementById("auto_next").style.backgroundImage="url('./RE/danquxunhuan.png')";
+                    document.getElementById("auto_next").title="当前单曲循环";
+                    break;
+                case 2:
+                    document.getElementById("auto_next").style.backgroundImage="url('./RE/xunhuanbofang.png')";
+                    document.getElementById("auto_next").title="当前循环播放";
+                    break;
             }
         }
 
     </script>
 </head>
-<body onload="get_music_ready(current_music_id)">
+<body onload="get_music_ready(current_music_id);loaded()">
 <div class="auto_player_base">
     <div class="auto_player">
         <div class="music_pic" id="music_pic"></div>
