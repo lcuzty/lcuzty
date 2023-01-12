@@ -367,19 +367,17 @@
             overflow: hidden;
         }
 
-        .autoplay_test_iframe{
+
+        #miniplayer{
+            border: 0px;
             position: fixed;
             right: 20px;
             bottom: 20px;
             width: 325px;
             height: 125px;
-            background-color: rgba(255, 255, 255, 0);
-            border: 0px;
-            transition: all 500ms;
             overflow: hidden;
-            z-index: 9998;
+            z-index: 9999;
         }
-
 
     </style>
     <script>
@@ -428,7 +426,7 @@
 </head>
 <body onresize="auto_adapt_size()" onload="auto_adapt_size()" style="background-color: rgb(255,255,255);margin: 0 0 0 0;padding: 0 0 0 0;">
 
-<iframe class="autoplay_test_iframe" src="https://lcuzty.github.io/lcuzty/autoplay_test/iframe.html"></iframe>
+<iframe src="https://lcuzty.github.io/lcuzty/miniplayer/iframe.html" id="miniplayer"></iframe>
 
 <div class="control">
     <div class="control_back" id="control_back" onclick="open_or_close_sidebar()" onmousemove="control_adapt()">
@@ -604,6 +602,14 @@
                     <a href="https://www.iconfont.cn/" target="_self" class="card_top">
                         <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">iconfont</div>
                         <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">阿里巴巴矢量图标库</div>
+                    </a>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card" style="background-image: url(https://img0.baidu.com/it/u=3803744022,761825036&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=477);background-size: cover;background-position: center;background-repeat: no-repeat">
+                    <a href="https://arco.design/" target="_self" class="card_top">
+                        <div class="card_title" style="width: 420px;height: 30px;font-size: 23px;padding-top: 155px;text-align: left;padding-left: 35px">arco.design</div>
+                        <div class="card_text" style="text-align: left;font-size: 13px;padding-top: 35px;padding-left: 35px;">企业级产品的完整设计和开发解决方案</div>
                     </a>
                 </div>
             </div>
