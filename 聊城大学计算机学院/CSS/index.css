@@ -1,0 +1,319 @@
+.title{
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    width: 100%;
+
+    z-index: 1000;
+}
+
+.title_decoration_line{
+    height: 3px;
+    background-color: rgb(0,120,215);
+
+    background-image: url("../RE/theme_color.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.title_main{
+    height: 90px;
+    text-align: center;
+    background-color: white;
+}
+
+.title_main_inside{
+    height: 90px;
+    display: inline-block;
+}
+
+.title_main_inside_logo{
+    height: 90px;
+    width: 390px;
+    background-image: url(../RE/logo_title.png);
+    background-size: auto 60px;
+    background-repeat: no-repeat;
+    background-position: left;
+    display: inline-block;
+    float: left;
+}
+
+.button{
+    transition: all 0.1s;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.button:hover{
+    background-color: rgb(0,120,215);
+    color: white;
+}
+
+.button:active{
+    scale: 97%;
+}
+
+.title_navs{
+    height: 50px;
+    background-color: rgb(0,120,215);
+    text-align: center;
+
+    background-image: url("../RE/theme_color.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.title_navs_main{
+    height: 50px;
+    display: inline-block;
+ }
+
+.title_right_buttons{
+    height: 30px;
+    width: 300px;
+    margin-top: 30px;
+    float: right;
+}
+
+.college_home_page_link{
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 30px;
+    float: right;
+    font-size: 14px;
+}
+
+.search_button{
+    width: auto;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: right;
+    font-size: 14px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.search_box{
+    width: 220px;
+    height: 30px;
+    background-color: rgb(230,230,230);
+    margin-right: 5px;
+    border-radius: 3px;
+
+}
+
+#search_text_input{
+    width: 165px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.nav_button{
+    height: 50px;
+    width: 115px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    line-height: 50px;
+    transition: all 0.1s;
+    color: white;
+    display: inline-block;
+}
+
+.nav_button:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav_button:active{
+    scale: 97%;
+}
+
+.footer{
+    height: 230px;
+    width: 100%;
+
+    background-color: rgb(0,120,215);
+    background-image: url("../RE/theme_color.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.title_navs_menus{
+    height: 0px;
+    width: 100%;
+    background-color: greenyellow;
+    text-align: center;
+}
+
+.title_navs_menus_main{
+    height: 0px;
+    width: 1200px;
+    display: inline-block;
+    background-color: wheat;
+}
+
+.nav_menu{
+    display: inline-block;
+    color: white;
+    overflow: hidden;
+
+    visibility: hidden;
+
+
+}
+
+.nav_menu>ul{
+    margin-top: 3px;
+    border-radius: 3px;
+    background-color: rgb(230,230,230);
+    color: black;
+}
+
+.nav_menu>ul>li{
+    width: 115px;
+    height: 30px;
+    cursor: pointer;
+    line-height: 30px;
+    transition: scale 0.1s;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.nav_menu>ul>li:hover{
+    background-color: rgb(215,215,215);
+}
+
+.nav_menu>ul>li:active{
+    scale: 97%;
+}
+
+#nav_menu_1{
+    visibility: hidden;
+}
+
+#nav_menu_3{
+    visibility: hidden;
+}
+
+#nav_menu_10{
+    visibility: hidden;
+}
+
+#nav_menu_2{
+    position: relative;
+    top: -180px;
+}
+
+#nav_menu_4{
+    position: relative;
+    top: -150px;
+}
+
+#nav_menu_5{
+    position: relative;
+    top: -210px;
+}
+
+#nav_menu_6{
+    position: relative;
+    top: -150px;
+}
+
+#nav_menu_7{
+    position: relative;
+    top: -240px;
+}
+
+#nav_menu_9{
+    position: relative;
+    top: -240px;
+}
+
+.gap1{
+    height: 143px;
+}
+
+.banner{
+    height: 500px;
+    width: 100%;
+    background-color: rgb(0,120,215);
+    transition: all 1s;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner_pic{
+    height: 500px;
+    background-image: url("../RE/banner/banner1.png");
+    float: right;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s;
+    display: inline-block;
+}
+
+.banner_title{
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    height: 250px;
+    text-indent: 2em;
+    transition: all 1s;
+}
+
+.banner_title_box{
+    display: inline-block;
+    height: 300px;
+    margin-top: 100px;
+}
+
+.banner_control_box{
+    width: 100%;
+    height: 50px;
+
+}
+
+.banner_control_button{
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    float: left;
+    border-radius: 3px;
+    transition: all 0.1s;
+    line-height: 50px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.banner_control_button:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.banner_control_button:active{
+    scale: 97%;
+}
+
+#banner_control_button_1{
+    float: left;
+}
+
+#banner_control_button_2{
+    float: right;
+}
+
+.content{
+    text-align: center;
+}
+
+.content_main{
+    display: inline-block;
+    height: 100px;
+}

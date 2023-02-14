@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聊城大学计算机学院</title>
+
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/base.css">
+
+    <script src="./JS/index.js"></script>
+</head>
+<body onload="auto_adapt()" onresize="auto_adapt()">
+    <div class="title">
+        <div class="title_decoration_line"></div>
+        <div class="title_main">
+            <div class="title_main_inside" id="title_main_inside">
+                <div class="title_main_inside_logo"></div>
+                <div class="title_right_buttons">
+                    <div class="button college_home_page_link" onclick="open_link(1)">学校主页</div>
+
+                    <div class="search_box" id="search_box">
+                        <input type="text" name="" id="search_text_input">
+                        <div class="button search_button" id="search_button">搜索</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="title_navs">
+            <div class="title_navs_main" id="title_navs_main">
+                <div class="nav_button" id="nav_button_1">首页</div>
+                <div class="nav_button" id="nav_button_2" onmouseenter="show_or_hide_nav_menu(2,1)" onmouseleave="show_or_hide_nav_menu(0,0)">学院概况</div>
+                <div class="nav_button" id="nav_button_3">师资队伍</div>
+                <div class="nav_button" id="nav_button_4" onmouseenter="show_or_hide_nav_menu(4,1)" onmouseleave="show_or_hide_nav_menu(0,0)">本科生教育</div>
+                <div class="nav_button" id="nav_button_5" onmouseenter="show_or_hide_nav_menu(5,1)" onmouseleave="show_or_hide_nav_menu(0,0)">研究生招生</div>
+                <div class="nav_button" id="nav_button_6" onmouseenter="show_or_hide_nav_menu(6,1)" onmouseleave="show_or_hide_nav_menu(0,0)">科学研究</div>
+                <div class="nav_button" id="nav_button_7" onmouseenter="show_or_hide_nav_menu(7,1)" onmouseleave="show_or_hide_nav_menu(0,0)">招生就业</div>
+                <div class="nav_button" id="nav_button_8" onmouseenter="show_or_hide_nav_menu(8,1)" onmouseleave="show_or_hide_nav_menu(0,0)">学团工作</div>
+                <div class="nav_button" id="nav_button_9" onmouseenter="show_or_hide_nav_menu(9,1)" onmouseleave="show_or_hide_nav_menu(0,0)">党建工作</div>
+                <div class="nav_button" id="nav_button_10">学风建设</div>
+            </div>
+        </div>
+        <div class="title_navs_menus" id="title_navs_menus">
+            <div class="title_navs_menus_main">
+                <div class="nav_menu" id="nav_menu_1">
+                    <ul>
+                        <li>111</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_2" onmouseenter="show_or_hide_nav_menu(2,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
+                    <ul>
+                        <li>学院简介</li>
+                        <li>院系设置</li>
+                        <li>现任领导</li>
+                        <li>人才招聘</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_3">
+                    <ul>
+                        <li>111</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_4" onmouseenter="show_or_hide_nav_menu(4,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
+                    <ul>
+                        <li>专业介绍</li>
+                        <li>培养方案</li>
+                        <li>课程建设</li>
+                        <li>教研教改</li>
+                        <li>规章制度</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_5" onmouseenter="show_or_hide_nav_menu(5,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
+                    <ul>
+                        <li>学院简介</li>
+                        <li>专业简介</li>
+                        <li>研究生导师</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_6" onmouseenter="show_or_hide_nav_menu(6,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
+                    <ul>
+                        <li>学科概况</li>
+                        <li>研究方向</li>
+                        <li>研究团队</li>
+                        <li>项目成果</li>
+                        <li>学术交流</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_7" onmouseenter="show_or_hide_nav_menu(7,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
+                    <ul>
+                        <li>招生信息</li>
+                        <li>就业信息</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_8" onmouseenter="show_or_hide_nav_menu(8,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
+                    <ul>
+                        <li>学工动态</li>
+                        <li>网络德教</li>
+                        <li>学风建设</li>
+                        <li>学生党建</li>
+                        <li>奖学助学</li>
+                        <li>心理健康</li>
+                        <li>宿舍管理</li>
+                        <li>社团组织</li>
+                        <li>规章制度</li>
+                        <li>相关下载</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_9" onmouseenter="show_or_hide_nav_menu(9,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
+                    <ul>
+                        <li>党务动态</li>
+                        <li>学习资料</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_10">
+                    <ul>
+                        <li>111</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="gap1"></div>
+
+    <div class="banner" id="banner">
+        <div class="banner_title_box" id="banner_title_box">
+            <p class="banner_title" id="banner_title">肖海荣到计算机学院调研指导工程教育认证工作</p>
+            <div class="banner_control_box" id="banner_control_box">
+                <div class="banner_control_button" id="banner_control_button_1" onclick="click_to_change_banner(0,1)">上一页</div>
+                <div class="banner_control_button" id="banner_control_button_2" onclick="click_to_change_banner(1,1)">下一页</div>
+            </div>
+        </div>
+
+        <div class="banner_pic" id="banner_pic">
+
+        </div>
+    </div>
+
+    <div class="content" id="content">
+        <div class="content_main" id="content_main">
+
+        </div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+</body>
+</html>
