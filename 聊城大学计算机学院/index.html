@@ -9,7 +9,7 @@
 
     <script src="./JS/index.js"></script>
 </head>
-<body onload="auto_adapt()" onresize="auto_adapt()">
+<body onload="auto_adapt()" onresize="auto_adapt_onresize()">
     <div class="title">
         <div class="title_decoration_line"></div>
         <div class="title_main">
@@ -18,26 +18,28 @@
                 <div class="title_right_buttons">
                     <div class="button college_home_page_link" onclick="open_link(1)">学校主页</div>
 
-                    <div class="search_box" id="search_box">
-                        <input type="text" name="" id="search_text_input">
-                        <div class="button search_button" id="search_button">搜索</div>
-                    </div>
+                    <form class="search_box" id="search_box" action="https://www.lcu.edu.cn/cms/search/searchResults.jsp?flg=0" onsubmit="return keywords(this)" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+                        <input name="siteID" value="32" type="hidden">
+                        <input type="text" name="query" name="" id="search_text_input" oninput="search_box_auto_show_or_hide_default_text()">
+                        <input type="submit" class="button search_button" id="search_button" value="搜索" name="Submit" >
+                        <p id="search_default_text">请输入关键字</p>
+                    </form>
 
                 </div>
             </div>
         </div>
         <div class="title_navs">
             <div class="title_navs_main" id="title_navs_main">
-                <div class="nav_button" id="nav_button_1">首页</div>
-                <div class="nav_button" id="nav_button_2" onmouseenter="show_or_hide_nav_menu(2,1)" onmouseleave="show_or_hide_nav_menu(0,0)">学院概况</div>
-                <div class="nav_button" id="nav_button_3">师资队伍</div>
-                <div class="nav_button" id="nav_button_4" onmouseenter="show_or_hide_nav_menu(4,1)" onmouseleave="show_or_hide_nav_menu(0,0)">本科生教育</div>
-                <div class="nav_button" id="nav_button_5" onmouseenter="show_or_hide_nav_menu(5,1)" onmouseleave="show_or_hide_nav_menu(0,0)">研究生招生</div>
-                <div class="nav_button" id="nav_button_6" onmouseenter="show_or_hide_nav_menu(6,1)" onmouseleave="show_or_hide_nav_menu(0,0)">科学研究</div>
-                <div class="nav_button" id="nav_button_7" onmouseenter="show_or_hide_nav_menu(7,1)" onmouseleave="show_or_hide_nav_menu(0,0)">招生就业</div>
-                <div class="nav_button" id="nav_button_8" onmouseenter="show_or_hide_nav_menu(8,1)" onmouseleave="show_or_hide_nav_menu(0,0)">学团工作</div>
-                <div class="nav_button" id="nav_button_9" onmouseenter="show_or_hide_nav_menu(9,1)" onmouseleave="show_or_hide_nav_menu(0,0)">党建工作</div>
-                <div class="nav_button" id="nav_button_10">学风建设</div>
+                <div class="nav_button" id="nav_button_1" onclick="open_link(2)">首页</div>
+                <div class="nav_button" id="nav_button_2" onclick="open_link(3)" onmouseenter="show_or_hide_nav_menu(2,1)" onmouseleave="show_or_hide_nav_menu(0,0)">学院概况</div>
+                <div class="nav_button" id="nav_button_3" onclick="open_link(4)">师资队伍</div>
+                <div class="nav_button" id="nav_button_4" onclick="open_link(5)" onmouseenter="show_or_hide_nav_menu(4,1)" onmouseleave="show_or_hide_nav_menu(0,0)">本科生教育</div>
+                <div class="nav_button" id="nav_button_5" onclick="open_link(6)" onmouseenter="show_or_hide_nav_menu(5,1)" onmouseleave="show_or_hide_nav_menu(0,0)">研究生招生</div>
+                <div class="nav_button" id="nav_button_6" onclick="open_link(7)" onmouseenter="show_or_hide_nav_menu(6,1)" onmouseleave="show_or_hide_nav_menu(0,0)">科学研究</div>
+                <div class="nav_button" id="nav_button_7" onclick="open_link(8)" onmouseenter="show_or_hide_nav_menu(7,1)" onmouseleave="show_or_hide_nav_menu(0,0)">招生就业</div>
+                <div class="nav_button" id="nav_button_8" onclick="open_link(9)" onmouseenter="show_or_hide_nav_menu(8,1)" onmouseleave="show_or_hide_nav_menu(0,0)">学团工作</div>
+                <div class="nav_button" id="nav_button_9" onclick="open_link(10)" onmouseenter="show_or_hide_nav_menu(9,1)" onmouseleave="show_or_hide_nav_menu(0,0)">党建工作</div>
+                <div class="nav_button" id="nav_button_10" onclick="open_link(11)">学风建设</div>
             </div>
         </div>
         <div class="title_navs_menus" id="title_navs_menus">
@@ -50,10 +52,10 @@
 
                 <div class="nav_menu" id="nav_menu_2" onmouseenter="show_or_hide_nav_menu(2,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
                     <ul>
-                        <li>学院简介</li>
-                        <li>院系设置</li>
-                        <li>现任领导</li>
-                        <li>人才招聘</li>
+                        <li onclick="open_link(12)">学院简介</li>
+                        <li onclick="open_link(13)">院系设置</li>
+                        <li onclick="open_link(14)">现任领导</li>
+                        <li onclick="open_link(15)">人才招聘</li>
                     </ul>
                 </div>
 
@@ -65,58 +67,58 @@
 
                 <div class="nav_menu" id="nav_menu_4" onmouseenter="show_or_hide_nav_menu(4,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
                     <ul>
-                        <li>专业介绍</li>
-                        <li>培养方案</li>
-                        <li>课程建设</li>
-                        <li>教研教改</li>
-                        <li>规章制度</li>
+                        <li onclick="open_link(16)">专业介绍</li>
+                        <li onclick="open_link(17)">培养方案</li>
+                        <li onclick="open_link(18)">课程建设</li>
+                        <li onclick="open_link(19)">教研教改</li>
+                        <li onclick="open_link(20)">规章制度</li>
                     </ul>
                 </div>
 
                 <div class="nav_menu" id="nav_menu_5" onmouseenter="show_or_hide_nav_menu(5,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
                     <ul>
-                        <li>学院简介</li>
-                        <li>专业简介</li>
-                        <li>研究生导师</li>
+                        <li onclick="open_link(21)">学院简介</li>
+                        <li onclick="open_link(22)">专业简介</li>
+                        <li onclick="open_link(23)">研究生导师</li>
                     </ul>
                 </div>
 
                 <div class="nav_menu" id="nav_menu_6" onmouseenter="show_or_hide_nav_menu(6,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
                     <ul>
-                        <li>学科概况</li>
-                        <li>研究方向</li>
-                        <li>研究团队</li>
-                        <li>项目成果</li>
-                        <li>学术交流</li>
+                        <li onclick="open_link(24)">学科概况</li>
+                        <li onclick="open_link(25)">研究方向</li>
+                        <li onclick="open_link(26)">研究团队</li>
+                        <li onclick="open_link(27)">项目成果</li>
+                        <li onclick="open_link(28)">学术交流</li>
                     </ul>
                 </div>
 
                 <div class="nav_menu" id="nav_menu_7" onmouseenter="show_or_hide_nav_menu(7,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
                     <ul>
-                        <li>招生信息</li>
-                        <li>就业信息</li>
+                        <li onclick="open_link(29)">招生信息</li>
+                        <li onclick="open_link(30)">就业信息</li>
                     </ul>
                 </div>
 
                 <div class="nav_menu" id="nav_menu_8" onmouseenter="show_or_hide_nav_menu(8,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
                     <ul>
-                        <li>学工动态</li>
-                        <li>网络德教</li>
-                        <li>学风建设</li>
-                        <li>学生党建</li>
-                        <li>奖学助学</li>
-                        <li>心理健康</li>
-                        <li>宿舍管理</li>
-                        <li>社团组织</li>
-                        <li>规章制度</li>
-                        <li>相关下载</li>
+                        <li onclick="open_link(31)">学工动态</li>
+                        <li onclick="open_link(32)">网络德教</li>
+                        <li onclick="open_link(33)">学风建设</li>
+                        <li onclick="open_link(34)">学生党建</li>
+                        <li onclick="open_link(35)">奖学助学</li>
+                        <li onclick="open_link(36)">心理健康</li>
+                        <li onclick="open_link(37)">宿舍管理</li>
+                        <li onclick="open_link(38)">社团组织</li>
+                        <li onclick="open_link(39)">规章制度</li>
+                        <li onclick="open_link(40)">相关下载</li>
                     </ul>
                 </div>
 
                 <div class="nav_menu" id="nav_menu_9" onmouseenter="show_or_hide_nav_menu(9,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
                     <ul>
-                        <li>党务动态</li>
-                        <li>学习资料</li>
+                        <li onclick="open_link(41)">党务动态</li>
+                        <li onclick="open_link(42)">学习资料</li>
                     </ul>
                 </div>
 
@@ -141,18 +143,36 @@
             </div>
         </div>
 
+        <div class="banner_pic_tran" id="banner_pic_tran">
+
+        </div>
+
         <div class="banner_pic" id="banner_pic">
 
         </div>
     </div>
 
     <div class="content" id="content">
-        <div class="content_main" id="content_main">
+        <div class="content_box" id="content_box">
 
         </div>
     </div>
 
     <div class="footer">
+        <div class="footer_background">
+            <div class="main_footer" id="main_footer">
+                <div class="footer1">
+
+                </div><div class="footer_decoration_line"></div><div class="footer2">
+                <p class="footer_text" id="footer_text_top">地址：山东省聊城市湖南路1号</p>
+                <p class="footer_text">邮编：252000&nbsp;&nbsp;电话：0635-8238540</p>
+                <p class="footer_text">技术支持：聊城大学格创研发室</p>
+                <p class="footer_text">Copyright 2023 聊城大学 All Rights Reserved.</p>
+            </div><div class="footer3">
+
+            </div>
+            </div>
+        </div>
 
     </div>
 </body>
