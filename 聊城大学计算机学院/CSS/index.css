@@ -1096,3 +1096,57 @@ body{
 .content_part_1{
     width: 100%;
 }
+
+.content_xsjl{
+    float: left;
+    width: 590px;
+    height: 780px;
+}
+
+.content_cylj{
+    float: right;
+    width: 590px;
+    height: 780px;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.slide_projector{
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sp_pic{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background 0.5s;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    border-radius: 3px;
+    scale: 90%;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+#sp_pic_1{
+    background-color: wheat;
+}
+
+#sp_pic_2{
+    background-color: red;
+}
+
+#sp_pic_3{
+    background-color: yellow;
+}
+
+#sp_pic_4{
+    background-color: cornflowerblue;
+}
+

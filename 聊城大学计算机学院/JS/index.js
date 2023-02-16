@@ -42,10 +42,11 @@ function auto_adapt(){
     for(i=1;i<=7;i++){
         document.getElementById("content_tzgg_title_box_" + i).style.width="305px";
     }
-    document.getElementById("content_box").style.marginLeft="20px";
+    // document.getElementById("content_box").style.marginLeft="20px";
     for(i=1;i<=4;i++){
         document.getElementById("news_tile_" + i).style.marginLeft="20px";
     }
+    document.getElementById("content_tzgg").style.float="right";
     if(window.innerWidth<=1240){
         document.getElementById("content_box").style.paddingRight="60px";
         document.getElementById("content_box").style.paddingLeft="20px";
@@ -67,29 +68,45 @@ function auto_adapt(){
         document.getElementById("content_news").style.height="1400px";
         document.getElementById("content_part_1").style.height="1400px";
         if(title_main_inside_width<=1000){
+            document.getElementById("content_box").style.paddingLeft="40px";
+            document.getElementById("content_box").style.paddingRight="40px";
             // document.getElementById("content_tzgg").style.marginTop="1400px";
             document.getElementById("content_tzgg").style.width=title_main_inside_width-80+"px";
             document.getElementById("content_news").style.width=title_main_inside_width-80+"px";
-            document.getElementById("news_tile_container").style.width=title_main_inside_width-40+"px";
+            document.getElementById("news_tile_container").style.width=title_main_inside_width-80+"px";
             document.getElementById("content_part_1").style.height="1500px";
 
             for(i=1;i<=7;i++){
                 document.getElementById("content_tzgg_title_box_" + i).style.width=title_main_inside_width-150+"px";
             }
             document.getElementById("content_news").style.height="750px";
-            document.getElementById("news_tile_container").style.paddingLeft=(title_main_inside_width-860)/2 + "px";
+            document.getElementById("news_tile_container").style.paddingLeft=(title_main_inside_width-80-720)/2-20+"px";
 
-            if(title_main_inside_width<=800){
+            document.getElementById("content_tzgg").style.float="left";
+
+
+            if(title_main_inside_width<=824){
                 document.getElementById("content_part_1").style.height="2150px";
                 document.getElementById("content_news").style.height="1400px";
-                document.getElementById("news_tile_container").style.paddingLeft=(title_main_inside_width-350)/2-50 + "px";
+                document.getElementById("news_tile_container").style.paddingLeft="0px";
 
-                if(title_main_inside_width<=430){
-                    document.getElementById("content_box").style.marginLeft=(20-(430-title_main_inside_width))/2+"px";
+
+                    document.getElementById("content_box").style.paddingLeft="15px";
+                    document.getElementById("content_box").style.paddingRight="15px";
+                    document.getElementById("content_box").style.marginLeft="0px";
+                    for(i=1;i<=7;i++){
+                        document.getElementById("content_tzgg_title_box_" + i).style.width=title_main_inside_width-100+"px";
+                    }
                     for(i=1;i<=4;i++){
                         document.getElementById("news_tile_" + i).style.marginLeft=(20-(400-title_main_inside_width))/2+"px";
                     }
-                }
+
+
+
+                        document.getElementById("content_tzgg").style.width=title_main_inside_width-30+"px";
+                        document.getElementById("content_news").style.width=title_main_inside_width-30+"px";
+
+
             }
         }
     }
@@ -124,6 +141,60 @@ function auto_adapt(){
         document.getElementById("banner_small_control_button_left").style.width=title_main_inside_width/2-20+"px";
         document.getElementById("banner_small_control_button_right").style.width=title_main_inside_width/2-20+"px";
     }
+
+
+    document.getElementById("content_xsjl").style.width="590px";
+    document.getElementById("content_cylj").style.width="590px";
+    document.getElementById("content_xsjl").style.float="left";
+    document.getElementById("content_cylj").style.float="right";
+    for(i=1;i<=7;i++){
+        document.getElementById("content_xsjl_title_box_" + i).style.width="500px";
+        document.getElementById("content_cylj_title_box_" + i).style.width="500px";
+    }
+    if(title_main_inside_width<=1240){
+        document.getElementById("content_xsjl").style.width=(title_main_inside_width-80)/2-10+"px";
+        document.getElementById("content_cylj").style.width=(title_main_inside_width-80)/2-10+"px";
+        for(i=1;i<=7;i++){
+            document.getElementById("content_xsjl_title_box_" + i).style.width=(title_main_inside_width-80)/2-100+"px";
+            document.getElementById("content_cylj_title_box_" + i).style.width=(title_main_inside_width-80)/2-100+"px";
+        }
+        if(title_main_inside_width<=1000){
+            document.getElementById("content_xsjl").style.float="left";
+            document.getElementById("content_cylj").style.float="left";
+            document.getElementById("content_xsjl").style.width=(title_main_inside_width-80)+"px";
+            document.getElementById("content_cylj").style.width=(title_main_inside_width-80)+"px";
+            for(i=1;i<=7;i++){
+                document.getElementById("content_xsjl_title_box_" + i).style.width=(title_main_inside_width-80)-100+"px";
+                document.getElementById("content_cylj_title_box_" + i).style.width=(title_main_inside_width-80)-100+"px";
+            }
+            if(title_main_inside_width<=824){
+                document.getElementById("content_xsjl").style.width=(title_main_inside_width-30)+"px";
+                document.getElementById("content_cylj").style.width=(title_main_inside_width-30)+"px";
+                for(i=1;i<=7;i++){
+                    document.getElementById("content_xsjl_title_box_" + i).style.width=(title_main_inside_width-30)-100+"px";
+                    document.getElementById("content_cylj_title_box_" + i).style.width=(title_main_inside_width-30)-100+"px";
+                }
+            }
+        }
+    }
+
+    for(i=1;i<=4;i++){
+        document.getElementById("sp_pic_" + i).style.width=title_main_inside_width/4+"px";
+
+        if(title_main_inside_width<=1240){
+            document.getElementById("sp_pic_" + i).style.width=(title_main_inside_width-80)/4+"px";
+        }
+        if(title_main_inside_width<=1000){
+            document.getElementById("sp_pic_" + i).style.width=(title_main_inside_width-80)/3+"px";
+            if(title_main_inside_width<=824){
+                document.getElementById("sp_pic_" + i).style.width=(title_main_inside_width-30)/2+"px";
+                if(title_main_inside_width<=500){
+                    document.getElementById("sp_pic_" + i).style.width=(title_main_inside_width-30)/1+"px";
+                }
+            }
+        }
+    }
+
 }
 
 function open_link(link_index){
@@ -434,4 +505,33 @@ function open_or_close_small_menu_box(){
         document.getElementById("title_small_menu").style.height="0px";
         open_or_close_small_menu(0,0);
     }
+}
+
+var sp_pic_1_current_pic_id=1;
+var sp_pic_2_current_pic_id=2;
+var sp_pic_3_current_pic_id=3;
+var sp_pic_4_current_pic_id=4;
+var max_id=4;
+setInterval(change_sp_pic,5000);
+function change_sp_pic(){
+    sp_pic_1_current_pic_id++;
+    sp_pic_2_current_pic_id++;
+    sp_pic_3_current_pic_id++;
+    sp_pic_4_current_pic_id++;
+    if(sp_pic_1_current_pic_id==max_id+1){
+        sp_pic_1_current_pic_id=1;
+    }
+    if(sp_pic_2_current_pic_id==max_id+1){
+        sp_pic_2_current_pic_id=1;
+    }
+    if(sp_pic_3_current_pic_id==max_id+1){
+        sp_pic_3_current_pic_id=1;
+    }
+    if(sp_pic_4_current_pic_id==max_id+1){
+        sp_pic_4_current_pic_id=1;
+    }
+    document.getElementById("sp_pic_1").style.backgroundImage="url(./CONTENT/xzfc/" + sp_pic_1_current_pic_id + ".jpg)";
+    document.getElementById("sp_pic_2").style.backgroundImage="url(./CONTENT/xzfc/" + sp_pic_2_current_pic_id + ".jpg)";
+    document.getElementById("sp_pic_3").style.backgroundImage="url(./CONTENT/xzfc/" + sp_pic_3_current_pic_id + ".jpg)";
+    document.getElementById("sp_pic_4").style.backgroundImage="url(./CONTENT/xzfc/" + sp_pic_4_current_pic_id + ".jpg)";
 }
