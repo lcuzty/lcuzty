@@ -32,10 +32,22 @@ function auto_adapt(){
         document.getElementById("nav_button_" + i).style.width="115px";
         document.getElementById("nav_menu_" + i).style.width="115px";
     }
-
-
+    document.getElementById("content_news").style.width="770px";
+    document.getElementById("news_tile_container").style.paddingLeft="0px";
+    document.getElementById("news_tile_container").style.width="750px";
+    document.getElementById("content_news").style.height="750px";
+    document.getElementById("content_part_1").style.height="750px";
+    document.getElementById("content_tzgg").style.marginTop="0px";
+    document.getElementById("content_tzgg").style.width="400px";
+    for(i=1;i<=7;i++){
+        document.getElementById("content_tzgg_title_box_" + i).style.width="305px";
+    }
+    document.getElementById("content_box").style.marginLeft="20px";
+    for(i=1;i<=4;i++){
+        document.getElementById("news_tile_" + i).style.marginLeft="20px";
+    }
     if(window.innerWidth<=1240){
-        document.getElementById("content_box").style.paddingRight="20px";
+        document.getElementById("content_box").style.paddingRight="60px";
         document.getElementById("content_box").style.paddingLeft="20px";
         document.getElementById("title_main_inside").style.paddingLeft="20px";
         document.getElementById("title_main_inside").style.paddingRight="20px";
@@ -49,6 +61,37 @@ function auto_adapt(){
             document.getElementById("nav_button_" + i).style.width="90px";
             document.getElementById("nav_menu_" + i).style.width="90px";
         }
+        document.getElementById("content_news").style.width=title_main_inside_width-520+ "px";
+        document.getElementById("news_tile_container").style.width=title_main_inside_width-480+ "px";
+        document.getElementById("news_tile_container").style.paddingLeft=(title_main_inside_width-870)/2-20+"px";
+        document.getElementById("content_news").style.height="1400px";
+        document.getElementById("content_part_1").style.height="1400px";
+        if(title_main_inside_width<=1000){
+            // document.getElementById("content_tzgg").style.marginTop="1400px";
+            document.getElementById("content_tzgg").style.width=title_main_inside_width-80+"px";
+            document.getElementById("content_news").style.width=title_main_inside_width-80+"px";
+            document.getElementById("news_tile_container").style.width=title_main_inside_width-40+"px";
+            document.getElementById("content_part_1").style.height="1500px";
+
+            for(i=1;i<=7;i++){
+                document.getElementById("content_tzgg_title_box_" + i).style.width=title_main_inside_width-150+"px";
+            }
+            document.getElementById("content_news").style.height="750px";
+            document.getElementById("news_tile_container").style.paddingLeft=(title_main_inside_width-860)/2 + "px";
+
+            if(title_main_inside_width<=800){
+                document.getElementById("content_part_1").style.height="2150px";
+                document.getElementById("content_news").style.height="1400px";
+                document.getElementById("news_tile_container").style.paddingLeft=(title_main_inside_width-350)/2-50 + "px";
+
+                if(title_main_inside_width<=430){
+                    document.getElementById("content_box").style.marginLeft=(20-(430-title_main_inside_width))/2+"px";
+                    for(i=1;i<=4;i++){
+                        document.getElementById("news_tile_" + i).style.marginLeft=(20-(400-title_main_inside_width))/2+"px";
+                    }
+                }
+            }
+        }
     }
 
     //footer_adapt
@@ -61,6 +104,7 @@ function auto_adapt(){
     document.getElementById("banner_small").style.height="0px";document.getElementById("banner").style.height="500px";
     document.getElementById("banner_small_pic").style.height="500px";
     document.getElementById("banner_pic_tran").style.height="500px";
+
     if(window.innerWidth<=1000){
         document.getElementById("footer_small").style.height="400px";
         document.getElementById("footer_small").style.visibility="visible";
