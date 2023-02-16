@@ -1,3 +1,4 @@
+
 function auto_adapt(){
     is_loaded=1;
     document.body.style.opacity="100%";
@@ -19,6 +20,51 @@ function auto_adapt(){
     document.getElementById("banner_control_button_2").style.width=window.innerWidth*0.3*0.29 + "px";
     document.getElementById("content_box").style.width=title_main_inside_width + "px";
     document.getElementById("main_footer").style.width=title_main_inside_width + "px";
+    document.getElementById("content_main_with_sidebar").style.width=title_main_inside_width-285 + "px";
+
+
+    document.getElementById("content_box").style.paddingRight="0px";
+    document.getElementById("content_box").style.paddingLeft="0px";
+    document.getElementById("title_main_inside").style.paddingLeft="0px";
+    document.getElementById("title_main_inside").style.paddingRight="0px";
+    document.getElementById("title_navs_menus_main").style.width="1200px";
+    for(i=1;i<=10;i++){
+        document.getElementById("nav_button_" + i).style.width="115px";
+        document.getElementById("nav_menu_" + i).style.width="115px";
+    }
+    if(window.innerWidth<=1240){
+        document.getElementById("content_box").style.paddingRight="20px";
+        document.getElementById("content_box").style.paddingLeft="20px";
+        document.getElementById("title_main_inside").style.paddingLeft="20px";
+        document.getElementById("title_main_inside").style.paddingRight="20px";
+
+        document.getElementById("content_main_with_sidebar").style.width=title_main_inside_width-325 + "px";
+
+
+        document.getElementById("title_navs_menus_main").style.width=title_main_inside_width +"px";
+
+        for(i=1;i<=10;i++){
+            document.getElementById("nav_button_" + i).style.width="90px";
+            document.getElementById("nav_menu_" + i).style.width="90px";
+        }
+    }
+
+    //footer_adapt
+    document.getElementById("footer_small").style.height="230px";
+    document.getElementById("footer_small").style.visibility="hidden";
+    document.getElementById("title_small").style.visibility="hidden";
+    document.getElementById("content_sidebar").style.position="fixed";
+    document.getElementById("content_sidebar").style.width="270px";
+    document.getElementById("content_list_title").style.textAlign="right";
+    if(window.innerWidth<=1000){
+        document.getElementById("footer_small").style.height="400px";
+        document.getElementById("footer_small").style.visibility="visible";
+        document.getElementById("title_small").style.visibility="visible";
+        document.getElementById("content_main_with_sidebar").style.width=title_main_inside_width -40  + "px";
+        document.getElementById("content_sidebar").style.position="unset";
+        document.getElementById("content_sidebar").style.width=title_main_inside_width-40+ "px";
+        document.getElementById("content_list_title").style.textAlign="center";
+    }
 }
 
 function open_link(link_index){
@@ -152,6 +198,9 @@ function open_link(link_index){
         case 42:
             window.open("#","_self");
             break;
+        case 43:
+            window.open("https://www.lcu.edu.cn/cms/search/","_blank");
+            break;
     }
 }
 
@@ -256,4 +305,72 @@ function make_banner_tran_op_to_0(){
         current_banner_tran_op-=2;
     }
     document.getElementById("banner_pic_tran").style.opacity=current_banner_tran_op*0.01;
+}
+
+function open_small_menu(small_menu_id){
+    open_or_close_small_menu(small_menu_id,0);
+    if(current_opened_menu_id!=small_menu_id){
+        open_or_close_small_menu(small_menu_id,1);
+    }else{
+        current_opened_menu_id=0;
+    }
+}
+
+var current_opened_menu_id;
+function open_or_close_small_menu(small_menu_id,op){
+    if(op){
+        switch (small_menu_id){
+            case 1:
+
+                break;
+            case 2:
+                document.getElementById("title_small_menu_subitem_box_2").style.height="140px";
+                break;
+            case 3:
+
+                break;
+            case 4:
+                document.getElementById("title_small_menu_subitem_box_" + small_menu_id).style.height="175px";
+                break;
+            case 5:
+                document.getElementById("title_small_menu_subitem_box_" + small_menu_id).style.height="105px";
+                break;
+            case 6:
+                document.getElementById("title_small_menu_subitem_box_" + small_menu_id).style.height="175px";
+                break;
+            case 7:
+                document.getElementById("title_small_menu_subitem_box_" + small_menu_id).style.height="70px";
+                break;
+            case 8:
+                document.getElementById("title_small_menu_subitem_box_" + small_menu_id).style.height="350px";
+                break;
+            case 9:
+                document.getElementById("title_small_menu_subitem_box_" + small_menu_id).style.height="70px";
+                break;
+            case 10:
+
+                break;
+        }
+        current_opened_menu_id=small_menu_id;
+    }else{
+        document.getElementById("title_small_menu_subitem_box_1").style.height="0px";
+        document.getElementById("title_small_menu_subitem_box_2").style.height="0px";
+        document.getElementById("title_small_menu_subitem_box_3").style.height="0px";
+        document.getElementById("title_small_menu_subitem_box_4").style.height="0px";
+        document.getElementById("title_small_menu_subitem_box_5").style.height="0px";
+        document.getElementById("title_small_menu_subitem_box_6").style.height="0px";
+        document.getElementById("title_small_menu_subitem_box_7").style.height="0px";
+        document.getElementById("title_small_menu_subitem_box_8").style.height="0px";
+        document.getElementById("title_small_menu_subitem_box_9").style.height="0px";
+        document.getElementById("title_small_menu_subitem_box_10").style.height="0px";
+    }
+}
+
+function open_or_close_small_menu_box(){
+    if(document.getElementById("title_small_menu").style.height=="0px"){
+        document.getElementById("title_small_menu").style.height="unset";
+    }else{
+        document.getElementById("title_small_menu").style.height="0px";
+        open_or_close_small_menu(0,0);
+    }
 }
