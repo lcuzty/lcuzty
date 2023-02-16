@@ -32,6 +32,8 @@ function auto_adapt(){
         document.getElementById("nav_button_" + i).style.width="115px";
         document.getElementById("nav_menu_" + i).style.width="115px";
     }
+
+
     if(window.innerWidth<=1240){
         document.getElementById("content_box").style.paddingRight="20px";
         document.getElementById("content_box").style.paddingLeft="20px";
@@ -56,6 +58,9 @@ function auto_adapt(){
     document.getElementById("content_sidebar").style.position="fixed";
     document.getElementById("content_sidebar").style.width="270px";
     document.getElementById("content_list_title").style.textAlign="right";
+    document.getElementById("banner_small").style.height="0px";document.getElementById("banner").style.height="500px";
+    document.getElementById("banner_small_pic").style.height="500px";
+    document.getElementById("banner_pic_tran").style.height="500px";
     if(window.innerWidth<=1000){
         document.getElementById("footer_small").style.height="400px";
         document.getElementById("footer_small").style.visibility="visible";
@@ -64,6 +69,16 @@ function auto_adapt(){
         document.getElementById("content_sidebar").style.position="unset";
         document.getElementById("content_sidebar").style.width=title_main_inside_width-40+ "px";
         document.getElementById("content_list_title").style.textAlign="center";
+        document.getElementById("banner_small").style.height="650px";
+        document.getElementById("banner").style.height="650px";
+        if(title_main_inside_width<=650){
+            document.getElementById("banner_small").style.height="400px";
+            document.getElementById("banner").style.height="400px";
+            document.getElementById("banner_small_pic").style.height="250px";
+            document.getElementById("banner_pic_tran").style.height="400px";
+        }
+        document.getElementById("banner_small_control_button_left").style.width=title_main_inside_width/2-20+"px";
+        document.getElementById("banner_small_control_button_right").style.width=title_main_inside_width/2-20+"px";
     }
 }
 
@@ -264,10 +279,12 @@ function banner_changer(banner_id) {
     }
     document.getElementById("banner_title").innerText=banner_title;
     document.getElementById("banner_pic").style.backgroundImage='url(' + banner_src + ')';
+    document.getElementById("banner_small_title").innerText=banner_title;
+    document.getElementById("banner_small_pic").style.backgroundImage='url(' + banner_src + ')';
 
 }
 
-var banner_changer_time=50;
+var banner_changer_time=0;
 setInterval(auto_change_banner,100);
 function auto_change_banner(){
     if(banner_changer_time==0){

@@ -253,9 +253,10 @@
     height: 500px;
     width: 100%;
     background-color: rgb(15,70,115);
-    transition: all 1s;
+    transition: all 0.5s;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
 .banner_pic{
@@ -300,10 +301,14 @@
     text-align: center;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0);
+    background-repeat: no-repeat;
+    background-size: 30px auto;
+    background-position: center;
 }
 
 .banner_control_button:hover{
     background-color: rgba(255, 255, 255, 0.1);
+    background-image: url("../RE/jiantou_liebiaoxiangzuo.png");
 }
 
 .banner_control_button:active{
@@ -312,10 +317,12 @@
 
 #banner_control_button_1{
     float: left;
+    background-image: url("../RE/jiantou_liebiaoxiangzuo.png");
 }
 
 #banner_control_button_2{
     float: right;
+    background-image: url("../RE/jiantou_liebiaoxiangyou.png");
 }
 
 .content{
@@ -787,4 +794,68 @@ body{
 
 .content_list_text_page_control_button_current_page_number:active{
     scale: 100%;
+}
+
+.content_box{
+    background-color: wheat;
+}
+
+.banner_small{
+    width: 100%;
+    height: 650px;
+    background-color: rgb(15,70,115);
+    position: absolute;
+    z-index: 5000;
+    overflow: hidden;
+}
+
+.banner_small_pic{
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background 0.5s;
+}
+
+.banner_small>p{
+    display: inline-block;
+    text-align: center;
+    word-break: break-all;
+    color: white;
+    height: 60px;
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.banner_small_control_button{
+    height: 50px;
+    width: 50px;
+    border-radius: 3px;
+    display: inline-block;
+    transition: all 0.1s;
+    background-position: center;
+    background-size: 30px auto;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.banner_small_control_button:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.banner_small_control_button:active{
+    scale: 97%;
+}
+
+.banner_small_control_button_left{
+    float: left;
+    background-image: url("../RE/jiantou_liebiaoxiangzuo.png");
+}
+
+.banner_small_control_button_right{
+    float: right;
+    background-image: url("../RE/jiantou_liebiaoxiangyou.png");
 }
