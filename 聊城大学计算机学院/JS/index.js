@@ -84,7 +84,6 @@ function auto_adapt(){
 
             document.getElementById("content_tzgg").style.float="left";
 
-
             if(title_main_inside_width<=824){
                 document.getElementById("content_part_1").style.height="2150px";
                 document.getElementById("content_news").style.height="1400px";
@@ -107,6 +106,7 @@ function auto_adapt(){
                         document.getElementById("content_news").style.width=title_main_inside_width-30+"px";
 
 
+
             }
         }
     }
@@ -126,12 +126,17 @@ function auto_adapt(){
         document.getElementById("footer_small").style.height="400px";
         document.getElementById("footer_small").style.visibility="visible";
         document.getElementById("title_small").style.visibility="visible";
-        document.getElementById("content_main_with_sidebar").style.width=title_main_inside_width -40  + "px";
+        document.getElementById("content_main_with_sidebar").style.width=title_main_inside_width -80  + "px";
         document.getElementById("content_sidebar").style.position="unset";
-        document.getElementById("content_sidebar").style.width=title_main_inside_width-40+ "px";
+        document.getElementById("content_sidebar").style.width=title_main_inside_width-80+ "px";
         document.getElementById("content_list_title").style.textAlign="center";
         document.getElementById("banner_small").style.height="650px";
         document.getElementById("banner").style.height="650px";
+        if(title_main_inside_width<=824){
+            document.getElementById("content_main_with_sidebar").style.width=title_main_inside_width -30  + "px";
+            document.getElementById("content_sidebar").style.position="unset";
+            document.getElementById("content_sidebar").style.width=title_main_inside_width-30+ "px";
+        }
         if(title_main_inside_width<=650){
             document.getElementById("banner_small").style.height="400px";
             document.getElementById("banner").style.height="400px";
@@ -197,8 +202,19 @@ function auto_adapt(){
 
 
 
+    document.getElementById("content_list_text_page_control").style.textAlign="right";
+    document.getElementById("title").style.position="fixed";
+    document.getElementById("title_small").style.position="fixed";
+    document.getElementById("title_small_menu").style.position="fixed";
+    document.getElementById("gap1").style.height="143px";
+    if(title_main_inside_width<=1000){
+        document.getElementById("content_list_text_page_control").style.textAlign="center";
+        document.getElementById("title").style.position="unset";
+        document.getElementById("title_small").style.position="absolute";
+        document.getElementById("gap1").style.height="0px";
+        document.getElementById("title_small_menu").style.position="absolute";
+    }
 
-    
 }
 
 function open_link(link_index){
@@ -332,8 +348,56 @@ function open_link(link_index){
         case 42:
             window.open("#","_self");
             break;
-        case 43:
+        case 43://聊城大学智能搜索引擎
             window.open("https://www.lcu.edu.cn/cms/search/","_blank");
+            break;
+        case 44:
+            window.open("xwdt2022101301.html","_self");
+            break;
+        case 45:
+            window.open("xwdt2022110302.html","_self");
+            break;
+        case 46:
+            window.open("xwdt2022110903.html","_self");
+            break;
+        case 47:
+            window.open("xwdt2022112604.html","_self");
+            break;
+        case 48://新闻动态
+            window.open("xwdt.html","_self");
+            break;
+        case 49://通知公告
+            window.open("tzgg.html","_self");
+            break;
+        case 50://学术交流
+            window.open("xsjl.html","_self");
+            break;
+        case 51://常用链接
+            window.open("cylj.html","_self");
+            break;
+        case 52://学子风采
+            window.open("xzfc.html","_self");
+            break;
+        case 53:
+            window.open("tzgg2021072001.html","_self");
+            break;
+        case 54:
+            window.open("tzgg2021091002.html","_self");
+            break;
+        case 55:
+            window.open("tzgg2022032803.html","_self");
+            break;
+        case 56:
+            window.open("tzgg2022052004.html","_self");
+            break;
+        case 57:
+            window.open("tzgg2022061705.html","_self");
+            break;
+        case 58:
+            window.open("tzgg2022061706.html","_self");
+            break;
+        case 59:
+            window.open("tzgg2022062607.html","_self");
             break;
     }
 }

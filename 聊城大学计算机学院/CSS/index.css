@@ -274,7 +274,6 @@
     color: white;
     font-size: 16px;
     height: 250px;
-    text-indent: 2em;
     transition: all 1s;
 }
 
@@ -508,6 +507,8 @@ body{
 
 .content_p_for_image{
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .content_p_for_image>img{
@@ -516,8 +517,12 @@ body{
 
 .content_time{
     width: 100%;
-    height: 30px;
+    /*height: 30px;*/
     color: gray;
+}
+
+.content_time>span{
+    line-height: 30px;
 }
 
 .content_text_p_center{
@@ -527,12 +532,13 @@ body{
 .content_sidebar{
     width: 270px;
     display: inline-block;
-    height: 100px;
+    height: 400px;
     position: fixed;
 }
 
 #content_main_with_sidebar{
     float: right;
+    width: 915px;
 }
 
 .content_sidebar_title{
@@ -555,6 +561,9 @@ body{
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
+}
+
+.content_sidebar_button_selected{
     background-image: url("../RE/hoverarticledec.png");
 }
 
@@ -597,7 +606,7 @@ body{
 }
 
 .content_list_article_item{
-    height: 80px;
+    /*height: 80px;*/
     padding: 10px 10px;
     background-position: left;
     background-repeat: no-repeat;
@@ -617,7 +626,7 @@ body{
 
 .content_list_article_item>.p2{
     color: gray;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .content_list_article_item:hover{
@@ -1176,4 +1185,20 @@ body{
 
 .news_title_date_copy_for_tzgg{
     background-color: rgb(235,235,235);
+}
+
+.content_text_p_right{
+    text-align: right;
+}
+
+.title_small{
+    visibility: hidden;
+}
+
+.banner_small{
+    height: 0px;
+}
+
+.footer_small{
+    visibility: hidden;
 }
