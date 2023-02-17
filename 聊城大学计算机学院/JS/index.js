@@ -195,6 +195,10 @@ function auto_adapt(){
         }
     }
 
+
+
+
+    
 }
 
 function open_link(link_index){
