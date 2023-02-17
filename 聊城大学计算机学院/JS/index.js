@@ -399,6 +399,78 @@ function open_link(link_index){
         case 59:
             window.open("tzgg2022062607.html","_self");
             break;
+        case 60:
+            window.open("xsjl2021103007.html","_self");
+            break;
+        case 61:
+            window.open("xsjl2021031606.html","_self");
+            break;
+        case 62:
+            window.open("xsjl2021031605.html","_self");
+            break;
+        case 63:
+            window.open("xsjl2021030104.html","_self");
+            break;
+        case 64:
+            window.open("xsjl2020102603.html","_self");
+            break;
+        case 65:
+            window.open("xsjl2020071002.html","_self");
+            break;
+        case 66:
+            window.open("xsjl2020011401.html","_self");
+            break;
+        case 67:
+            window.open("https://jwc.lcu.edu.cn/zhxxfw/158314.html","_blank");
+            break;
+        case 68:
+            window.open("https://mail.lcu.edu.cn/","_blank");
+            break;
+        case 69:
+            window.open("https://www.xybsyw.com/front/personal/personalHome.xhtml","_blank");
+            break;
+        case 70:
+            window.open("http://www.sdgxbys.cn/","_blank");
+            break;
+        case 71:
+            window.open("cylj2022041401.html","_self");
+            break;
+        case 72:
+            window.open("http://lcu.co.cnki.net/Login.html?dp=&r=1578733625877","_blank");
+            break;
+        case 73:
+            window.open("http://ee-c.lcu.edu.cn/","_blank");
+            break;
+        case 74:
+            window.open("xzfc2021120710.html","_self");
+            break;
+        case 75:
+            window.open("xzfc2021112809.html","_self");
+            break;
+        case 76:
+            window.open("xzfc2021113008.html","_self");
+            break;
+        case 77:
+            window.open("xzfc2021112207.html","_self");
+            break;
+        case 78:
+            window.open("xzfc2021112206.html","_self");
+            break;
+        case 79:
+            window.open("xzfc2021112205.html","_self");
+            break;
+        case 80:
+            window.open("xzfc2021112204.html","_self");
+            break;
+        case 81:
+            window.open("xzfc2021112203.html","_self");
+            break;
+        case 82:
+            window.open("xzfc2020011702.html","_self");
+            break;
+        case 83:
+            window.open("xzfc2020011701.html","_self");
+            break;
     }
 }
 
