@@ -4,7 +4,7 @@ function auto_adapt(){
     document.body.style.opacity="100%";
     var title_main_inside_width;
     if(window.innerWidth<=1200){
-        title_main_inside_width=window.innerWidth;
+        title_main_inside_width=document.body.clientWidth;
     }else{
         title_main_inside_width=1200;
     }
@@ -48,12 +48,12 @@ function auto_adapt(){
     }
     document.getElementById("content_tzgg").style.float="right";
     if(window.innerWidth<=1240){
-        document.getElementById("content_box").style.paddingRight="60px";
+        document.getElementById("content_box").style.paddingRight="20px";
         document.getElementById("content_box").style.paddingLeft="20px";
         document.getElementById("title_main_inside").style.paddingLeft="20px";
         document.getElementById("title_main_inside").style.paddingRight="20px";
 
-        document.getElementById("content_main_with_sidebar").style.width=title_main_inside_width-325 + "px";
+        document.getElementById("content_main_with_sidebar").style.width=title_main_inside_width-365 + "px";
 
 
         document.getElementById("title_navs_menus_main").style.width=title_main_inside_width +"px";
@@ -77,7 +77,7 @@ function auto_adapt(){
             document.getElementById("content_part_1").style.height="1500px";
 
             for(i=1;i<=7;i++){
-                document.getElementById("content_tzgg_title_box_" + i).style.width=title_main_inside_width-150+"px";
+                document.getElementById("content_tzgg_title_box_" + i).style.width=title_main_inside_width-180+"px";
             }
             document.getElementById("content_news").style.height="750px";
             document.getElementById("news_tile_container").style.paddingLeft=(title_main_inside_width-80-720)/2-20+"px";
@@ -95,7 +95,7 @@ function auto_adapt(){
                     document.getElementById("content_box").style.paddingRight="15px";
                     document.getElementById("content_box").style.marginLeft="0px";
                     for(i=1;i<=7;i++){
-                        document.getElementById("content_tzgg_title_box_" + i).style.width=title_main_inside_width-100+"px";
+                        document.getElementById("content_tzgg_title_box_" + i).style.width=title_main_inside_width-130+"px";
                     }
                     for(i=1;i<=4;i++){
                         document.getElementById("news_tile_" + i).style.marginLeft=(20-(400-title_main_inside_width))/2+"px";
@@ -373,23 +373,35 @@ function click_to_change_banner(op,is_change_by_click) {
 }
 
 var current_banner_id=1;
-var max_banner_id=3;
+var max_banner_id=6;
 function banner_changer(banner_id) {
     var banner_title;
     var banner_src;
     current_banner_id=banner_id;
     switch (banner_id) {
         case 1:
-            banner_title='肖海荣到计算机学院调研指导工程教育认证工作';
-            banner_src='./RE/banner/banner1.png';
+            banner_title='欢迎报考计算机学院';
+            banner_src='./RE/banner/banner1.jpg';
             break;
         case 2:
-            banner_title='计算机学院开展庆祝建党99周年迎“七一”主题党日...';
+            banner_title='计算机学院举办2021年度青年教师教学比赛';
             banner_src='./RE/banner/banner2.png';
             break;
         case 3:
-            banner_title='计算机学院举办2021年度青年教师教学比赛';
-            banner_src='./RE/banner/banner3.png';
+            banner_title='学校党委书记关延平、校长王昭风到学院工作调研';
+            banner_src='./RE/banner/banner3.jpg';
+            break;
+        case 4:
+            banner_title='计算机学院召开“创新与融合”U+高校联盟教学研讨...';
+            banner_src='./RE/banner/banner4.png';
+            break;
+        case 5:
+            banner_title='肖海荣到计算机学院调研指导工程教育认证工作';
+            banner_src='./RE/banner/banner5.png';
+            break;
+        case 6:
+            banner_title='计算机学院开展庆祝建党99周年迎“七一”主题党日...';
+            banner_src='./RE/banner/banner6.jpg';
             break;
     }
     document.getElementById("banner_title").innerText=banner_title;
@@ -511,9 +523,13 @@ var sp_pic_1_current_pic_id=1;
 var sp_pic_2_current_pic_id=2;
 var sp_pic_3_current_pic_id=3;
 var sp_pic_4_current_pic_id=4;
-var max_id=4;
+var max_id=8;
 setInterval(change_sp_pic,5000);
 function change_sp_pic(){
+    document.getElementById("sp_pic_1").style.backgroundImage="url(./CONTENT/xzfc/" + sp_pic_1_current_pic_id + ".jpg)";
+    document.getElementById("sp_pic_2").style.backgroundImage="url(./CONTENT/xzfc/" + sp_pic_2_current_pic_id + ".jpg)";
+    document.getElementById("sp_pic_3").style.backgroundImage="url(./CONTENT/xzfc/" + sp_pic_3_current_pic_id + ".jpg)";
+    document.getElementById("sp_pic_4").style.backgroundImage="url(./CONTENT/xzfc/" + sp_pic_4_current_pic_id + ".jpg)";
     sp_pic_1_current_pic_id++;
     sp_pic_2_current_pic_id++;
     sp_pic_3_current_pic_id++;
@@ -530,8 +546,4 @@ function change_sp_pic(){
     if(sp_pic_4_current_pic_id==max_id+1){
         sp_pic_4_current_pic_id=1;
     }
-    document.getElementById("sp_pic_1").style.backgroundImage="url(./CONTENT/xzfc/" + sp_pic_1_current_pic_id + ".jpg)";
-    document.getElementById("sp_pic_2").style.backgroundImage="url(./CONTENT/xzfc/" + sp_pic_2_current_pic_id + ".jpg)";
-    document.getElementById("sp_pic_3").style.backgroundImage="url(./CONTENT/xzfc/" + sp_pic_3_current_pic_id + ".jpg)";
-    document.getElementById("sp_pic_4").style.backgroundImage="url(./CONTENT/xzfc/" + sp_pic_4_current_pic_id + ".jpg)";
 }
