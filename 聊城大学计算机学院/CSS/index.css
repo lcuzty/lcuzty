@@ -1202,3 +1202,12 @@ body{
 .footer_small{
     visibility: hidden;
 }
+
+.sp_pic{
+    background-image: url("../RE/black.png");
+    cursor: pointer;
+}
+
+body{
+    background-color: white;
+}

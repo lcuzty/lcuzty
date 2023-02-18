@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>师资队伍</title>
+
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/base.css">
+
+    <script src="./JS/index.js"></script>
+</head>
+<body onload="auto_adapt()" onresize="auto_adapt_onresize()">
+
+<div class="title_small" id="title_small">
+    <div class="title_decoration_line title_decoration_line_for_small_title">
+        <div class="title_small_top_button tstb_l" onclick="open_or_close_small_menu_box()"></div><div class="title_small_top_button tstb_m" onclick="open_link(1)"></div><div class="title_small_top_button tstb_r" onclick="open_link(43)"></div>
+    </div>
+    <div class="title_small_main" id="title_small_main">
+
+    </div>
+    <div class="title_decoration_line"></div>
+    <div class="title_small_menu" id="title_small_menu">
+
+
+
+        <div class="title_small_menu_item" onclick="open_link(2)">首页</div>
+        <div class="title_small_menu_subitem_box" id="title_small_menu_subitem_box_1">
+        </div>
+
+
+
+        <div class="title_small_menu_item" onclick="open_small_menu(2)">学院概况</div>
+        <div class="title_small_menu_subitem_box" id="title_small_menu_subitem_box_2">
+            <div class="title_small_menu_subitem" onclick="open_link(12)">学院简介</div>
+            <div class="title_small_menu_subitem" onclick="open_link(13)">院系设置</div>
+            <div class="title_small_menu_subitem" onclick="open_link(14)">现任领导</div>
+            <div class="title_small_menu_subitem" onclick="open_link(15)">人才招聘</div>
+        </div>
+
+
+
+        <div class="title_small_menu_item" onclick="open_link(4)">师资队伍</div>
+        <div class="title_small_menu_subitem_box" id="title_small_menu_subitem_box_3">
+        </div>
+
+
+
+        <div class="title_small_menu_item" onclick="open_small_menu(4)">本科生教育</div>
+        <div class="title_small_menu_subitem_box" id="title_small_menu_subitem_box_4">
+            <div class="title_small_menu_subitem"  onclick="open_link(16)">专业介绍</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(17)">培养方案</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(18)">课程建设</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(19)">教研教改</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(20)">规章制度</div>
+        </div>
+
+
+
+        <div class="title_small_menu_item" onclick="open_small_menu(5)">研究生招生</div>
+        <div class="title_small_menu_subitem_box" id="title_small_menu_subitem_box_5">
+            <div class="title_small_menu_subitem"  onclick="open_link(21)">学院简介</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(22)">专业简介</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(23)">研究生导师</div>
+        </div>
+
+
+
+        <div class="title_small_menu_item" onclick="open_small_menu(6)">科学研究</div>
+        <div class="title_small_menu_subitem_box" id="title_small_menu_subitem_box_6">
+            <div class="title_small_menu_subitem"  onclick="open_link(24)">学科概况</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(25)">研究方向</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(26)">研究团队</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(27)">项目成果</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(28)">学术交流</div>
+        </div>
+
+
+
+        <div class="title_small_menu_item" onclick="open_small_menu(7)">招生就业</div>
+        <div class="title_small_menu_subitem_box" id="title_small_menu_subitem_box_7">
+            <div class="title_small_menu_subitem"  onclick="open_link(29)">招生信息</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(30)">就业信息</div>
+        </div>
+
+
+
+        <div class="title_small_menu_item" onclick="open_small_menu(8)">学团工作</div>
+        <div class="title_small_menu_subitem_box" id="title_small_menu_subitem_box_8">
+            <div class="title_small_menu_subitem"  onclick="open_link(31)">学工动态</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(32)">网络德育</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(33)">学风建设</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(34)">学生党建</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(35)">奖学助学</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(36)">心理健康</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(37)">宿舍管理</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(38)">社团组织</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(39)">规章制度</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(40)">相关下载</div>
+        </div>
+
+
+
+        <div class="title_small_menu_item" onclick="open_small_menu(9)">党建工作</div>
+        <div class="title_small_menu_subitem_box" id="title_small_menu_subitem_box_9">
+            <div class="title_small_menu_subitem"  onclick="open_link(41)">党务动态</div>
+            <div class="title_small_menu_subitem"  onclick="open_link(42)">学习资料</div>
+        </div>
+
+
+
+        <div class="title_small_menu_item" onclick="open_link(11)">学风建设</div>
+        <div class="title_small_menu_subitem_box" id="title_small_menu_subitem_box_10">
+        </div>
+
+
+
+        <div class="title_decoration_line"></div>
+    </div>
+</div>
+
+    <div class="title" id="title">
+        <div class="title_decoration_line"></div>
+        <div class="title_main" id="title_main">
+            <div class="title_main_inside" id="title_main_inside">
+                <div class="title_main_inside_logo"></div>
+                <div class="title_right_buttons">
+                    <div class="button college_home_page_link" onclick="open_link(1)">学校主页</div>
+
+                    <form class="search_box" id="search_box" action="https://www.lcu.edu.cn/cms/search/searchResults.jsp?flg=0" onsubmit="return keywords(this)" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+                        <input name="siteID" value="32" type="hidden">
+                        <input type="text" name="query" name="" id="search_text_input" oninput="search_box_auto_show_or_hide_default_text()">
+                        <input type="submit" class="button search_button" id="search_button" value="搜索" name="Submit" >
+                        <p id="search_default_text">请输入关键字</p>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="title_navs">
+            <div class="title_navs_main" id="title_navs_main">
+                <div class="nav_button" id="nav_button_1" onclick="open_link(2)">首页</div>
+                <div class="nav_button" id="nav_button_2" onclick="open_link(3)" onmouseenter="show_or_hide_nav_menu(2,1)" onmouseleave="show_or_hide_nav_menu(0,0)">学院概况</div>
+                <div class="nav_button" id="nav_button_3" onclick="open_link(4)">师资队伍</div>
+                <div class="nav_button" id="nav_button_4" onclick="open_link(5)" onmouseenter="show_or_hide_nav_menu(4,1)" onmouseleave="show_or_hide_nav_menu(0,0)">本科生教育</div>
+                <div class="nav_button" id="nav_button_5" onclick="open_link(6)" onmouseenter="show_or_hide_nav_menu(5,1)" onmouseleave="show_or_hide_nav_menu(0,0)">研究生招生</div>
+                <div class="nav_button" id="nav_button_6" onclick="open_link(7)" onmouseenter="show_or_hide_nav_menu(6,1)" onmouseleave="show_or_hide_nav_menu(0,0)">科学研究</div>
+                <div class="nav_button" id="nav_button_7" onclick="open_link(8)" onmouseenter="show_or_hide_nav_menu(7,1)" onmouseleave="show_or_hide_nav_menu(0,0)">招生就业</div>
+                <div class="nav_button" id="nav_button_8" onclick="open_link(9)" onmouseenter="show_or_hide_nav_menu(8,1)" onmouseleave="show_or_hide_nav_menu(0,0)">学团工作</div>
+                <div class="nav_button" id="nav_button_9" onclick="open_link(10)" onmouseenter="show_or_hide_nav_menu(9,1)" onmouseleave="show_or_hide_nav_menu(0,0)">党建工作</div>
+                <div class="nav_button" id="nav_button_10" onclick="open_link(11)">学风建设</div>
+            </div>
+        </div>
+        <div class="title_navs_menus" id="title_navs_menus">
+            <div class="title_navs_menus_main"  id="title_navs_menus_main">
+                <div class="nav_menu" id="nav_menu_1">
+                    <ul>
+                        <li>111</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_2" onmouseenter="show_or_hide_nav_menu(2,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
+                    <ul>
+                        <li onclick="open_link(12)">学院简介</li>
+                        <li onclick="open_link(13)">院系设置</li>
+                        <li onclick="open_link(14)">现任领导</li>
+                        <li onclick="open_link(15)">人才招聘</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_3">
+                    <ul>
+                        <li>111</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_4" onmouseenter="show_or_hide_nav_menu(4,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
+                    <ul>
+                        <li onclick="open_link(16)">专业介绍</li>
+                        <li onclick="open_link(17)">培养方案</li>
+                        <li onclick="open_link(18)">课程建设</li>
+                        <li onclick="open_link(19)">教研教改</li>
+                        <li onclick="open_link(20)">规章制度</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_5" onmouseenter="show_or_hide_nav_menu(5,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
+                    <ul>
+                        <li onclick="open_link(21)">学院简介</li>
+                        <li onclick="open_link(22)">专业简介</li>
+                        <li onclick="open_link(23)">研究生导师</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_6" onmouseenter="show_or_hide_nav_menu(6,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
+                    <ul>
+                        <li onclick="open_link(24)">学科概况</li>
+                        <li onclick="open_link(25)">研究方向</li>
+                        <li onclick="open_link(26)">研究团队</li>
+                        <li onclick="open_link(27)">项目成果</li>
+                        <li onclick="open_link(28)">学术交流</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_7" onmouseenter="show_or_hide_nav_menu(7,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
+                    <ul>
+                        <li onclick="open_link(29)">招生信息</li>
+                        <li onclick="open_link(30)">就业信息</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_8" onmouseenter="show_or_hide_nav_menu(8,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
+                    <ul>
+                        <li onclick="open_link(31)">学工动态</li>
+                        <li onclick="open_link(32)">网络德教</li>
+                        <li onclick="open_link(33)">学风建设</li>
+                        <li onclick="open_link(34)">学生党建</li>
+                        <li onclick="open_link(35)">奖学助学</li>
+                        <li onclick="open_link(36)">心理健康</li>
+                        <li onclick="open_link(37)">宿舍管理</li>
+                        <li onclick="open_link(38)">社团组织</li>
+                        <li onclick="open_link(39)">规章制度</li>
+                        <li onclick="open_link(40)">相关下载</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_9" onmouseenter="show_or_hide_nav_menu(9,1)" onmouseleave="show_or_hide_nav_menu(0,0)">
+                    <ul>
+                        <li onclick="open_link(41)">党务动态</li>
+                        <li onclick="open_link(42)">学习资料</li>
+                    </ul>
+                </div>
+
+                <div class="nav_menu" id="nav_menu_10">
+                    <ul>
+                        <li>111</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="gap1" id="gap1"></div>
+
+<div class="banner_small" id="banner_small" style="visibility: hidden;height: 0px;overflow: hidden">
+    <div class="banner_small_pic" id="banner_small_pic">
+
+    </div>
+    <p id="banner_small_title"></p>
+    <div class="banner_small_control_button banner_small_control_button_left" onclick="click_to_change_banner(0,1)" id="banner_small_control_button_left"></div>
+    <div class="banner_small_control_button banner_small_control_button_right"onclick="click_to_change_banner(1,1)" id="banner_small_control_button_right"></div>
+</div>
+
+
+<div class="banner" id="banner" style="visibility: hidden;position: absolute;top: -10000px">
+        <div class="banner_title_box" id="banner_title_box" style="visibility: hidden;position: absolute;top: -10000px">
+            <p class="banner_title" id="banner_title">肖海荣到计算机学院调研指导工程教育认证工作</p>
+            <div class="banner_control_box" id="banner_control_box">
+                <div class="banner_control_button" id="banner_control_button_1" onclick="click_to_change_banner(0,1)">上一页</div>
+                <div class="banner_control_button" id="banner_control_button_2" onclick="click_to_change_banner(1,1)">下一页</div>
+            </div>
+        </div>
+
+        <div class="banner_pic_tran" id="banner_pic_tran">
+
+        </div>
+
+        <div class="banner_pic" id="banner_pic">
+
+        </div>
+    </div>
+
+    <div class="content" id="content">
+        <div class="content_box" id="content_box">
+            <div class="content_main">
+                <div class="current_location">
+                    <span>您当前位置：</span>
+                    <div class="location_button" onclick="open_link(0)">首页</div>
+                    <span>></span>
+                    <span class="location_button" onclick="open_link(4)">师资队伍</span>
+                </div>
+                <div class="content_title">
+                    <p>师资队伍（部分）</p>
+                </div>
+                <div class="content_time">
+<!--                    <span>发布日期：</span><span>2022.06.17</span>-->
+                </div>
+                <div class="hr"></div>
+                <div class="content_text">
+                    <div class="article">      <p>&nbsp;</p>
+
+                        <p><strong><span style="font-size:20px;">特聘教授：</span></strong></p>
+
+                        <p>&nbsp;</p>
+
+                        <table border="0" cellpadding="1" cellspacing="1" style="width:800px;">
+                            <tbody>
+                            <tr>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/341800.htm"><span style="font-size:16px;">潘全科</span></a></td>
+                                <td style="text-align: center;"><span style="font-size:16px;">&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; </span></td>
+                                <td style="text-align: center;"><span style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span></td>
+                                <td style="text-align: center;"><span style="font-size:16px;">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; </span></td>
+                                <td style="text-align: center;"><span style="font-size:16px;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <p>&nbsp;</p>
+
+                        <p><strong><span style="font-size:20px;">教授：</span></strong></p>
+
+                        <p>&nbsp;</p>
+
+                        <table border="0" cellpadding="1" cellspacing="1" style="width:800px;">
+                            <tbody>
+                            <tr>
+                                <td style="text-align: center;"><span style="font-size:16px;"><a href="http://cs.lcu.edu.cn/szdw/339886.htm">左风朝</a></span></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339885.htm"><span style="font-size:16px;">李俊青</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339884.htm"><span style="font-size:16px;">姜&nbsp;&nbsp; 华</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339857.htm"><span style="font-size:16px;">桑红燕</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339872.htm"><span style="font-size:16px;">贾仰理</span></a></td>
+                                <td style="text-align: center;"><span style="font-size:16px;">&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <p>&nbsp;</p>
+
+                        <p>&nbsp;</p>
+
+                        <p><strong><span style="font-size:20px;">副教授：</span></strong></p>
+
+                        <p>&nbsp;</p>
+
+                        <table border="0" cellpadding="1" cellspacing="1" style="width:800px; height:200px;">
+                            <tbody>
+                            <tr>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339883.htm"><span style="font-size:16px;">刘广亮</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339881.htm"><span style="font-size:16px;">李成友</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339880.htm"><span style="font-size:16px;">王贤勇</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339879.htm"><span style="font-size:16px;">于承敏</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339878.htm"><span style="font-size:16px;">王文宏</span></a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339828.htm"><span style="font-size:16px;">陈&nbsp;&nbsp; 晶</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339876.htm"><span style="font-size:16px;">赵传申</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339875.htm"><span style="font-size:16px;">李&nbsp;&nbsp; 寰</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339874.htm"><span style="font-size:16px;">董金新</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339873.htm"><span style="font-size:16px;">郑丽萍</span></a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339871.htm"><span style="font-size:16px;">张振领</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339869.htm"><span style="font-size:16px;">王玉亭</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339868.htm"><span style="font-size:16px;">李元振</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339860.htm"><span style="font-size:16px;">孙守斌</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339859.htm"><span style="font-size:16px;">李德奎</span></a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339858.htm"><span style="font-size:16px;">贾保先</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339856.htm"><span style="font-size:16px;">王存刚</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339855.htm"><span style="font-size:16px;">朱淑芹</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339854.htm"><span style="font-size:16px;">韩玉艳</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339853.htm"><span style="font-size:16px;">段&nbsp;&nbsp; 朋</span></a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339850.htm"><span style="font-size:16px;">亓民勇</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339842.htm"><span style="font-size:16px;">薛凌燕</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339839.htm"><span style="font-size:16px;">赵海勇</span></a></td>
+                                <td style="text-align: center;">&nbsp;</td>
+                                <td style="text-align: center;">&nbsp;</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <p>&nbsp;</p>
+
+                        <p><strong><span style="font-size:20px;">讲师：</span></strong></p>
+
+                        <p>&nbsp;</p>
+
+                        <table border="0" cellpadding="1" cellspacing="1" style="height:200px;width:800px;">
+                            <tbody>
+                            <tr>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339852.htm"><span style="font-size:16px;">许丽莉</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339838.htm"><span style="font-size:16px;">郑志新</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339849.htm"><span style="font-size:16px;">任晓慧</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339848.htm"><span style="font-size:16px;">王&nbsp;&nbsp; 敏</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339847.htm"><span style="font-size:16px;">赵&nbsp;&nbsp; 阳</span></a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339846.htm"><span style="font-size:16px;">孙&nbsp;&nbsp; 剑</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339845.htm"><span style="font-size:16px;">刘&nbsp;&nbsp; 闯</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339844.htm"><span style="font-size:16px;">高开周</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339843.htm"><span style="font-size:16px;">张亚卿</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339841.htm"><span style="font-size:16px;">李凌云</span></a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339840.htm"><span style="font-size:16px;">孙静怡</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339836.htm"><span style="font-size:16px;">张&nbsp;&nbsp; 彪</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339837.htm"><span style="font-size:16px;">刘莉莉</span></a></td>
+                                <td style="text-align: center;"><a href="http://cs.lcu.edu.cn/szdw/339827.htm"><span style="font-size:16px;">周&nbsp;&nbsp; 帆</span></a></td>
+                                <td style="text-align: center;"><a href="https://cs.lcu.edu.cn/szdw/431879.htm"><span style="font-size:16px;">孟磊磊</span></a></td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;"><a href="https://cs.lcu.edu.cn/szdw/446268.htm"><span style="font-size:16px;">邹温强</span></a></td>
+
+                            </tr>
+
+                            <tr>
+                                <td style="text-align: center;">&nbsp;</td>
+                                <td style="text-align: center;">&nbsp;</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <p>&nbsp;</p>
+
+                        <p>&nbsp;</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer footer_small" id="footer_small" style="position: absolute">
+        <div class="footer_background footer_background_small">
+            <div class="footer1_small">
+
+            </div>
+            <div class="footer2_small">
+
+            </div>
+            <p>地址：山东省聊城市湖南路1号</p>
+            <p>邮编：252000&nbsp;&nbsp;电话：0635-8238540</p>
+            <p>技术支持：聊城大学格创研发室</p>
+            <p>Copyright 2023 聊城大学 All Rights Reserved.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_background">
+            <div class="main_footer" id="main_footer">
+                <div class="footer1">
+
+                </div><div class="footer_decoration_line"></div><div class="footer2">
+                <p class="footer_text" id="footer_text_top">地址：山东省聊城市湖南路1号</p>
+                <p class="footer_text">邮编：252000&nbsp;&nbsp;电话：0635-8238540</p>
+                <p class="footer_text">技术支持：聊城大学格创研发室</p>
+                <p class="footer_text">Copyright 2023 聊城大学 All Rights Reserved.</p>
+            </div><div class="footer3">
+
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+
+<div style="visibility: hidden;position: fixed;width: 0px;height: 0px">
+    <div id="content_news"></div>
+    <div id="news_tile_container"></div>
+    <div id="content_part_1"></div>
+    <div id="content_part_2"></div>
+    <div id="content_part_3"></div>
+    <div id="content_tzgg"></div>
+    <div id="content_tzgg_title_box_1"></div>
+    <div id="content_tzgg_title_box_2"></div>
+    <div id="content_tzgg_title_box_3"></div>
+    <div id="content_tzgg_title_box_4"></div>
+    <div id="content_tzgg_title_box_5"></div>
+    <div id="content_tzgg_title_box_6"></div>
+    <div id="content_tzgg_title_box_7"></div>
+    <div id="news_tile_1"></div>
+    <div id="news_tile_2"></div>
+    <div id="news_tile_3"></div>
+    <div id="news_tile_4"></div>
+    <div id="sp_pic_1"></div>
+    <div id="sp_pic_2"></div>
+    <div id="sp_pic_3"></div>
+    <div id="sp_pic_4"></div>
+    <div id="content_xsjl"></div>
+    <div id="content_cylj"></div>
+    <div id="content_xsjl_title_box_1"></div>
+    <div id="content_xsjl_title_box_2"></div>
+    <div id="content_xsjl_title_box_3"></div>
+    <div id="content_xsjl_title_box_4"></div>
+    <div id="content_xsjl_title_box_5"></div>
+    <div id="content_xsjl_title_box_6"></div>
+    <div id="content_xsjl_title_box_7"></div>
+    <div id="content_cylj_title_box_1"></div>
+    <div id="content_cylj_title_box_2"></div>
+    <div id="content_cylj_title_box_3"></div>
+    <div id="content_cylj_title_box_4"></div>
+    <div id="content_cylj_title_box_5"></div>
+    <div id="content_cylj_title_box_6"></div>
+    <div id="content_cylj_title_box_7"></div>
+    <div id="content_main_with_sidebar"></div>
+    <div id="content_sidebar"></div>
+    <div id="content_list_title"></div>
+    <div id="content_list_text_page_control"></div>
+</div>
+</body>
+</html>
